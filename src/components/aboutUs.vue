@@ -20,29 +20,11 @@ export default {
             textInput:'',
             persons:[
                 {
-                    name: 'haghighat',
-                    img: '../../img/haghighat.jpg',
-                    title: 'mehdi',
-                    id:9484
-                },
-                {
-                    name:'rostami',
-                    img:'../../img/rostami.jpg',
-                    title:'reza',
-                    id:9319
-                },
-                {
                     name:'iziy',
                     img:'../../img/iziy.jpg',
                     title:'naser',
                     id:17566
                 },
-                {
-                    name:'kamari',
-                    img:'../../img/kamari.jpg',
-                    title:'mehdi',
-                    id:9256
-                }
             ]
         }
     },

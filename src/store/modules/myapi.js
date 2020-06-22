@@ -13,6 +13,7 @@ export default{
             setTimeout(()=>{
                 resolve(productId);
             },1000);
+            console.log(reject);
         });
     }
 
