@@ -1,0 +1,201 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from './views/Home.vue'
+import user from './components/user'
+import contact from './components/contact'
+import aboutUs from './components/aboutUs'
+import details from './components/details'
+import AuthHandler from './components/AuthHandler'
+import humanres from './components/backEnd/hr/humanres'
+
+import login from './components/login'
+import signUp from './components/signUp'
+import profile from './components/profile'
+
+import invoice from './components/backEnd/invoice/invoice'
+import invoiceItems from './components/backEnd/invoice/invoiceItems'
+import findInvoice from './components/backEnd/invoice/findInvoice'
+import invoiceOverview from './components/backEnd/invoice/invoiceOverview'
+import invoiceHeader from './components/backEnd/invoice/invoiceHeader'
+
+import product from './components/backEnd/product/product'
+import findProduct from './components/backEnd/product/findProduct'
+import createProduct from './components/backEnd/product/createProduct'
+import cProductBase from './components/backEnd/product/cproduct/cProductBase'
+
+import skillType from './components/backEnd/hr/skillType'
+import employees from './components/backEnd/hr/employees'
+import newEmployee from './components/backEnd/hr/newEmployee'
+import signUpC from './components/signUpC.vue'
+
+import payment from './components/bucket/payment'
+import delivery from './components/bucket/delivery'
+import bucketView from './components/bucket/bucketView'
+
+import createPromotion from './components/backEnd/product/promotion/createPromotion'
+import createCatalog from './components/backEnd/product/catalog/createCatalog'
+import createCategories from './components/backEnd/product/categories/createCategories'
+import createContent from './components/content/createContent' 
+
+
+Vue.use(Router)
+
+export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+       path:'/invoice',
+       component: invoice
+    },
+    {
+      path:'/invoiceItems',
+      component: invoiceItems
+   },
+   {
+    path:'/findInvoice',
+    component: findInvoice
+   },
+   {
+     path:'/invoiceOverview',
+     component: invoiceOverview
+   },
+   {
+     path:'/invoiceHeader',
+     component: invoiceHeader
+   },
+    {
+      path:'/login',
+      name:'login',
+      component:login
+    },{
+      path:'/signUp',
+      name:'signUp',
+      component:signUp
+    },
+    {
+      path:'/profile',
+      name:'profile',
+      component:profile
+    },
+    {
+      path:'/users',
+      name:'users',
+      component:user
+    },
+    {
+      path:'/contact',
+      name:'contact',
+      component:contact
+    },
+    {
+      path:'/aboutus',
+      name:'aboutUs',
+      component:aboutUs
+    },
+    {
+      path:'/humanres',
+      component:humanres
+    },
+    {
+      path:'/details/:pid',
+      name:'details',
+      component:details
+    },{
+      path:'/product/:id',
+      name:'product' ,
+      component:product,
+      props:true
+    },
+    {
+      path:'/findProduct',
+      name:findProduct,
+      component:findProduct
+    },
+    {
+      path:'/skillType',
+      name:skillType,
+      component:skillType
+    },
+    {
+      path:'/employees',
+      name:employees,
+      component:employees
+    },
+    {
+      path:'/newEmployee',
+      name:newEmployee,
+      component:newEmployee
+    },
+    {
+      path:'/signUpC',
+      name:signUpC,
+      component:signUpC
+    },
+    {
+      path:'/oauth2/callback',
+      component:AuthHandler,
+    },
+    {
+      path:"/createProduct/:id/:title",
+      name:"createProduct",
+      component:createProduct,
+      props:true
+    },
+    {
+      path:'/payment',
+      name:'payment',
+      component:payment,
+    },
+    {
+      path:'/delivery',
+      name:'delivery',
+      component:delivery
+    },
+    {
+      path:'/cProductBase',
+      name:cProductBase,
+      component:cProductBase
+    },
+    {
+      path:'/bucketView',
+      name:'bucketView',
+      component:bucketView,
+    },
+    {
+      path:'/createPromotion' ,
+      name:'createPromotion',
+      component:createPromotion
+    },
+    {
+      path:'/createCatalog',
+      name:'createCatalog',
+      component:createCatalog
+    },
+    {
+      path:'/createCategories',
+      name: 'createCategories',
+      component:createCategories
+    },
+    {
+        path:'/createContent',
+        name:'createContent',
+        component:createContent
+    }
+    ,
+    {
+       path: '/about',
+       name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    }
+  ]
+})
+

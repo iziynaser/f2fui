@@ -1,0 +1,42 @@
+<template>
+    <div id="searchBar">
+            <b-form-input size="sm" class="mr-sm-2" type="submit" placeholder="Search"></b-form-input>
+            <searchBar @termChange="onTermChange" category="root"/>
+    </div>
+</template>
+
+<script>
+
+import axios from 'axios'
+
+    export default {
+        name:'searchBar' ,
+        props:{
+            category:{type:String} ,
+            witchPart:{type:String}               
+        },
+        methods:{
+            onTermChange:function(searchTerm){
+                console.log(searchTerm);
+                axios.get('http://localhost:8080/f2f/hello',
+                {
+                  params:{
+                        'access_token' : localStorage.getItem('access_token')
+                         }
+                })
+                .then(function (response) {
+                    console.log(response.data);                
+                }).catch(function (error) {
+                    console.log(error.data);                          
+            }) ;        
+        },      
+      doSearch(){
+        
+      }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

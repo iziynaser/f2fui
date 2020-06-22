@@ -1,0 +1,57 @@
+<template>
+<div >
+
+      <b-button-group>
+            <b-dropdown>
+                  <div v-if="!isLoggedIn">
+                        <b-dropdwon-item>
+                              <router-link to="/login">signIn</router-link>
+                        </b-dropdwon-item>
+                  </div>
+                  <div v-else>
+                        <b-dropdown-item >
+                              <router-link to="/profile">{{$t('profile')}} </router-link>
+                        </b-dropdown-item>                  
+
+                        <b-dropdown-divider/>
+
+                        <b-dropdown-item>
+                              {{$t('myorders')}}
+                        </b-dropdown-item>   
+
+                        <b-dropdown-divider/>
+
+                        <b-dropdown-item v-on:click="logout">
+                              {{$t('logout')}}
+                        </b-dropdown-item>   
+                  </div>
+            </b-dropdown>
+      </b-button-group> 
+ 
+</div>
+</template>
+
+<script>
+
+import {mapActions,mapGetters} from 'vuex'
+
+export default {
+      name:'shoppingList',
+      data:function(){
+            return {
+
+            }
+      },
+      computed: {
+            ...mapGetters(["isLoggedIn"])
+      },
+      components:{        
+      },
+      methods:{
+            ...mapActions(['logout']),
+      },
+      mounted(){
+      }
+
+}          
+</script>

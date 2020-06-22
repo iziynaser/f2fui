@@ -1,0 +1,94 @@
+<template>
+<div>
+  <b-row>
+    <b-col></b-col>
+    <b-col></b-col>
+    <b-col></b-col>
+    <b-col></b-col>
+  </b-row>
+  <hr/>
+  <div>browse to top</div>
+  <hr/>
+  <div>
+    <b-row>
+      <b-col>
+          <b-list-group horizontal="md" flush>
+              <b-list-group-item>{{$t('C_FOOTER_REGISTER_ORDER')}}</b-list-group-item>
+              <b-list-group-item>{{$t('C_FOOTER_PROCESS_ORDER')}}</b-list-group-item>
+              <b-list-group-item>{{$t('C_FOOTER_PAYMENT_METHODS')}}</b-list-group-item>
+          </b-list-group>
+      </b-col>
+      <b-col>          
+          <b-list-group horizontal="md" flush>
+            <li>{{$t('C_FOOTER_REPORT_A_BUG')}}</li>
+            <li>{{$t('C_FOOTER_PRIVACY')}}</li>
+            <li>{{$t('C_FOOTER_RETURN_PRODUCT')}}</li>
+          </b-list-group>
+      </b-col>
+      <b-col></b-col>
+      <b-col>
+          <b-row></b-row>
+          <b-row>
+            <b-col>
+              <b-row>
+                inform from pormotions
+                <b-input type="text"/>
+              </b-row>
+            </b-col>
+          </b-row>
+      </b-col>
+    </b-row>
+  </div>
+<hr/>
+  <div>
+      <b-row>
+        <b-col>
+                  <span>{{$t('C_FOOTER_FOLLOW_US')}}</span>
+                  <b-link :href="form.instagramUrl">
+                      <img src="http://localhost:8080/images/footer/instagram.png" class="p-2 w-20 img-rounded" />
+                  </b-link>
+                  <b-link :href="form.twitterUrl">
+                      <img src="http://localhost:8080/images/footer/twitter.png" class="p-2 w-20 img-rounded" />
+                  </b-link>
+                  <b-link :href="form.aparatUrl">
+                      <img src="http://localhost:8080/images/footer/aparat.png" class="p-2 w-20 img-rounded" />
+                  </b-link>
+                  <b-link :href="form.linkedInUrl">
+                      <img src="http://localhost:8080/images/footer/linkedin.png" class="p-2 w-20 img-rounded" />
+                  </b-link>
+        </b-col>
+     </b-row>
+  </div>
+</div>
+</template>
+
+<script>
+export default {
+    name:'footers',   
+    data(){
+        return{
+        errorMessage:'',
+          form:{
+              linkedInUrl:'',
+              twitterUrl:'',
+              aparatUrl:'',
+              instagramUrl:''
+          }
+        }
+    } 
+}
+</script>
+
+<style scoped>
+ .navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  background-color: red;
+  color: white;
+  text-align: center;
+ }
+</style>
