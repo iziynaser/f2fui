@@ -16,14 +16,16 @@
                       placeholder="value"
               ></b-input>                      
 
-              <b-table striped hover :items="items" 
+              <f2fTable  :items="items" @row-selected="rowSelected" />
+
+              <!-- <b-table striped hover :items="items" 
                        selectable
                        select-mode="single" 
                        selected-variant="success"
                        @row-selected="rowSelected"
               >
+              </b-table> -->
 
-              </b-table>
               {{selected}}
               <b-button variant="primary">save</b-button>
           </b-form>
@@ -32,6 +34,9 @@
 </template>
 
 <script>
+
+import f2fTable from '../../base/f2fTable'
+
 export default {
     name:'brand',
     props:{
@@ -49,6 +54,9 @@ export default {
     methods:{
       rowSelected:function(items){
         this.selected = items
+      },
+      components:{
+        f2fTable
       }
     }
 }

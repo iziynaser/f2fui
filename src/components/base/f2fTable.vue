@@ -11,7 +11,9 @@
                  :fields="fields"
                  :items="items"                  
                  :current-page="currentPage" 
-                 :per-page="perPage" >
+                 :per-page="perPage" 
+                 @row-selected="rowSelected"
+                 >
 
                 <template v-slot:table-caption>
                     {{caption}}
@@ -77,7 +79,12 @@ export default {
       }
     } ,
     created(){},
-    methods:{}        
+    methods:{
+        rowSelected:function(items){
+            this.$emit('rowSelected',items);
+        }
+
+    }        
 }
 </script>
 

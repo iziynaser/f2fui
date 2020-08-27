@@ -6,12 +6,7 @@
             create a new keyword
         </div>
 
-        <!-- <b-table striped hover small caption-top responsive
-                 head-variant="dark" :items="searchResult" :fields="searchFields" >
-                 <template v-slot:table-caption>{{$t('C_PRODUCT_KEY_RELATED_KEY')}}</template>
-        </b-table> -->
-
-        <f2fTable :items="searchResult" :fields="searchFields" />
+        <f2fTable :items="searchResult" :fields="searchFields" caption="product related key" />
 
 <b-container fluid>
     <b-row class="my-1">

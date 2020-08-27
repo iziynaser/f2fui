@@ -9,6 +9,7 @@
             </router-link>
 
           <b-card>
+              
                   <b-table striped hover :items="searchResult" small
                            :fields="searchFields"  head-variant="dark" responsive caption-top  
                            :busy="isBusy"
