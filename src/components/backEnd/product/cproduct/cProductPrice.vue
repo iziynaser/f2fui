@@ -16,6 +16,7 @@
                     {{data.index+1}}
                 </template>  
           </b-table>
+
           <b-container fluid>
                 <b-row  class="my-1">
                     <b-col sm="3">
@@ -99,7 +100,8 @@ export default {
       }
     } ,
     mounted(){
-        this.listOfPricesRelatedToProduct();
+        if(this.id!==0)
+            this.listOfPricesRelatedToProduct();
     },
     components:{
         f2fPriceType,

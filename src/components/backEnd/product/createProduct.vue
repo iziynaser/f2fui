@@ -1,7 +1,6 @@
 <template>
     <div>
-
-           <span v-if="id">
+           <span v-if="id!==0">
                edit product with 
                  <span v-if="id">id : {{id}}</span>
                  and <span v-if="title">title : {{title}}</span>
@@ -13,25 +12,25 @@
               <b-card no-body>
                   <b-tabs pills card>
                         <b-tab :title="this.$t('CPRODUCT_CREATE_main')">
-                            <cProductMain :id="id" :title="title"/>
+                            <cProductMain :id=Number(id) :title="title"/>
                         </b-tab>
                          <b-tab :title="this.$t('C_PRODUCT_MEASURE_TITLE')">
-                             <cProductMeasure :id="id" :title="title"/>
+                             <cProductMeasure :id=Number(id) :title="title"/>
                          </b-tab>   
                         <b-tab :title="this.$t('CPRODUCT_CREATE_price')">
-                            <cProductPrice :id="id" :title="title"/>
+                            <cProductPrice :id=Number(id) :title="title"/>
                         </b-tab> 
                         <b-tab :title="this.$t('CPRODUCT_CREATE_category')">
-                             <cProductCategory :id="id" :title="title"/>   
+                             <cProductCategory :id=Number(id) :title="title"/>   
                         </b-tab>
                         <b-tab :title="this.$t('CPRODUCT_CREATE_features')">
-                            <cProductFeature :id="id" :title="title"/>
+                            <cProductFeature :id=Number(id) :title="title"/>
                         </b-tab> 
                         <!-- <b-tab :title="this.$t('CPRODUCT_CREATE_cost')">
                         
                         </b-tab>  -->
                         <b-tab :title="this.$t('CPRODUCT_CREATE_keywords')">
-                            <cProductKeyword :id="id" :title="title"/>
+                            <cProductKeyword :id=Number(id) :title="title"/>
                         </b-tab>
                         <!-- <b-tab :title="this.$t('CPRODUCT_CREATE_inventory')">                              
                               <cProductInventory/>                              
@@ -39,9 +38,13 @@
                         <!-- <b-tab :title="this.$t('CPRODUCT_CREATE_supplier')">
                             <cProductSupplier/>
                         </b-tab>    -->
-                        <b-tab :title="this.$t('CPRODUCT_CREATE_content')">
-                             <cProductContent :id="id" :title="title"/> 
+                        <b-tab title="pics">
+                             <cProductContent :id=Number(id) :title="title"/> 
                         </b-tab>
+                        <b-tab :title="this.$t('CPRODUCT_CREATE_content')">
+                              <cProductPics/>               
+                        </b-tab>
+
                   </b-tabs>
               </b-card>
     </div>
@@ -58,6 +61,7 @@ import cProductKeyword from './cproduct/cProductKeyword'
 import cProductMeasure from './cproduct/cProductMeasure'
 import cProductFeature from './cproduct/cProductFeature'
 //import cProductInventory from './cproduct/cProductInventory'
+import cProductPics from './cproduct/cProductPics'
 
 export default {
     name:'createProduct',
@@ -82,7 +86,8 @@ export default {
         //cProductSupplier,
         cProductMeasure,
         cProductFeature,
-        //cProductInventory,        
+        //cProductInventory,
+        cProductPics        
     }
 }
 </script>

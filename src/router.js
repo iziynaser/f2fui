@@ -10,7 +10,7 @@ import humanres from './components/backEnd/hr/humanres'
 
 import login from './components/login'
 import signUp from './components/signUp'
-import profile from './components/profile'
+//import profile from './components/profile'
 
 import invoice from './components/backEnd/invoice/invoice'
 import invoiceItems from './components/backEnd/invoice/invoiceItems'
@@ -37,6 +37,26 @@ import createCatalog from './components/backEnd/product/catalog/createCatalog'
 import createCategories from './components/backEnd/product/categories/createCategories'
 import createContent from './components/content/createContent' 
 
+import Adress from './components/bucket/adress/AdressMain.vue'
+import registerOrder from './components/bucket/registerOrder.vue'
+
+import surveyMain from './components/content/survey/surveyMain'
+import blogMain from './components/content/blog/blogMain'
+import forumMain from './components/content/forum/forumMain'
+import qaMain from './components/content/qa/qaMain'
+
+import createBrands from './components/backEnd/product/brand/createBrands'
+import createProfiles from './components/profile/createProfiles'
+import contentMain from './components/content/contnt/contentMain'
+import myOrders from './components/order/myOrders'
+
+import publicQa from './components/content/qa/publicQa'
+
+import articleMain from './components/backEnd/article/articleMain'
+
+import categoriesPage from './components/backEnd/product/categories/categoriesPage'
+
+import contentC from './components/content/contnt/contentC.vue'
 
 Vue.use(Router)
 
@@ -78,11 +98,11 @@ export default new Router({
       name:'signUp',
       component:signUp
     },
-    {
-      path:'/profile',
-      name:'profile',
-      component:profile
-    },
+    // {
+    //   path:'/profile',
+    //   name:'profile',
+    //   component:profile
+    // },
     {
       path:'/users',
       name:'users',
@@ -187,7 +207,75 @@ export default new Router({
         name:'createContent',
         component:createContent
     }
-    ,
+    ,{
+      path:'/Adress',
+      name:'Adress',
+      component:Adress
+    },
+    {
+      path:'/registerOrder',
+      name:'registerOrder',
+      component:registerOrder
+    },
+    {
+      path:'/surveyMain',
+      name:'surveyMain',
+      component:surveyMain
+    },
+    {
+      path:'/blogMain',
+      name:'blogMain',
+      component:blogMain
+    },
+    {
+      path:'/forumMain',
+      name:'forumMain',
+      component:forumMain
+    },
+    {
+      path:'/qaMain',
+      name:'qaMain',
+      component:qaMain
+    },
+    {
+      path:'/createBrands',
+      name:'createBrands',
+      component:createBrands
+    },
+    {
+      path:'/createProfiles',
+      name:'createProfiles',
+      component:createProfiles
+    },
+    {
+      path:'/myOrders',
+      name:'myOrders',
+      component:myOrders
+    },
+    {
+      path:'/contentMain',
+      name:'contentMain',
+      component:contentMain
+    },
+    {
+      path:'/publicQa',
+      name:'publicQa',
+      component:publicQa
+    },{
+      path:'/articleMain',
+      name:'articleMain',
+      component:articleMain
+    },
+    {
+      path:'/categoriesPage',
+      name:'categoriesPage',
+      component:categoriesPage
+    },
+    {
+      path:'/contentC' ,
+      name:'contentC' ,
+      component:contentC
+    },
     {
        path: '/about',
        name: 'about',

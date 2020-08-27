@@ -1,0 +1,98 @@
+<template>
+    <div>
+        <div>
+            <b-row class="my-1">
+                    <b-col>
+                        <h6>
+                        <p class="font-weight-italic ">editor for content:</p>
+                        </h6>                        
+                    </b-col> 
+                    <!-- <b-col>
+                        <b-button size="sm" variant="success"
+                                  ref="saveBtn"  
+                                  @clik="saveForm()">save</b-button>
+                    </b-col>                     -->
+            </b-row>
+        </div>
+        <div>
+            <b-row class="my-1">
+                <b-button class="m-1">preview</b-button>
+                <b-button class="m-1" @click="saveForm">save2</b-button>
+            </b-row>
+            <vue-editor v-model="form.body"                          
+                        :config="config"
+                        ref="content" 
+                        @text-change="contentChanged()">
+            </vue-editor>        
+        </div> 
+    </div>
+</template>
+
+<script>
+
+import { VueEditor } from 'vue2-editor'
+import * as axios from 'axios'
+
+export default {
+    name:'contentEditor',
+    props:{
+            title :{
+                type:String,
+                default: "sdfsdfdsdsfs"
+            },
+            desciption:{
+                type:String,
+                default: "dfsdfsf"
+            },
+            editorContent:{type:String}
+          } ,
+    data(){
+      return {
+          form:{
+                body : "enter your text here" ,
+                language: 'fa',
+                code: '123' ,
+                date:'1398/05/25',
+                status:'PUBLISHED'
+          },
+          hasPreview : true,
+          config:{
+              image:{
+                  byFile:'http://localhost:8080/image',
+                  byUrl:'http://localhost:8080/image-by-url'
+              },
+              field: 'image',
+              types:'image/*'
+          },          
+      }
+    } ,
+    components:{
+        VueEditor
+    },
+    mounted(){
+        //this.title = this.$t('REDITOR_TITLE');
+        //this.desciption = this.$t('REDITOR_DESCRIPTION');
+    },
+    methods:{
+        saveForm(){
+               //console.log('saveForm is called');
+               var self = this;
+               const url="http://localhost:8080/f2f/content/save" ;
+               axios.post(url,self.form)
+                    .then((res) => {
+                        console.log(res);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    })         
+        },
+        contentChanged(){
+            console.log('content changed');
+        }
+    }
+}
+</script>
+
+<style scoped>
+
+</style>

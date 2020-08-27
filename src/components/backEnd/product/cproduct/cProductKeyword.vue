@@ -102,6 +102,7 @@ export default {
         }
     },
     created() {
+        if(this.id!==0)
             this.loadKeyowrds();
     },     
 }

@@ -79,10 +79,10 @@
                                     </b-row>
                                 </b-list-group-item>
                                 <b-list-group-item>
-                                    <b-form-group :label="$t('CPRODUCT_MAIN_is_virtual')">
+                                    <!-- <b-form-group :label="$t('CPRODUCT_MAIN_is_virtual')">
                                         <b-form-radio v-model="product.isVirtual" name="isVirtual" value="0">no</b-form-radio>
                                         <b-form-radio v-model="product.isVirtual" name="isVirtual" value="1">yes</b-form-radio>
-                                    </b-form-group>
+                                    </b-form-group> -->
                                 </b-list-group-item>
                             </b-list-group>
 
@@ -116,7 +116,7 @@ export default {
             internalName:"",
             name:"",
             comment:"",
-            isVirtual:"true",
+            //isVirtual:"true",
             introDate:"",
             releaseDate:"",
             disContinuedDate:"",
@@ -133,7 +133,7 @@ export default {
             self.internalName="";
             self.name="";
             self.comment="";
-            self.isVirtual="";
+            //self.isVirtual="";
             self.introDate="";
             self.releaseDate="";
             self.disContinuedDate="";

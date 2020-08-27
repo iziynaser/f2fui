@@ -1,21 +1,9 @@
 <template>
     <div>
         <div>
-            <b-row>
-                   <b-col>
-                       <h5>
-                       <p class="font-weight-bolder ">
-                           <!-- {{title}} -->
-                           register new comment description
-                       </p>
-                       </h5>
-                    </b-col> 
-            </b-row>
-            <b-row>
+            <b-row class="my-1">
                     <b-col>
-                        <h6>
                         <p class="font-weight-italic ">{{desciption}}</p>
-                        </h6>
                     </b-col> 
             </b-row>
         </div>
@@ -32,10 +20,10 @@ import { VueEditor } from 'vue2-editor'
 export default {
     name:'rEditor',
     props:{
-            title :{
-                type:String,
-                default: "sdfsdfdsdsfs"
-            },
+            // title :{
+            //     type:String,
+            //     default: "sdfsdfdsdsfs"
+            // },
             desciption:{
                 type:String,
                 default: "dfsdfsf"
@@ -59,6 +47,7 @@ export default {
     } ,
     methods:{
         contentChanged(){
+            //console.log(this.content);
             this.$emit("editorContentChanged",this.content);
         },
         clear(){
@@ -69,7 +58,7 @@ export default {
         VueEditor
     },
     mounted(){
-        this.title = this.$t('REDITOR_TITLE');
+        // this.title = this.$t('REDITOR_TITLE');
         this.desciption = this.$t('REDITOR_DESCRIPTION');
     },
     // beforeDestroy(){

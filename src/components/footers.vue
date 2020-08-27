@@ -4,7 +4,9 @@
     <b-col></b-col>
     <b-col></b-col>
     <b-col></b-col>
-    <b-col></b-col>
+    <b-col>
+      <router-link to="/publicQa">answer to public questions</router-link>
+    </b-col>
   </b-row>
   <hr/>
   <div>browse to top</div>

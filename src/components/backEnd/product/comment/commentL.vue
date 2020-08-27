@@ -27,7 +27,8 @@ import viewComment from './viewComment'
 export default {
     name:'commentL',
     props:{
-            comments:[]
+      comments:[],
+      id:Number
           } ,
     data(){
       return {
@@ -74,14 +75,15 @@ export default {
                 method:"GET",
                 url: "http://localhost:8080/f2f/comments/list",
                 params:{
-                    'access_token': localStorage.getItem('access_token')
+                    'access_token': localStorage.getItem('access_token'),
+                    'productId':self.id 
                 }
             }).then(function(res){
                 self.comments = res.data;
-
+                console.log(res.data);
                 //fill other arrays
-                self.onMostUsefulComments();
-                self.onSubjectComments();
+               self.onMostUsefulComments();
+               self.onSubjectComments();
 
             }).catch(function(error){
                 console.log(error);

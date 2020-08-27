@@ -1,16 +1,28 @@
 <template>
     <div class="p-2 my-2 border">
-        <b-button v-b-toggle.ynCollapse variant="light" class="block">
-            <span class="when-closed">
-                <b-icon-arrow-down aria-hidden="true"></b-icon-arrow-down>
-            </span>
-            <span class="when-opened">
-                <b-icon-arrow-up aria-hidden="true"></b-icon-arrow-up>
-            </span>
-            {{yesNoLabel}}
-        </b-button>
+        
+        <div v-b-toggle.ynCollapse>
+            <b-row>
+                <b-col sm="9">
+                    <span >{{yesNoLabel}}</span>
+                </b-col>
+                <b-col sm="3">
+                    <span class="when-closed">
+                        <p class="h4 mb-2">
+                            <b-icon-arrow-down variant="danger" aria-hidden="true"></b-icon-arrow-down>
+                        </p>    
+                    </span>
+                    <span class="when-opened">
+                        <p class="h4 mb-2">
+                            <b-icon-arrow-up variant="danger" aria-hidden="true"></b-icon-arrow-up>
+                        </p>                
+                    </span>            
+                </b-col>
+            </b-row>                        
+        </div>
 
         <b-collapse visible id="ynCollapse">
+        <hr/>
         <div class="input-group mb-3">
                 <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">
@@ -21,9 +33,10 @@
                    placeholder="Search" 
                    aria-label="Search" 
                    aria-describedby="basic-addon1"
-                   v-on:keydown="filterResult()"
+                   v-on:keydown="filterResult(searchText)"
                    >
         </div>
+        <hr/>
         <div>
             <b-form-checkbox-group stacked
                 v-model="value" 
@@ -68,13 +81,20 @@ export default {
     } ,
     methods:{
         filterResult(){
+            //var self = this;
             if(this.oriOptions.length===0)
                this.oriOptions = this.options.slice(0);
 
             if(this.$refs.searchText.value.length==0)
                 this.options = this.oriOptions.slice(0);
 
-            this.options.shift();
+            // this.options =this.oriOptions.slice(0).filter(function(el){
+            //     let c = el;
+            //     console.log(c.name);
+            //     return c.name.includes(self.$refs.searchText.value);
+            // });
+            //this.options.shift();
+            console.log(this.options);
 
         },
     } ,

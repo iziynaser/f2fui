@@ -57,11 +57,12 @@
 
 import Vue from 'vue'
 import treeItem from './treeItem'
+import * as axios from 'axios'
 
 export default {
     name:'f2fTree',
     props:{
-
+              id:Number
           } ,
     data(){
       return {
@@ -69,17 +70,17 @@ export default {
         fvalue:"",
         item:Object,
         treeData : {
-            name: this.$t('C_PRODUCT_MAIN_FEATURES'),
-            value:"a9" ,
-            children: [
-                { name: this.$t('C_PRODUCT_FEATURE_') , value:"a8" },
-                { name: this.$t('C_PRODUCT_FEATURE_') , value:"a7" },
-                {
-                  name: this.$t('C_PRODUCT_MAIN_OFEATURES'),
-                  value:"a10" ,
-                  children: [ { name: this.$t('C_PRODUCT_MAIN_OFEATURES_one') , value:"a7" },]
-                }
-            ]
+            // name: this.$t('C_PRODUCT_MAIN_FEATURES'),
+            // value:"a9" ,
+            // children: [
+            //     { name: this.$t('C_PRODUCT_FEATURE_') , value:"a8" },
+            //     { name: this.$t('C_PRODUCT_FEATURE_') , value:"a7" },
+            //     {
+            //       name: this.$t('C_PRODUCT_MAIN_OFEATURES'),
+            //       value:"a10" ,
+            //       children: [ { name: this.$t('C_PRODUCT_MAIN_OFEATURES_one') , value:"a7" },]
+            //     }
+            // ]
         },
        // treeData: treeData
       }
@@ -105,7 +106,31 @@ export default {
           changeItem:function(){
               this.item.name = this.fname;
               this.item.value = this.fvalue;
-          }
+          },
+          load(){
+            var self = this;
+            
+            if(self.id==0)
+                return
+            
+            const url = `http://localhost:8080/f2f/productFeatureGroup/load`;
+            axios.get(url,{
+                params:{
+                    productId: self.id
+                }
+            })
+                .then(function(res){
+                    //self.form.treeData = res.data;
+                    self.treeData = res.data.treeData;
+                    console.log("treeData:"+self.treeData); 
+                })
+                .catch(function(error){
+                    console.log(error)    ;
+                });
+        }
+    },
+    created(){
+        this.load();
     },
     components:{
       treeItem

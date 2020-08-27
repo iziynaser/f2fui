@@ -79,8 +79,8 @@
                       </div>
           </b-tab>
 
-          <b-tab :title="this.$t('PRODUCT_Survey')">
-                      Survey ,
+          <b-tab :title="this.$t('PRODUCT_REVIEW')">
+                      
           </b-tab>
 
           <b-tab :title="this.$t('PRODUCT_quesAndAns')">

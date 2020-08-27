@@ -34,7 +34,7 @@
                                                           type="text"></b-form-input> 
                                       </b-col>
                                   </b-row>  
-                                                                    <b-row   class="my-1">
+                                <b-row   class="my-1">
                                       <b-col sm="3">
                                            <label>{{$t('CPRODUCT_MAIN_productType')}}</label> 
                                       </b-col>
@@ -43,7 +43,7 @@
                                                            fetchUrl="http://localhost:8080/f2f/ProductType/list"
                                                            :selectOptionLabel="this.$t('CPRODUCT_MAIN_productType_select')"/> 
                                       </b-col>
-                                  </b-row>
+                                </b-row>
                                   <b-row   class="my-1">
                                       <b-col sm="3">
                                            <label>{{$t('CPRODUCT_MAIN_Comment')}}</label> 
@@ -81,12 +81,12 @@
                                         </b-col>
                                     </b-row>
                                 </b-list-group-item>
-                                <b-list-group-item>
+                                <!-- <b-list-group-item>
                                     <b-form-group :label="$t('CPRODUCT_MAIN_is_virtual')">
                                         <b-form-radio v-model="product.isVirtual" name="isVirtual" value="0">no</b-form-radio>
                                         <b-form-radio v-model="product.isVirtual" name="isVirtual" value="1">yes</b-form-radio>
                                     </b-form-group>
-                                </b-list-group-item>
+                                </b-list-group-item> -->
                             </b-list-group>
 
                         <b-row class="my-1">
@@ -123,11 +123,12 @@ export default {
             internalName:"",
             name:"",
             comment:"",
-            isVirtual:"true",
+            //isVirtual:"true",
             introDate:"",
             releaseDate:"",
             disContinuedDate:"",
-            brand:""
+            brand:"",
+            id:0
           }
       }
     } ,
@@ -140,7 +141,7 @@ export default {
             self.internalName="";
             self.name="";
             self.comment="";
-            self.isVirtual="";
+            //self.isVirtual="";
             self.introDate="";
             self.releaseDate="";
             self.disContinuedDate="";
@@ -178,7 +179,7 @@ export default {
     } ,
     created() {
             //this.$store.commit("showToast","the product page loaded....");
-            if(this.id){
+            if(this.id!==0){
                 this.loadProduct();
             }
     },     

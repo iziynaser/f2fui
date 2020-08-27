@@ -28,6 +28,9 @@ import f2fInvoiceType from './components/base/f2fInvoiceType';
 //test interceptor
 import interceptorSetup from './interceptors'
 
+//test default persian align and trl
+import { f2fChangeLocale } from './f2fUtils';
+
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
@@ -66,6 +69,9 @@ axios.interceptors.response.use(
       else if(error.response.data.status==404)
           store.commit("showToast","Bad Request...404.");
       
+      if(error.response.status==400 && error.response.data.error==="invalid_grant")
+            store.commit("showToast","username and password do not match");
+
           console.log("error:"+error.response.data.error);// = "Bad Request"
           console.log("message:"+error.response.data.message);
           console.log("path:"+error.response.data.path);
@@ -105,6 +111,11 @@ i18next.init({
     t('key');
 });
 const i18n = new VueI18Next(i18next);
+
+
+//call here for persian and trl align
+f2fChangeLocale('fa');
+
 
 new Vue({
   router,

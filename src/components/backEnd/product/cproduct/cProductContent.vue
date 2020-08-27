@@ -1,7 +1,7 @@
 <template>
     <div>
-                         <span v-if="id">id : {{id}}</span>
-                 and <span v-if="title">title : {{title}}</span>
+                         <!-- <span v-if="id">id : {{id}}</span>
+                 and <span v-if="title">title : {{title}}</span> -->
 
         <b-card no-body>
             <b-tabs card vertical pills>

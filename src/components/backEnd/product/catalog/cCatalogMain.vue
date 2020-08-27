@@ -78,12 +78,12 @@
                                         </b-col>
                                     </b-row>
                                 </b-list-group-item>
-                                <b-list-group-item>
+                                <!-- <b-list-group-item>
                                     <b-form-group :label="$t('CPRODUCT_MAIN_is_virtual')">
                                         <b-form-radio v-model="product.isVirtual" name="isVirtual" value="0">no</b-form-radio>
                                         <b-form-radio v-model="product.isVirtual" name="isVirtual" value="1">yes</b-form-radio>
                                     </b-form-group>
-                                </b-list-group-item>
+                                </b-list-group-item> -->
                             </b-list-group>
 
                         <b-row class="my-1">
@@ -116,7 +116,7 @@ export default {
             internalName:"",
             name:"",
             comment:"",
-            isVirtual:"true",
+            //isVirtual:"true",
             introDate:"",
             releaseDate:"",
             disContinuedDate:"",
@@ -133,7 +133,7 @@ export default {
             self.internalName="";
             self.name="";
             self.comment="";
-            self.isVirtual="";
+            //self.isVirtual="";
             self.introDate="";
             self.releaseDate="";
             self.disContinuedDate="";
@@ -141,10 +141,10 @@ export default {
         },
         saveProduct(){
             var self = this;
-            const headers = new Headers();
+            //const headers = new Headers();
             const access_token=localStorage.getItem('access_token');
-            headers.append('Authorization','Bearer '+ access_token);
-            headers.append('Accept','application/json');
+            //headers.append('Authorization','Bearer '+ access_token);
+            //headers.append('Accept','application/json');
 
             const url = `http://localhost:8080/f2f/products/save`;
             axios.post(url,self.product,

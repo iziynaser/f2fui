@@ -15,28 +15,33 @@
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
+              <router-link to="/createBrands">{{$t('CATALOG_brands')}}</router-link>
+          </b-dropdown-item>
+
+
+          <!-- <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CATALOG_features')}}</router-link>
-          </b-dropdown-item>
+          </b-dropdown-item> -->
 
-          <b-dropdown-item href="#" >
+          <!-- <b-dropdown-item href="#" >
               <router-link to="/createPromotion">{{$t('CATALOG_promos')}}</router-link>
-          </b-dropdown-item>
+          </b-dropdown-item> -->
 
-          <b-dropdown-item href="#" >
+          <!-- <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CATALOG_priceRules')}}</router-link>
-          </b-dropdown-item>
+          </b-dropdown-item> -->
 
-          <b-dropdown-item href="#" >
+          <!-- <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CATALOG_stores')}}</router-link>
-          </b-dropdown-item>
+          </b-dropdown-item> -->
 
-          <b-dropdown-item href="#" >
+          <!-- <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CATALOG_shipping')}}</router-link>
-          </b-dropdown-item>
+          </b-dropdown-item> -->
 
-          <b-dropdown-item href="#" >
+          <!-- <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CATALOG_imageManagement')}}</router-link>
-          </b-dropdown-item>
+          </b-dropdown-item> -->
 
           <b-dropdown-item href="#" >
               <router-link to="/createCatalog">{{$t('CATALOG_TITLE')}}</router-link>

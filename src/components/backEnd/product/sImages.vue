@@ -26,10 +26,14 @@
   
   export default {
     name:'sImages',
+    props:{
+        thumbnailImages:[],
+        productImages:[]
+    },
     data(){
         return{
-            thumbnailImages:["http://localhost:8080/images/download1.jpg","http://localhost:8080/images/download2.jpg","http://localhost:8080/images/download3.jpg"],
-            productImages:["http://localhost:8080/images/download1.jpg","http://localhost:8080/images/download2.jpg","http://localhost:8080/images/download3.jpg"],
+            //thumbnailImages:["http://localhost:8080/images/download1.jpg","http://localhost:8080/images/download2.jpg","http://localhost:8080/images/download3.jpg"],
+            //productImages:["http://localhost:8080/images/download1.jpg","http://localhost:8080/images/download2.jpg","http://localhost:8080/images/download3.jpg"],
         }
     },
     methods:{

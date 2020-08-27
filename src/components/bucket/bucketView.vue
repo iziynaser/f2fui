@@ -1,21 +1,42 @@
 <template>
     <div>
-          <aliveProduct/>
+          <!-- <aliveProduct/> -->
           <b-button to="/delivery">
             select delivery
           </b-button>
-          <yesNo/>
-          <filteri/>
-          <f2fRange/>
+
+          <hr/>
+
+
+          <div>
+            <h4>list of basket</h4>
+            <!-- <b-card-group deck> -->
+                <div v-for="product in listOfCarts" :key="product.id" class="mt-4">                  
+                  <b-card img-src="http://localhost:8080/images/product/8/medium/pic1.jpg" img-width="70" img-height="70" img-left >
+                      <h4>{{product.name}},{{product.quantity}}</h4>
+                      <b-card-text>
+                        description of product
+                      </b-card-text>
+                      <b-row>
+                        <b-col>
+                            <b-icon icon="plus" @click="addToCart(product.id)" variant="success" class="border rounded"></b-icon>
+                        </b-col>
+                        <b-col>
+                            <b-icon icon="trash" @click="removeFromCart(product.id)" variant="danger" class="border rounded"></b-icon>
+                        </b-col>
+                      </b-row>
+                  </b-card>
+                </div>
+            <!-- </b-card-group> -->
+          </div>
     </div>
 </template>
 
 <script>
 
-import aliveProduct from './aliveProduct'
-import yesNo from './yesNo'
-import filteri from './filteri'
-import f2fRange from './f2fRange'
+// import aliveProduct from './aliveProduct'
+import {mapGetters} from 'vuex'
+
 
 export default {
     name:'bucketView',
@@ -30,10 +51,11 @@ export default {
 
     },
     components:{
-      aliveProduct,
-      yesNo,
-      filteri,
-      f2fRange
+      // aliveProduct,
+    },
+    computed:{
+          ...mapGetters(["listOfCarts"])
+
     }
 
 }

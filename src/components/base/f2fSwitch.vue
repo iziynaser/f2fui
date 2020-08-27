@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name:'aliveProduct',
+    name:'f2fSwitch',
     props:{
           } ,
     data(){

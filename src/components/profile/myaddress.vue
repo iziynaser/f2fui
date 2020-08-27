@@ -1,12 +1,12 @@
 <template>
     <div>
-          
+          list of my addresses
     </div>
 </template>
 
 <script>
 export default {
-    name:'myaddress',
+    name:'myAddress',
     props:{
           } ,
     data(){

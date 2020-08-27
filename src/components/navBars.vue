@@ -1,6 +1,6 @@
 <template>
 <div>
-      <router-link left to="/">
+      <router-link left to="/aboutUs">
         <b-img left src="http://localhost:8080/images/logo/logo.png" ></b-img> 
       </router-link>
     
@@ -16,13 +16,19 @@
         
         <categoriesMenu/>
 
-        <!-- <orderMenu/> -->
+        <orderMenu/>
+
+        <portalMenu/>
+
+        <humanResMenu/>
+
+<accountingMenu/>
 
         <!-- <portalMenu/> -->
 
-        <!-- <humanResMenu/> -->
+        <!-- <humanResMenu/>
 
-        <accountingMenu/>
+        <accountingMenu/> -->
 
         <!-- <b-nav-item-dropdown :text="$t('PARTY_SITE')" right>
           <b-dropdown-item href="#" >
@@ -36,13 +42,37 @@
           </b-dropdown-item>
         </b-nav-item-dropdown> -->
 
+
+        <b-nav-item-dropdown text="CONTENT" right>
+          <b-dropdown-item href="#" >
+              <router-link to="/contentC">Content</router-link>
+          </b-dropdown-item>
+        </b-nav-item-dropdown>
+
+<reportMenu/>
+
         <!-- <reportMenu/> -->
 
         <catalogMenu/>
 
-        <!-- <contentMenu/> -->
+        <contentMenu/>
         
         <langMenu/>
+
+        <!-- <div class="dropdown">
+          <button class="btn btn-outline-info dropdown-toggle" 
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-toggle="dropdown"
+                  type="button" 
+                  id="catButton" >cat
+          </button>
+        </div>
+        <div class="dropdown-menu">
+            <a class="dropddown-item">c1</a>
+            <a  class="dropddown-item">c2</a>
+            <a  class="dropddown-item">c3</a>            
+        </div> -->
 
       </b-navbar-nav>
     </b-collapse>
@@ -54,27 +84,27 @@
 <script>
 
 import categoriesMenu from './categories/categoriesMenu'
-// import orderMenu from  './menus/orderMenu'
-// import portalMenu from './menus/portalMenu'
-// import humanResMenu from './menus/humanResMenu'
+import orderMenu from  './menus/orderMenu'
+import portalMenu from './menus/portalMenu'
+import humanResMenu from './menus/humanResMenu'
 import catalogMenu from './menus/catalogMenu'
 import langMenu from './menus/langMenu'
-// import contentMenu from './menus/contentMenu'
+import contentMenu from './menus/contentMenu'
 import accountingMenu from './menus/accountingMenu'
-// import reportMenu from './menus/reportMenu'
+import reportMenu from './menus/reportMenu'
 
 export default {
       name:'navBars',
       components:{
         categoriesMenu,
-        // orderMenu,
-        // portalMenu,
-        // humanResMenu,
+        orderMenu,
+        portalMenu,
+        humanResMenu,
         catalogMenu,
         langMenu,
-        // contentMenu,
+        contentMenu,
         accountingMenu,
-        // reportMenu
+        reportMenu
       },
       methods:{
          

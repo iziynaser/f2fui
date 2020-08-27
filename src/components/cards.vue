@@ -6,8 +6,11 @@
                 {{product.name}}
             </div>
 
-            <router-link to="/product">
-                <img :src="cardImage" @click="showProduct()"/>                
+            <router-link :to="{
+                        name:'product',
+                        params:{id:product.id,title:product.name}
+                    }">
+                <img :src="cardImage"/>      
             </router-link>
 
             <b-card-header>

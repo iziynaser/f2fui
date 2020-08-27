@@ -1,14 +1,24 @@
 <template>
   <div id="app">
     <div class="container">
+
+      <!-- load list of images -->
+      <div>
+        <strong>list of images on server</strong>
+        <ul>
+          <li v-for="item in listOfImages" :key="item">
+            <!-- <img :src="item" class="img-responsive img-thumnail"> -->
+            <b-img rounded thumbnail fluid :src="item"></b-img>
+          </li>
+        </ul>
+      </div>
+
+
       <!--UPLOAD-->
       <form enctype="multipart/form-data" novalidate v-if="isInitial || isSaving">
         <strong>Upload images</strong>
-        <!-- 
-        <input type="hidden" name="access_token" value="ggggggg"/>
-        <input type="hidden" name="type" value="sdf"/>
-        <input type="hidden" name="productId" value="123456"/> 
-        -->
+
+
         <div class="dropbox">
           <input type="file" multiple :name="uploadFieldName" :disabled="isSaving" @change="filesChange($event.target.name, $event.target.files); fileCount = $event.target.files.length"
             accept="image/*" class="input-file">
@@ -20,6 +30,7 @@
             </p>
         </div>
       </form>
+
       <!--SUCCESS-->
       <div v-if="isSuccess">
         <strong>Uploaded {{ uploadedFiles.length }} file(s) successfully.</strong>
@@ -47,7 +58,7 @@
 <script>
   // swap as you need
   //import { upload } from './file-upload.fake.service'; // fake service
-  import { upload } from './file-upload.service';   // real service
+  import { upload, loadListOfImages } from './file-upload.service';   // real service
   import { wait } from './utils';
 
   const STATUS_INITIAL = 0, STATUS_SAVING = 1, STATUS_SUCCESS = 2, STATUS_FAILED = 3;
@@ -69,7 +80,8 @@
         uploadedFiles: [],
         uploadError: null,
         currentStatus: null,
-        uploadFieldName: 'photos'
+        uploadFieldName: 'photos',
+        listOfImages:[]
       }
     },
     computed: {
@@ -92,6 +104,22 @@
         this.currentStatus = STATUS_INITIAL;
         this.uploadedFiles = [];
         this.uploadError = null;
+
+        //call list of uploaded server files
+        if(this.productId==0)
+          return
+
+        loadListOfImages(this.productId,this.type)
+          .then(x => {
+            this.listOfImages = [].concat(x);
+            console.log("list of uploaded server files:"+ this.listOfImages);
+          })
+          .catch(err => {
+            //this.uploadError = err.response;
+            console.log(err);
+          });
+
+
       },
       save(formData) {
         // upload data to the server

@@ -130,6 +130,7 @@
     "PRODUCT_Survey":"survey",
     "PRODUCT_quesAndAns":"questions and answeres",
     "PRODUCT_comments":"comments" ,
+    "PRODUCT_REVIEW":"review" , 
 
     "EMPLOYEES_name":"name" ,
     "EMPLOYEES_family":"family" ,
@@ -277,6 +278,66 @@
     "PRODUCT_LIST_OTHER_SELLER":"list of other sellers",
     "PRODUCT_SUMMARY_FEATURES":"summary features",
     "TOKEN_EXPIRED_ERR":"please login again,an error occured.",
-    "PRODUCT_CREATE":"create product"
+    "PRODUCT_CREATE":"create product",
+
+    "C_CATEGORIES_TITLE":"product categories",
+    "C_CATEGORIES_MAIN_PART":"main part" ,
+    "C_CATEGORIES_CONTENT":"categories content",
+    "C_CATEGORIES_ADD_P_T_C":"add product to categories",
+
+    "Adress_OSTAN":"ostan",
+    "Adress_SHAHR":"shahr",
+    "Adress_POSTAL_CODE":"postal code",
+    "Adress_POSTAL_ADDRESS":"postal address",
+    "Adress_PELAK":"pelak",
+    "Adress_VAHED":"unit",
+    "Adress_mobile1":"mobile no1",
+    "Adress_mobile2":"mobile no2",
+    "Adress_name":"name",
+    "Adress_family":"family",
+    "Adress_is_getter_myself":"who is getter of myself",
+    "Adress_nationalCode":"national code" ,
+
+    "AdressMain_selectFromExisting":"select from existing",
+    "AdressMain_addNewAdress":"add new address" ,
+    "AdressContent_selectDeliveryAdress":"select an delivery address"  ,
+    "AdressContent_chooseThisAdress":"select this address as destination" ,
+    "AdressContent_edit":"edit",
+    "AdressContent_delete":"delete",
+  
+    "CATEGORIES_MAIN_categoryCode":"category code",
+    "CATEGORIES_MAIN_categoryName":"category name",
+    "CATEGORIES_MAIN_categoryDesc":"description",
+    "CATEGORIES_MAIN_imgUrl":"image url",
+    "CATEGORIES_MAIN_detailImgUrl":"detail image url",
+    "CATEGORIES_MAIN_fromDate":"from date",
+    "CATEGORIES_MAIN_toDate":"to date",
+    "CATEGORIES_MAIN_parentCategory":"parent category",
+    "CATEGORIES_MAIN_save":"save" ,
+
+    "BRAND_MAIN_NAME":"brand name",
+    "BRAND_MAIN_VALUE":"value" ,
+    "BRAND_MAIN_listOfBrands":"list of brands for this category",
+    "CREATE_BRANDS_addRemoveBrand":"add brand" ,
+    "CATALOG_brands":"brands"  ,
+
+    "CONTENT_MAIN_base" : "base" ,
+    "CONTENT_MAIN_editor" : "editor" ,
+    "CONTENT_MAIN_seo" : "seo" ,
+    "CONTENT_MAIN_category" : "category" ,
+    "CONTENT_MAIN_tags" : "tags" ,
+    "CONTENT_MAIN_menus" : "menus"  ,
+    "CONTENT_MAIN_search" : "content search" ,
+    
+    "CONTENT_CREATE_name":"name" ,
+    "CONTENT_CREATE_tite":"title" ,
+    "CONTENT_CREATE_description":"description" ,
+    "CONTENT_CREATE_seqNum":"seq" ,
+    "CONTENT_CREATE_purpose":"purpose" ,
+    "CONTENT_CREATE_isPublic":"is public" ,
+    "CONTENT_CREATE_toDate":"to Date" ,
+    "CONTENT_CREATE_fromDate":"from Date" ,
+    "CONTENT_CREATE_status":"status" 
+
   }
 }

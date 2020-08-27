@@ -1,8 +1,8 @@
 <template>
     <div>
-            <div  v-if="comments.length>0">                
+            <div  v-if=" comments.length > 0 ">                
                 <b-list-group >
-                  <b-list-group-item v-for="comment in comments" :key="comment.title">
+                  <b-list-group-item v-for="comment in comments" :key="comment.id">
                     <b-row>  
                     <b-col>
                         <div>
@@ -43,20 +43,20 @@
                             </b-list-group>
                           </div>
 
-                          <div v-html="comment.body"></div>
+                          <div v-html="comment.content"></div>
                           <div>
                             does this post useful?
-                            <b-button size="sm" :pressed.sync="noButtonPressesd" variant="outline-dark">
+                            <b-button class="m-2"  size="sm" :pressed.sync="noButtonPressesd" variant="outline-dark">
                                 no 
                                 <b-badge v-if="comment.numberOfDisLikes===null" variant="danger" pill>0</b-badge>                                
                                 <b-badge v-else variant="danger" pill>{{comment.numberOfDisLikes}}</b-badge>                                
                             </b-button>
-
-                            <b-button size="sm" :pressed.sync="yesButtonPressed" variant="outline-success">
+                            
+                            <b-button  size="sm" :pressed.sync="yesButtonPressed" variant="outline-success">
                                 yes 
-                                <b-badge v-if="comment.numberOfLikes===null" variant="success" pill>0</b-badge>                                                                
-                                <b-badge v-else variant="success" pill>{{comment.numberOfLikes}}</b-badge>                                                                
-                            </b-button>
+                                <b-badge  v-if="comment.numberOfLikes===null" variant="success" pill>0</b-badge>                                                                
+                                <b-badge  v-else variant="success" pill>{{comment.numberOfLikes}}</b-badge>                                                                
+                            </b-button> 
                           </div>
                         </div>
                     </b-col>  
@@ -75,7 +75,8 @@ export default {
           } ,
     data(){
       return {
-        
+        yesButtonPressed:false,
+        noButtonPressesd:false,
       }
     } ,
     methods:{

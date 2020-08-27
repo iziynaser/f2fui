@@ -42,4 +42,15 @@ function upload(formData) {
             img, { url: `${BASE_URL}/images/${img.id}` })));
 }
 
-export { upload }
+function loadListOfImages(productId,type){
+    const url = `http://localhost:8080/f2f/storage/list`;
+    return axios.get(url,{
+        params:{
+            productId: productId,
+            type:type
+        }
+    })
+        .then(x => x.data);
+}
+
+export { upload,loadListOfImages }

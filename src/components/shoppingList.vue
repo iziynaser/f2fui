@@ -10,13 +10,13 @@
                   </div>
                   <div v-else>
                         <b-dropdown-item >
-                              <router-link to="/profile">{{$t('profile')}} </router-link>
+                              <router-link to="/createProfiles">{{$t('profile')}} </router-link>
                         </b-dropdown-item>                  
 
                         <b-dropdown-divider/>
 
                         <b-dropdown-item>
-                              {{$t('myorders')}}
+                              <router-link to="/myOrders">{{$t('myorders')}}</router-link>                              
                         </b-dropdown-item>   
 
                         <b-dropdown-divider/>

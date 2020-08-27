@@ -36,7 +36,7 @@ const actions={
         window.localStorage.removeItem('refresh_token');
         window.localStorage.removeItem('expires_in');
         window.localStorage.removeItem('scope');
-        window.localStorage.removeItem('toeken_type');
+        window.localStorage.removeItem('token_type');
         router.push('/');
     },
     finalizeLogin:({commit},datas)=>{
@@ -54,7 +54,7 @@ const actions={
         window.localStorage.setItem('refresh_token',r_t);
         window.localStorage.setItem('expires_in',e_i);
         window.localStorage.setItem('scope',s_c);
-        window.localStorage.setItem('toeken_type',t_t);
+        window.localStorage.setItem('token_type',t_t);
         router.push('/');
     }
 };

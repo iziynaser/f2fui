@@ -1,11 +1,11 @@
 <template>
     <div>
-        <b-card>
+
                   <b-table striped hover :items="searchResult" small
                            :fields="searchFields"  head-variant="dark" responsive caption-top  
                            :busy="isBusy"
                            >
-                           <template v-slot:table-caption>search results</template>   
+                           <template v-slot:table-caption>login history</template>   
                            <template v-slot:table-busy>
                                  <div class="text-center text-danger my-2">
                                     <b-spinner class="align-middle"></b-spinner>
@@ -19,8 +19,8 @@
                                  {{data.item.device.substring(1,50)}} 
                            </template>
                   </b-table>                
-        </b-card>
-    </div>
+        
+            </div>
 </template>
 
 <script>
@@ -47,25 +47,28 @@ export default {
       }
     } ,
     methods:{
-
-    }   ,
+          loadListOfLoginHistory(){
+                console.log('load list of login history called');
+                  var self = this;
+                  axios({
+                        method:'GET',
+                        url:'http://localhost:8080/f2f/loginHistory/',
+                        params:{
+                              'access_token' : localStorage.getItem('access_token')
+                              },
+                        withCredentials:true
+                  })
+                  .then(function (res) {
+                        console.log('rrrrr');
+                        self.searchResult = res.data.data; 
+                  }).catch(function (error) {              
+                        console.log(error);              
+                  }) ;
+          }
+    },
     mounted(){
-      var self = this;
-      
-      axios({
-                method:'GET',
-                url:'http://localhost:8080/f2f/loginHistory/',
-                params:{
-                     'access_token' : localStorage.getItem('access_token')
-                },
-                withCredentials:true
-            })
-              .then(function (res) {
-                  self.searchResult = res.data.data; 
-            }).catch(function (error) {              
-                  console.log(error);              
-      }) ;
-    }   
+          this.loadListOfLoginHistory();
+    }
 }
 </script>
 

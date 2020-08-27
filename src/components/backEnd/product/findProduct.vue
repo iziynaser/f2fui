@@ -1,7 +1,12 @@
 <template>
     <div>
 
-            <router-link to="/createProduct" >{{$t('PRODUCT_CREATE')}}</router-link>
+            <router-link :to="{
+                        name:'createProduct',
+                        params:{id:0,title:'new_prod'}
+                    }">
+                {{$t('PRODUCT_CREATE')}}
+            </router-link>
 
           <b-card>
                   <b-table striped hover :items="searchResult" small
@@ -89,9 +94,6 @@ export default {
                 axios({
                     method:'GET',
                     url:'http://localhost:8080/f2f/products/list',
-                    // params:{
-                    //     'access_token' : localStorage.getItem('access_token')                            
-                    // }
                 })
                 .then(function(res){
                       self.searchResult = res.data; 

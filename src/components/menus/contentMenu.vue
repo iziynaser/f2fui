@@ -7,36 +7,37 @@
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/humanres">{{$t('CONTENT_survey')}}</router-link>
+              <router-link to="/surveyMain">{{$t('CONTENT_survey')}}</router-link>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/humanres">{{$t('CONTENT_forum')}}</router-link>
+              <router-link to="/forumMain">{{$t('CONTENT_forum')}}</router-link>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/humanres">{{$t('C_WEB_QA')}}</router-link>
+              <router-link to="/qaMain">{{$t('C_WEB_QA')}}</router-link>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/humanres">{{$t('CONTENT_blog')}}</router-link>
+              <router-link to="/blogMain">{{$t('CONTENT_blog')}}</router-link>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/humanres">{{$t('CONTENT_content')}}</router-link>
+              <router-link to="/contentMain">{{$t('CONTENT_content')}}</router-link>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/humanres">{{$t('CONTENT_dataSource')}}</router-link>
+              <router-link to="/articleMain">Article</router-link>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CONTENT_contentSetup')}} </router-link>
           </b-dropdown-item>
 
-          <b-dropdown-item href="#" >
+          <!-- <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CONTENT_datasourceSetup')}} </router-link>
-          </b-dropdown-item>
+          </b-dropdown-item> -->
+
         </b-nav-item-dropdown>
     </div>
 </template>

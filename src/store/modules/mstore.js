@@ -40,25 +40,25 @@ const actions={
         myapi.getProducts().then((products)=>{
             //passing the products received from response as a payload to the mutation
             commit("setUpProducts",products);
-            commit("showToast","product loadeded");    
+            commit("showToast","product loaded");    
         });
     },
     addToCart:({commit},productId)=>{
         myapi.products("add",productId).then((productId)=>{
             commit("addToCart",productId);
-            commit("showToast","added to toast");    
+            commit("showToast","added to basket");    
         });
     },
     removeFromCart:({commit},productId)=>{
         myapi.products("remove",productId).then((productId)=>{
             commit("removeFromCart",productId);
-            commit("showToast","remove from toast");    
+            commit("showToast","remove from basket");    
         });
     },
     deleteFromCart:({commit},productId)=>{
         myapi.products("delete",productId).then(()=>{
             commit("deleteFormCart",productId);
-            commit("showToast","deleted from toast");    
+            commit("showToast","deleted from basket");    
         });
     }
 };

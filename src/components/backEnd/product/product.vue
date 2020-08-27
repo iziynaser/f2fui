@@ -1,14 +1,15 @@
 <template>
     <div>
 
-      <!-- params: {{this.$route.params.id}},{{this.$route.params.title}}
-      props : {{id}},{{title}} -->
+      <!-- params: {{this.$route.params.id}},{{this.$route.params.title}} -->
+      props : {{id}},{{title}} 
 
       <div class="containser">
         <div class="row">
             
             <div class="col-sm">              
-              <sImages/>
+              <sImages  :thumbnailImages="thumbnailArrayImages"
+                        :productImages="productArrayImages"/>
             </div>
 
             <span class="border"/>
@@ -90,7 +91,7 @@
                         </b-row>
                       </b-list-group-item>
                       <b-list-group-item>
-                        <b-button class="btn-block">+ {{$t('PRODUCT_ADD_TO_BUCKET')}}</b-button>
+                        <b-button class="btn-block" @click="addToCart()">+ {{$t('PRODUCT_ADD_TO_BUCKET')}}</b-button>
                       </b-list-group-item>
                       <b-list-group-item>
                         {{$t('PRODUCT_IS_PRICE_GOOD')}} {{$t('PRODUCT_YES')}} / {{$t('PRODUCT_NO')}}
@@ -102,33 +103,8 @@
       
 
       <div class="p-2 m-2 container">
-        <div class="p-2 row">
-          <b-col>
-             <b-button variant="outline-primary">
-                <img src="http://localhost:8080/images/icon/warranti.png" class="w-25 img-rounded" @click="showProduct()"/>
-             </b-button>
-          </b-col>
-          <b-col>
-            <b-button variant="outline-primary">
-                <img src="http://localhost:8080/images/icon/gift.png"      class="w-25 img-rounded" @click="showProduct()"/>  
-            </b-button>    
-          </b-col>
-          <b-col>
-            <b-button variant="outline-primary">
-              <img src="http://localhost:8080/images/icon/exam.png"      class="w-25 img-rounded" @click="showProduct()"/>  
-            </b-button>  
-          </b-col>
-          <b-col>
-            <b-button variant="outline-primary">
-                <img src="http://localhost:8080/images/icon/delivery.png"  class="w-25 img-rounded" @click="showProduct()"/>  
-            </b-button>    
-          </b-col>
-          <b-col>
-            <b-button variant="outline-primary">
-                <img src="http://localhost:8080/images/icon/buy.png"   class="w-25 img-rounded" @click="showProduct()"/>            
-            </b-button>    
-          </b-col>
-        </div>
+        <productAttribute/>
+
         <div class="row">                    
           <div class="card border-success mb-3">
             <div class="card-header">
@@ -154,54 +130,20 @@
           <b-tabs content-class="m-4" card>
 
           <b-tab :title="this.$t('PRODUCT_comments')">
-                      <comment/>
+                      <comment :id="Number(id)"/>
           </b-tab>
 
           <b-tab :title="this.$t('PRODUCT_features')">
-                      features ,
-                      <div>
-                        <div v-for="group in groupIdsWithNames" :key="group.id">
-                            <b-container>
-
-                              {{group.gname}}
-
-                              <div v-if="group.gitems" class="box">
-
-                                  <div>
-                                    <b-row v-for="im in group.gitems" :key="im.id" class="text-right">                                  
-                                      <b-col>  
-                                        {{im.itemname}}
-                                      </b-col>
-                                      <b-col>
-                                      <div v-if="im.itemvalues">
-                                        <div>
-                                          <div v-for="iin in im.itemvalues" :key="iin.id">
-                                            {{iin.itemvalue}}
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                      </b-col>  
-
-
-                                    </b-row>
-                                  </div> 
-                              </div>
-                              
-
-                            </b-container>
-                        </div>
-                      </div>
+             <productFeature :id="Number(id)"/>
           </b-tab>
 
-          <b-tab :title="this.$t('PRODUCT_Survey')">
-                      Survey ,
-                      <rEditor/>
+          <b-tab :title="this.$t('PRODUCT_REVIEW')">
+                      <contentC/>
           </b-tab>
 
           <b-tab :title="this.$t('PRODUCT_quesAndAns')">
                       quesAndAns
-                      <rEditor/>
+                      <!-- <rEditor/> -->
                       <qAndA/>
           </b-tab>
 
@@ -214,13 +156,19 @@
 
 <script>
 
-import axios from 'axios'
+
 import sImages from './sImages'
-import rEditor from './rEditor'
+//import rEditor from './rEditor'
 import qAndA from './qAndA'
 import similarProduct from './similarProduct'
-import comment from './comment'
+//import comment from './comment'
+import comment from './comment/comment'
 import otherSellers from './otherSellers'
+import productAttribute from './productAttribute'
+import productFeature from './productFeature'
+import {loadListOfImages} from './file-upload.service'
+
+import contentC from '../../content/contnt/contentC'
 
 export default {
     name:'product',
@@ -229,7 +177,15 @@ export default {
             title:String
           } ,
     components:{
-      sImages,rEditor,qAndA,similarProduct,comment,otherSellers
+      sImages,
+      //rEditor,
+      qAndA,
+      similarProduct,
+      comment,
+      otherSellers,
+      productAttribute,
+      productFeature ,
+      contentC
     },
     data(){
       return {
@@ -250,74 +206,38 @@ export default {
         itemIdsWithNames:[],
         itemsIds:[],
 
+        //carousel
+        thumbnailArrayImages:[],
+        productArrayImages:[],
+
       }
     } ,
     methods:{
-          onSearchResult() {                
-                var self = this;
-
-                var groupIds = self.groupIds;
-                var itemIds =  self.itemIds;
-                var groupIdsWithNames = self.groupIdsWithNames;
-                var idx = 0 ;
-
-                this.errors= {};
-                this.isBusy = true;
-                axios({
-                    method:'GET',
-                    url:'http://localhost:8080/f2f/products/features',
-                    params:{
-                        'access_token' : localStorage.getItem('access_token')                            
-                    }
+          addToCart(){
+            this.$store.dispatch("addToCart",this.id);            
+          },
+          showThumbnailImages(){
+            if(this.id!==0)
+              loadListOfImages(this.id,"small")
+                .then(x=>{
+                  this.thumbnailArrayImages = [].concat(x);
+                }).catch((err) => {
+                  console.log(err);
                 })
-                .then(function(res){
-
-                      self.searchResult = res.data; 
-                      for(const feature of self.searchResult){
-
-                        if(!groupIds.includes(feature.groupId)){
-                          if(feature.groupId)
-                            groupIds.push(feature.groupId);
-                            groupIdsWithNames.push({gid:feature.groupId,gname:feature.groupName,gitems:[]});
-                        }
-
-                        if(!itemIds.includes(feature.itemId)){
-                          if(feature.itemId){
-                            itemIds.push(feature.itemId);
-
-                            for(const [i,g] of groupIdsWithNames.entries()){
-                              if(g.gid===feature.groupId){
-                                  groupIdsWithNames[i].gitems.push({itemid:feature.itemId,itemname:feature.itemName,itemvalues:[]});
-                                  
-                                  //start of my block
-                                  if(feature.itemsId){
-                                    if(groupIdsWithNames[i].gitems)
-                                    for(idx=0;idx<groupIdsWithNames[i].gitems.length;idx++){
-                                        if(feature.itemId===groupIdsWithNames[i].gitems[idx].itemid){
-                                            //console.log(idx +" , " + groupIdsWithNames[i].gitems[idx]) ;
-                                            groupIdsWithNames[i].gitems[idx].itemvalues.push({itemid:feature.itemsId,itemvalue:feature.itemsName});
-                                        }                                          
-                                    }                                    
-                                  }//end of my block
-                              }                                
-                            }                            
-                          }                        
-                        }
-                        
-
-
-                      }
-
-                      //console.log(groupIdsWithNames);
-                      self.isBusy=false;
+          },
+          showMediumImages(){
+            if(this.id!==0)
+             loadListOfImages(this.id,"medium")
+                .then(x=>{
+                  this.productArrayImages = [].concat(x);
+                }).catch((err) => {
+                  console.log(err);
                 })
-                .catch(function(error){
-                    console.log(error)    ;
-                });
           }
     }      ,
     mounted(){
-        this.onSearchResult();
+        this.showThumbnailImages();
+        this.showMediumImages();
     }
 }
 </script>
