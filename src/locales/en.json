@@ -337,7 +337,12 @@
     "CONTENT_CREATE_isPublic":"is public" ,
     "CONTENT_CREATE_toDate":"to Date" ,
     "CONTENT_CREATE_fromDate":"from Date" ,
-    "CONTENT_CREATE_status":"status" 
+    "CONTENT_CREATE_status":"status"  ,
+
+    "PREV":"prev" ,
+    "NEXT":"next" ,
+    "FIRST":"first" ,
+    "LAST":"last" 
 
   }
 }

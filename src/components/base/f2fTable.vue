@@ -9,13 +9,21 @@
                  responsive 
                  caption-top 
                  :fields="fields"
-                 :items="datas.content" 
-                 current-page="currentPage" 
-                 per-page="perPage" >
+                 :items="items"                  
+                 :current-page="currentPage" 
+                 :per-page="perPage" >
+
                 <template v-slot:table-caption>
-                    list of other sellers (table)
+                    {{caption}}
                 </template>                 
-                
+
+                <template v-slot:table-busy>
+                    <div class="text-center text-danger my-2">
+                        <b-spinner class="align-middle"></b-spinner>
+                        <strong>loading</strong>
+                    </div>  
+                </template>
+
                 <template v-slot:cell(index)="data">
                     {{data.index+1}}
                 </template> 
@@ -35,45 +43,41 @@
             :total-rows="totalRows"
             :per-page="perPage"
             aria-controls="my-table"
+            first-text="<<"
+            prev-text="<"
+            next-text=">"
+            last-text=">>"
           ></b-pagination>           
     </div>
 </template>
 <script>
 
-//import i18next from 'i18next'
-
 export default {
     name:'f2fTable',
     props:{
-            datas : {},
-            fields: []
+            items : [],
+            fields: [],
+            busy:{
+                type:Boolean ,
+                default : false
+            } ,
+            caption:{
+                type:String,
+                default : "list of search result (table)"
+            },
+            totalRows: {
+                type:Number ,
+                default:0
+            }
           } ,
     data(){
       return {          
           perPage: 7 ,
-          currentPage: 0 ,
-          totalRows: 19
+          currentPage: 1 ,          
       }
     } ,
-    created(){
-        //this.fields = this.fieldz();
-    },
-    methods:{
-        //   fieldz(){
-        //       if(this.datas===null) return [];
-        //       if(this.datas.content===undefined)
-        //         return;
-        //       let objs = this.datas.content[0] ;
-        //       let fldz = [];
-        //       for(var key in objs){
-        //         let b = new Object();
-        //         b.key = key;
-        //         b.label = i18next.t('CONTENT_SEARCH_'+key);
-        //         fldz.push(b);
-        //       }
-        //       return fldz;
-        //   } 
-    }        
+    created(){},
+    methods:{}        
 }
 </script>
 

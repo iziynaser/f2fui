@@ -3,19 +3,8 @@
 
         <!-- <span v-if="id">id : {{id}}</span>
         and <span v-if="title">title : {{title}}</span> -->
-
-          <b-table small striped hover 
-                    head-variant="dark"
-                    responsive
-                    caption-top
-                   :fields="fields"
-                   :items="items">
-                <template v-slot:table-caption>list of prices related to this product</template> 
-                
-                <template v-slot:cell(index)="data">
-                    {{data.index+1}}
-                </template>  
-          </b-table>
+        
+          <f2fTable  :items="items" :fields="fields" caption="list of prices related to this product" /> 
 
           <b-container fluid>
                 <b-row  class="my-1">
@@ -70,6 +59,7 @@
 import * as axios from 'axios';
 import f2fPriceType from '../../../base/f2fPriceType' ;
 import VuePersianDateTimePicker from 'vue-persian-datetime-picker'
+import f2fTable from '../../../base/f2fTable'
 
 export default {
     name:'cProductPrice',
@@ -105,6 +95,7 @@ export default {
     },
     components:{
         f2fPriceType,
+        f2fTable ,
         datePicker:VuePersianDateTimePicker
     },
     methods:{

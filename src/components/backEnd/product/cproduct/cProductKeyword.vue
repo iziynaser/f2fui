@@ -6,10 +6,12 @@
             create a new keyword
         </div>
 
-        <b-table striped hover small caption-top responsive
+        <!-- <b-table striped hover small caption-top responsive
                  head-variant="dark" :items="searchResult" :fields="searchFields" >
                  <template v-slot:table-caption>{{$t('C_PRODUCT_KEY_RELATED_KEY')}}</template>
-        </b-table>
+        </b-table> -->
+
+        <f2fTable :items="searchResult" :fields="searchFields" />
 
 <b-container fluid>
     <b-row class="my-1">
@@ -37,6 +39,7 @@
 <script>
 
 import * as axios from 'axios';
+import f2fTable from '../../../base/f2fTable'
 
 export default {
     name:'cProductKeyword',
@@ -104,7 +107,10 @@ export default {
     created() {
         if(this.id!==0)
             this.loadKeyowrds();
-    },     
+    },  
+    components:{
+        f2fTable
+    }   
 }
 </script>
 

@@ -462,6 +462,12 @@
       "CONTENT_SEARCH_dateCreated" : "dateCreated" ,
       "CONTENT_SEARCH_lastModified" : "last modified" ,
       "CONTENT_SEARCH_code" : "code" ,
-      "CONTENT_SEARCH_date" : "date"
+      "CONTENT_SEARCH_date" : "date" ,
+
+      "PREV":"قبلی" ,
+      "NEXT":"بعدی" ,
+      "FIRST":"اولین" ,
+      "LAST":"آخرین" 
+
     }
 }

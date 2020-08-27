@@ -1,18 +1,7 @@
 <template>
     <div>
 
-          <b-table small striped hover 
-                    head-variant="dark"
-                    responsive
-                    caption-top
-                   :fields="fields"
-                   :items="items">
-                <template v-slot:table-caption>list of categories related to this product</template> 
-                
-                <template v-slot:cell(index)="data">
-                    {{data.index+1}}
-                </template>  
-          </b-table>
+          <f2fTable :items="items" :fields="fields" caption="list of categories related to this product" />  
 
           <b-container fluid>
                 <b-row  class="my-1">
@@ -59,6 +48,7 @@
 <script>
 
 import * as axios from 'axios';
+import f2fTable from '../../../base/f2fTable'
 
 export default {
     name:'cProductCategory',
@@ -95,6 +85,7 @@ export default {
         },
     },
     components:{
+        f2fTable
     } ,
     mounted(){
         if(this.id!==0)

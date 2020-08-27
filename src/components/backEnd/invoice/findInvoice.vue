@@ -65,21 +65,7 @@
           </b-card>
       
           <b-card>
-                  <b-table striped hover :items="searchResult" small
-                           :fields="searchFields"  head-variant="dark" responsive caption-top  
-                           :busy="isBusy"
-                           >
-                           <template v-slot:table-caption>search results</template>   
-                           <template v-slot:table-busy>
-                                 <div class="text-center text-danger my-2">
-                                    <b-spinner class="align-middle"></b-spinner>
-                                    <strong>loading</strong>
-                                 </div>  
-                           </template>
-                           <template v-slot:cell(index)="data">
-                                 {{data.index+1}}
-                           </template>                           
-                  </b-table>                
+                  <f2fTable :items="searchResult" :fields="searchFields" :busy="isBusy" caption="search results"  />
           </b-card>
           
     </div>
@@ -88,6 +74,7 @@
 <script>
 
 import axios from 'axios'
+import f2fTable from '../../base/f2fTable'
 
 export default {
     name:'findInvoice',
@@ -137,6 +124,9 @@ export default {
       }) ;
 
 
+    },
+    components:{
+          f2fTable
     },
     methods:{
 

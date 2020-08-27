@@ -1,22 +1,8 @@
 <template>
     <div>
         
-        name of seller,amount, add to basket button
-
-                  <b-table small striped hover 
-                    head-variant="dark"
-                    responsive
-                    caption-top
-                   :fields="fields"
-                   :items="items">
-                <template v-slot:table-caption>
-                    list of other sellers (table)
-                </template> 
-                
-                <template v-slot:cell(index)="data">
-                    {{data.index+1}}
-                </template>  
-          </b-table>
+        name of seller,amount, add to basket button          
+        <f2fTable :fields="fields" :items="items" caption="list of other sellers (table)"  />
 
         seeMore<br/>
         seeLess
@@ -27,6 +13,7 @@
 <script>
 
 import * as axios from 'axios';
+import f2fTable from '../../base/f2fTable'
 
 export default {
     name:'otherSellers',
@@ -62,6 +49,9 @@ export default {
                 });
         },
     } ,
+    components:{
+        f2fTable
+    },
     mounted(){
         this.listOfOtherSellers();
     }        
