@@ -1,33 +1,8 @@
 <template>
     <div>
         <div>
-            <b-row>
-                <template>
-                    <b-breadcrumb>
-                        <b-breadcrumb-item href="#home" @click="loadCategories(1)">
-                            <b-icon-house-fill scale="1.25" shift-v="1.25" aria-hidden="true"></b-icon-house-fill>
-                        </b-breadcrumb-item>
-                        <b-breadcrumb-item v-for="breadcrumb in breadcrumbItems" 
-                                           :key="breadcrumb.id" 
-                                           href="#" 
-                                           @click="loadCategories(breadcrumb.id,breadcrumb.text)">
-                            {{breadcrumb.text}}
-                        </b-breadcrumb-item>
-                    </b-breadcrumb>
-                </template>
-            </b-row>
+            <categoryBrowser @categoryChanged="loadBrands"/>
             <b-row class="my-1">
-                <b-col sm="3">
-                    <b-card>
-                    <b-form-checkbox-group stacked name="checkButton">      
-                        <b-form-checkbox :value="option.id" v-for="option in cols1" 
-                                         :key="option.id" 
-                                         @change="loadCategories(option.id,option.name)">
-                            {{option.name}}
-                        </b-form-checkbox>        
-                    </b-form-checkbox-group>
-                    </b-card>
-                </b-col>
                 <b-col sm="9">
                     <b-card>
                         <b>
@@ -70,6 +45,7 @@
 <script>
 
 import * as axios from 'axios'
+import categoryBrowser from '../../../base/categoryBrowser'
 
 export default {
     name:'brandMain',
@@ -90,6 +66,9 @@ export default {
         }
       }
     } ,
+    components:{
+        categoryBrowser
+    },
     methods:{
         variantColors(idx){
             return idx % 2==0 ? "light" : "info" ;
@@ -106,63 +85,15 @@ export default {
                         console.log(err);
                     }) 
         },
-        loadCategories(idv,idt){
-                console.log('idv:'+idv+',idt:'+idt);
-                var self = this;
-
-                if(idv==1 && self.breadcrumbItems.length>1){
-                    self.breadcrumbItems = self.breadcrumbItems.splice(0);
-                }
-                
-                self.form.categoryId=idv;
-                self.cName = idt;
-
-                const url = `http://localhost:8080/f2f/Category/listById`;
-                axios.get(url,{
-                params:{id:idv}
-            })
-                .then(function(res){
-                    if(res){
-                        self.cols1 = res.data;
-                        if(idv!==1){
-                            let exist=false;
-                            let idx=-1;
-                            for(const [i,b] of self.breadcrumbItems.entries()){
-                                if(b.id==idv){
-                                     exist = true;
-                                     idx=i;
-                                }                                    
-                            }
-                            if(exist==false)        
-                                self.breadcrumbItems.push({text:idt,id:idv,href:'#'});
-                            else{
-                                let L = self.breadcrumbItems.length-1 ;
-                                if(L!==idx)
-                                    var k = 0;
-                                    while(k<L-idx){
-                                         self.breadcrumbItems.pop();
-                                         k++;   
-                                    }                                        
-                            }
-                                
-                        }else{
-                            self.breadcrumbItems=[];
-                        }
-
-                        //load brands
-                        self.loadBrands(idv);
-                    }                        
-                })
-                .catch(function(error){
-                    console.log(error)    ;
-                });
-        },
-        loadBrands(cId){
+        loadBrands(form){
             var self = this;
+            // self.form.categoryId=cId;
+            self.form.categoryId=form.cCode;
             const url = `http://localhost:8080/f2f/brand/byCategoryId`;
             axios.get(url,{
                 params:{
-                    categoryId: cId
+                    // categoryId: cId
+                    categoryId: form.cCode
                 }
             })
                 .then(function(res){
@@ -173,9 +104,7 @@ export default {
                 });
         }
     }
-    ,created(){
-        this.loadCategories(1,'همه دسته ها');
-    }      
+    ,created(){}      
 }
 </script>
 

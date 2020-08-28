@@ -1,18 +1,31 @@
 <template>
     <div>
-                         <!-- <span v-if="id">id : {{id}}</span>
-                 and <span v-if="title">title : {{title}}</span> -->
+        menus
+        <b-row>
+            <b-col>
+                <categoryBrowser  :cType="Number(9)" @categoryChanged="categoryChanged"/>
+            </b-col>
+            <b-col>
+                <b-row>
+                                    the content saved in menu {{category.cName}}
+                <br/>
+                <b-button v-on:click="save">{{$t('C_PRODUCT_FEATURE_SAVE_FINAL')}}</b-button>
 
-        <b-button v-on:click="save">{{$t('C_PRODUCT_FEATURE_SAVE_FINAL')}}</b-button>
-        <!-- <f2fTree :id="id" v-model="form.treeData" v-on:selectedRootEvent="handleTreeData" />  -->
+                </b-row>
+                <b-row>
+                    <createQuickCategory :categoryType="Number(9)" :categoryCode="category.cCode" />
+                </b-row>
+            </b-col>            
+        </b-row>        
     </div>
 </template>
 
 <script>
 
-// import f2fTree from '../../base/f2fTree'
 import {mapGetters} from 'vuex'
 import * as axios from 'axios'
+import categoryBrowser from '../../base/categoryBrowser'
+import createQuickCategory from './createQuickCategory'
 
 export default {
     name:'contentMenus',
@@ -25,14 +38,23 @@ export default {
           form:{
               productId:this.id,
               treeData : {}
+          },
+          category:{
+              cCode : "" ,
+              cName: ""
           }
       } 
     },
         components:{
-        // f2fTree
+        categoryBrowser ,
+        createQuickCategory
     },
     methods:{
         ...mapGetters(['getProductId']),
+        categoryChanged(form){
+            this.category.cCode = form.cCode ;
+            this.category.cName = form.cName ;
+        },
         saveFeature(){
             let self = this;
                                             
@@ -65,29 +87,7 @@ export default {
                             console.log(err);
                         });
         },
-        // load(){
-        //     var self = this;
-            
-        //     if(self.id==0)
-        //         return
-            
-        //     const url = `http://localhost:8080/f2f/productFeatureGroup/load`;
-        //     axios.get(url,{
-        //         params:{
-        //             productId: self.id
-        //         }
-        //     })
-        //         .then(function(res){
-        //             self.form.treeData = res.data;
-        //             console.log("treeData:"+self.form.treeData); 
-        //         })
-        //         .catch(function(error){
-        //             console.log(error)    ;
-        //         });
-        // }
-    },created(){
-       // this.load();
-    }    
+    },created(){}    
 }
 </script>
 

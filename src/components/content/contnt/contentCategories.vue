@@ -1,13 +1,15 @@
 <template>
     <div>
-        brands
+        <!-- brands -->
         <!-- <brandMain/>    -->
+        <categoryBrowser/>
     </div>
 </template>
 
 <script>
 
 // import brandMain from '../../backEnd/product/brand/brandMain'
+import categoryBrowser from '../../base/categoryBrowser'
 
 export default {
     name:'contentCategories',
@@ -23,6 +25,7 @@ export default {
     },
     components:{
         // brandMain
+        categoryBrowser
     }
 }
 </script>

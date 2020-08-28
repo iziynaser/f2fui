@@ -112,24 +112,6 @@
                   <b-input type="date"></b-input>
               </b-col>
           </b-row>
-          <b-row class="my-1">
-              <b-col>
-                  {{$t('CONTENT_CREATE_status')}}
-              </b-col>
-              <b-col>
-                  <b-button-group>
-                      <b-dropdown right text="change state to">
-                          <b-dropdown-item>inProgress</b-dropdown-item>
-                          <b-dropdown-item>initial draft</b-dropdown-item>
-                          <b-dropdown-item>revised draft</b-dropdown-item>
-                          <b-dropdown-item>final draft</b-dropdown-item>
-                          <b-dropdown-item>available</b-dropdown-item>
-                          <b-dropdown-item>deactivated</b-dropdown-item>
-                          <b-dropdown-item>published</b-dropdown-item>
-                      </b-dropdown>
-                  </b-button-group>
-              </b-col>
-          </b-row>
           <b-button>
               {{$t('save')}}
            </b-button>

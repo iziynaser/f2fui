@@ -30,6 +30,9 @@
                         <b-tab title="users">
                             <contentUsers/>                     
                         </b-tab>
+                        <b-tab title="status">
+                            <contentStatus/>
+                        </b-tab>
                   </b-tabs>
               </b-card>
     </div>
@@ -44,6 +47,7 @@ import contentCategories from './contentCategories'
 import contentMenus from './contentMenus'
 import contentSearch from './contentSearch'
 import contentUsers from './contentUsers'
+import contentStatus from './contentStatus'
 
 export default {
     name:'contentMain',
@@ -64,7 +68,8 @@ export default {
         contentCategories ,
         contentMenus ,
         contentSearch ,
-        contentUsers
+        contentUsers ,
+        contentStatus
     }
 }
 </script>

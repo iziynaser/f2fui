@@ -6,6 +6,9 @@
                         <b-tab :title="this.$t('CREATE_BRANDS_addRemoveBrand')">
                             <brandMain/>    
                         </b-tab>
+                        <!-- <b-tab title="brand2">
+                            <categoryBrowser/>
+                        </b-tab> -->
                   </b-tabs>
               </b-card>
     </div>
@@ -14,6 +17,7 @@
 <script>
 
 import brandMain from './brandMain'
+//import categoryBrowser from './categoryBrowser'
 
 export default {
     name:'createBrands',
@@ -28,7 +32,8 @@ export default {
 
     },
     components:{
-        brandMain
+        brandMain ,
+        //categoryBrowser
     }
 }
 </script>

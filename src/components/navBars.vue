@@ -24,12 +24,6 @@
 
 <accountingMenu/>
 
-        <!-- <portalMenu/> -->
-
-        <!-- <humanResMenu/>
-
-        <accountingMenu/> -->
-
         <!-- <b-nav-item-dropdown :text="$t('PARTY_SITE')" right>
           <b-dropdown-item href="#" >
               <router-link to="/humanres">WebSite</router-link>
@@ -50,6 +44,8 @@
         </b-nav-item-dropdown>
 
 <reportMenu/>
+
+<customMenus/>
 
         <!-- <reportMenu/> -->
 
@@ -92,6 +88,7 @@ import langMenu from './menus/langMenu'
 import contentMenu from './menus/contentMenu'
 import accountingMenu from './menus/accountingMenu'
 import reportMenu from './menus/reportMenu'
+import customMenus from './menus/customMenus'
 
 export default {
       name:'navBars',
@@ -104,7 +101,8 @@ export default {
         langMenu,
         contentMenu,
         accountingMenu,
-        reportMenu
+        reportMenu,
+        customMenus
       },
       methods:{
          
