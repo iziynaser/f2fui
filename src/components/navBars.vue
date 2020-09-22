@@ -45,6 +45,8 @@
 
 <reportMenu/>
 
+<userMenu/>
+
 <customMenus/>
 
         <!-- <reportMenu/> -->
@@ -89,6 +91,7 @@ import contentMenu from './menus/contentMenu'
 import accountingMenu from './menus/accountingMenu'
 import reportMenu from './menus/reportMenu'
 import customMenus from './menus/customMenus'
+import userMenu from './menus/userMenu'
 
 export default {
       name:'navBars',
@@ -102,7 +105,8 @@ export default {
         contentMenu,
         accountingMenu,
         reportMenu,
-        customMenus
+        customMenus ,
+        userMenu
       },
       methods:{
          

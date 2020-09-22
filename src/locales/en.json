@@ -342,7 +342,22 @@
     "PREV":"prev" ,
     "NEXT":"next" ,
     "FIRST":"first" ,
-    "LAST":"last" 
+    "LAST":"last" ,
+    
+    "profiles" : "profile" ,
+    "personalInfo" : "personal information" ,
+    "loginHistory" : "login history" ,
+    "authorities" : "authorities"  ,
+    "address" : "address" ,
+    "emails" : "emails" ,
+
+    "more":"more" ,
+    "close":"close" ,
+
+    "showLess":"show less" ,
+    "showOtherColor":"show other colors" ,
+
+    "USER_MENU" : "users"
 
   }
 }

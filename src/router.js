@@ -58,6 +58,9 @@ import categoriesPage from './components/backEnd/product/categories/categoriesPa
 
 import contentC from './components/content/contnt/contentC.vue'
 
+
+import userMain from './components/backEnd/user/userMain.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -275,6 +278,11 @@ export default new Router({
       path:'/contentC' ,
       name:'contentC' ,
       component:contentC
+    },
+    {
+      path:'/userMain',
+      name : userMain ,
+      component:userMain
     },
     {
        path: '/about',

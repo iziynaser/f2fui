@@ -1,21 +1,21 @@
 <template>
     <div>
-          profiles
+          {{$t('profiles')}}
               <b-card no-body>
                   <b-tabs pills card>
-                        <b-tab title="personal info">
+                        <b-tab :title="$t('personalInfo')">
                             <personalInfo/>                            
                         </b-tab>
-                        <b-tab title="login history">
+                        <b-tab :title="$t('loginHistory')">
                             <loginHistory/> 
                         </b-tab>
-                        <b-tab title="authorities">
+                        <b-tab :title="$t('authorities')">
                             <authorityInfo/>    
                         </b-tab>
-                        <b-tab title="adress">
+                        <b-tab :title="$t('address')">
                             <myAddress/>
                         </b-tab>
-                        <b-tab title="emails">
+                        <b-tab :title="$t('emails')">
                             <emails/>
                         </b-tab>
                   </b-tabs>

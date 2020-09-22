@@ -467,7 +467,22 @@
       "PREV":"قبلی" ,
       "NEXT":"بعدی" ,
       "FIRST":"اولین" ,
-      "LAST":"آخرین" 
+      "LAST":"آخرین"  ,
+      
+      "profiles" : "پروفایل" ,
+      "personalInfo" : "اطلاعات شخصی" ,
+      "loginHistory" : "تاریخچه ورود به سیستم" ,
+      "authorities" : "دسترسی ها"  ,
+      "address" : "آدرس" ,
+      "emails" : "ایمیل" ,
+
+       "more":"موارد بیشتر" ,
+       "close":"بستن" ,
+
+       "showLess":"نمایش کمتر" ,
+       "showOtherColor":"نمایش رنگ های دیکر" ,
+
+       "USER_MENU" : "کاربران"
 
     }
 }

@@ -2,7 +2,8 @@
     <div>
 
       <!-- params: {{this.$route.params.id}},{{this.$route.params.title}} -->
-      props : {{id}},{{title}} 
+      <!-- props : {{id}}, -->
+      <b>{{title}}</b> 
 
       <div class="containser">
         <div class="row">
@@ -19,21 +20,18 @@
 
               <div>
                 <b-list-group horizontal>
-                  <b-list-group-item>
-                    comments
-                    <b-badge variant="success" pill>20</b-badge>
+                  <b-list-group-item>                  
+                    <f2fBadge name="comments" address="urlComments"/>
                   </b-list-group-item>
 
                   <b-list-group-item>
-                     sales 
-                    <b-badge variant="primary" pill>10</b-badge>
+                    <f2fBadge name="sales" address="urlsales"/>
                   </b-list-group-item>
                 </b-list-group>                
               </div>
 
               <div class="clearfix">
-                {{$t('PRODUCT_AVAL_COLORS')}}:                
-                <b-button pill variant="outline" size="sm" style="background-color:blue" >blue</b-button>
+                <colorMoreLess/>
               </div>  
 
               <div>
@@ -43,14 +41,8 @@
                 </b-row>
               </div>
 
-              <div>
-                     {{$t('PRODUCT_SUMMARY_FEATURES')}}
-                     <ul class="list-group list-group-flush">
-                         <li class="list-group-item"> sdfsdfsdfsf</li>
-                         <li class="list-group-item"> sdfsdfsdfsf</li>
-                         <li class="list-group-item"> sdfsdfsdfsf</li>
-                         <li class="list-group-item"> sdfsdfsdfsf</li>
-                     </ul> 
+              <div>                     
+                     <moreLess/>
               </div>
 
             </div>
@@ -167,8 +159,11 @@ import otherSellers from './otherSellers'
 import productAttribute from './productAttribute'
 import productFeature from './productFeature'
 import {loadListOfImages} from './file-upload.service'
+import moreLess from './moreLess'
+import colorMoreLess from './colorMoreLess'
 
 import contentC from '../../content/contnt/contentC'
+import f2fBadge from '../../base/f2fBadge'
 
 export default {
     name:'product',
@@ -185,7 +180,10 @@ export default {
       otherSellers,
       productAttribute,
       productFeature ,
-      contentC
+      contentC ,
+      moreLess ,
+      colorMoreLess ,
+      f2fBadge
     },
     data(){
       return {
