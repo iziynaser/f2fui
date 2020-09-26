@@ -357,7 +357,10 @@
     "showLess":"show less" ,
     "showOtherColor":"show other colors" ,
 
-    "USER_MENU" : "users"
-
+    "USER_MENU" : "users" ,
+    "user_main" : "user main" ,
+    "user_roles" : "roles" ,
+    "user_additional" : "additional data" ,
+    "user_list" : "user list"
   }
 }

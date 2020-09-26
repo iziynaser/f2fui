@@ -482,7 +482,11 @@
        "showLess":"نمایش کمتر" ,
        "showOtherColor":"نمایش رنگ های دیکر" ,
 
-       "USER_MENU" : "کاربران"
+       "USER_MENU" : "کاربران" ,
+       "user_main" : "مدیریت کاربران" ,
+       "user_roles" : "نقش کاربر" ,
+       "user_additional" : "اطلاعات بیشتر" ,
+       "user_list" : "لیست کاربران"
 
     }
 }
