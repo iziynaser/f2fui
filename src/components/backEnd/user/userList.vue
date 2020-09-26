@@ -1,47 +1,37 @@
 <template>
     <div>
-           <f2fTable :items="items"  :fields="fields" caption="mm"  />                  
+           <f2fTable :items="items"  :fields="fields" caption="mm" @buttonTableClicked="buttonTableClicked" />                  
     </div>
 </template>
 
 <script>
 
-import axios from 'axios'
 import f2fTable from '../../base/f2fTable'
 
 export default {
     name:'userList',
+    props:{
+        items:[],    
+    },
     data(){
       return {
-        items:[],    
+        isBusy:false,
+        errors:{},        
         fields:[
             {key:"id",label:'title'},
+            {key:"username",label:'user name'},
+            {key:"action",label:'action'},
         ],            
       } 
     },
     methods:{
-        listOfCategoriesRelatedToProduct(){
-                var self = this;
-                this.errors= {};
-                this.isBusy = true;
-                axios({
-                    method:'GET',
-                    url:'http://localhost:8080/management/user/list',
-                })
-                .then(function(res){
-                      self.items = res.data; 
-                })
-                .catch(function(error){
-                    console.log(error)    ;
-                });
+        buttonTableClicked(index){
+            console.log('on parent called:'+ index);
         },
     },
     components:{
         f2fTable
-    } ,
-    mounted(){
-            this.listOfCategoriesRelatedToProduct();
-    }      
+    } ,   
 }
 </script>
 

@@ -21,6 +21,8 @@ export default {
           } ,
     data(){
       return {
+          isBusy:false,
+          errors:{},
           items:[],
           fields:[
               {key:'id',label:'شناسه'},

@@ -13,6 +13,8 @@ export default {
     name:'templateGrid',
     data(){
       return {
+        isBusy:false,
+        errors:{},
         items:[],    
         fields:[
             {key:"title",label:'title'},

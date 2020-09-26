@@ -87,6 +87,8 @@ export default {
           } ,
     data(){
       return {
+          isBusy:false,
+          errors:{},
           form:{
               productId: '' ,
               productName : '' ,

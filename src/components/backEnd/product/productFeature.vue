@@ -51,7 +51,8 @@ export default {
         category:'',
         topFeatures:'',
         searchResult:[],      
-
+        isBusy:false,
+        errors:{},
         groupIds:[],
         groupIdsWithNames:[],
         itemIds:[],
