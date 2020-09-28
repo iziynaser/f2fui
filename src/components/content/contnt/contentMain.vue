@@ -33,6 +33,13 @@
                         <b-tab title="status">
                             <contentStatus/>
                         </b-tab>
+
+<!-- 
+                        <b-tab title="CMS">
+                            <cms/>
+                        </b-tab> -->
+
+
                   </b-tabs>
               </b-card>
     </div>
@@ -48,6 +55,7 @@ import contentMenus from './contentMenus'
 import contentSearch from './contentSearch'
 import contentUsers from './contentUsers'
 import contentStatus from './contentStatus'
+// import cms from './cms'
 
 export default {
     name:'contentMain',
@@ -69,7 +77,8 @@ export default {
         contentMenus ,
         contentSearch ,
         contentUsers ,
-        contentStatus
+        contentStatus ,
+        // cms
     }
 }
 </script>

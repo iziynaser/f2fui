@@ -34,6 +34,12 @@
               <router-link to="/humanres">{{$t('CONTENT_contentSetup')}} </router-link>
           </b-dropdown-item>
 
+        <!-- <b-nav-item-dropdown text="CONTENT" right> -->
+          <!-- <b-dropdown-item href="#" >
+              <router-link to="/contentC">Content</router-link>
+          </b-dropdown-item> -->
+        <!-- </b-nav-item-dropdown> -->
+
           <!-- <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CONTENT_datasourceSetup')}} </router-link>
           </b-dropdown-item> -->

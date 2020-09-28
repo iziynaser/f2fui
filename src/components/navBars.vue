@@ -22,7 +22,7 @@
 
         <humanResMenu/>
 
-<accountingMenu/>
+        <accountingMenu/>
 
         <!-- <b-nav-item-dropdown :text="$t('PARTY_SITE')" right>
           <b-dropdown-item href="#" >
@@ -36,20 +36,20 @@
           </b-dropdown-item>
         </b-nav-item-dropdown> -->
 
-
+<!-- 
         <b-nav-item-dropdown text="CONTENT" right>
           <b-dropdown-item href="#" >
               <router-link to="/contentC">Content</router-link>
           </b-dropdown-item>
-        </b-nav-item-dropdown>
+        </b-nav-item-dropdown> -->
 
-<reportMenu/>
+        <reportMenu/>
 
-<userMenu/>
+        <userMenu/>
 
-<customMenus/>
+        <customMenus/>
 
-        <!-- <reportMenu/> -->
+        <cmsMenu/>
 
         <catalogMenu/>
 
@@ -92,6 +92,7 @@ import accountingMenu from './menus/accountingMenu'
 import reportMenu from './menus/reportMenu'
 import customMenus from './menus/customMenus'
 import userMenu from './menus/userMenu'
+import cmsMenu from './menus/cmsMenu'
 
 export default {
       name:'navBars',
@@ -106,7 +107,8 @@ export default {
         accountingMenu,
         reportMenu,
         customMenus ,
-        userMenu
+        userMenu ,
+        cmsMenu
       },
       methods:{
          

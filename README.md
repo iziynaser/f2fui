@@ -26,6 +26,7 @@ the resources I used in this app are listed below as far as i can remember:
 5. https://codesandbox.io/s/github/vuejs/vuejs.org/tree/master/src/v2/examples/vue-20-tree-view?from-embed=&file=/index.html
 6. https://www.flaticon.com/free-icon/fast-delivery_1273912?term=express%20delivery%20box&page=1&position=18
 7. https://ofbiz.apache.org
+8. stackoverflow: bootstrap-vue multi level drop down
 
 ### get data about npm
 1. https://medium.com/@alberto.schiabel/2.  npm-tricks-part-1-get-list-of-globally-installed-packages-39a240347ef0
