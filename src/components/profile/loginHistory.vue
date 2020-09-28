@@ -53,13 +53,13 @@ export default {
                   axios({
                         method:'GET',
                         url:'http://localhost:8080/f2f/loginHistory/',
-                        params:{
-                              'access_token' : localStorage.getItem('access_token')
-                              },
+                        // params:{
+                        //       'access_token' : localStorage.getItem('access_token')
+                        //       },
                         withCredentials:true
                   })
                   .then(function (res) {
-                        console.log('rrrrr');
+                        console.log('login history');
                         self.searchResult = res.data.data; 
                   }).catch(function (error) {              
                         console.log(error);              

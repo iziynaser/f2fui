@@ -1,6 +1,6 @@
 <template>
     <div>
-           <f2fTable :items="items"  :fields="fields" caption="mm" @buttonTableClicked="buttonTableClicked" />                  
+           <f2fTable :items="items"  :fields="fields" caption="list of users" @rowSelected="rowSelected" />                  
     </div>
 </template>
 
@@ -25,8 +25,8 @@ export default {
       } 
     },
     methods:{
-        buttonTableClicked(index){
-            console.log('on parent called:'+ index);
+        rowSelected(item){
+           this.$emit("bClicked",item);
         },
     },
     components:{

@@ -361,6 +361,7 @@
     "user_main" : "user main" ,
     "user_roles" : "roles" ,
     "user_additional" : "additional data" ,
-    "user_list" : "user list"
+    "user_list" : "user list" ,
+    "user_setting": "user setting"
   }
 }

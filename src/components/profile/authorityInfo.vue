@@ -31,9 +31,9 @@ export default {
               axios({
                 method:'GET',
                 url:'http://localhost:8080/user/me',
-                params:{
-                     'access_token' : localStorage.getItem('access_token')
-                  },
+                // params:{
+                //      'access_token' : localStorage.getItem('access_token')
+                //   },
                 withCredentials:true
               })
               .then(function (response) {

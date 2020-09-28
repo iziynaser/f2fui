@@ -1,10 +1,13 @@
 <template>    
     <div>
         <b-table 
-                 id="my-table"
+                 id="f2fTable"
+                 ref="f2fTable"
                  small     
                  striped 
                  hover  
+                 selectable
+                 select-mode="single"
                  head-variant="dark" 
                  responsive 
                  caption-top 
@@ -38,7 +41,6 @@
                     edit product      
                     </router-link>
                 </template>
-
           </b-table>
           <b-pagination 
             v-model="currentPage"
@@ -78,12 +80,13 @@ export default {
           currentPage: 1 ,          
       }
     } ,
-    created(){},
+    mounted(){
+        this.$refs.f2fTable.selectRow(0);
+    },
     methods:{
         rowSelected:function(items){
             this.$emit('rowSelected',items);
-        }
-
+        },
     }        
 }
 </script>

@@ -486,7 +486,8 @@
        "user_main" : "مدیریت کاربران" ,
        "user_roles" : "نقش کاربر" ,
        "user_additional" : "اطلاعات بیشتر" ,
-       "user_list" : "لیست کاربران"
+       "user_list" : "لیست کاربران" ,
+       "user_setting" : "تنظیمات کاربر"
 
     }
 }

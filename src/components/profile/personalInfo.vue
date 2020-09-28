@@ -153,10 +153,10 @@ export default {
               axios({
                 method:'GET',
                 url:'http://localhost:8080/f2f/userProfile',
-                params:{
-                     'access_token' : localStorage.getItem('access_token')
-                  },
-                withCredentials:true
+                // params:{
+                //      'access_token' : localStorage.getItem('access_token')
+                //   },
+                // withCredentials:true
               })
               .then(function (response) {
                 if(response){

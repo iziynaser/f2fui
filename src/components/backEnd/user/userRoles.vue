@@ -20,7 +20,7 @@ export default {
         errors:{},  
         fields:[
             {key:"id",label:'title'},
-            {key:"username",label:'user name'}
+            {key:"roleName",label:'role name'}
         ],            
       } 
     },
