@@ -1,30 +1,49 @@
 <template>
     <div>
-
-        <b-dropdown id="dropdown-1" text="dropdown button 1" class="m-md-2">
-            <b-dropdown-item>first action 1</b-dropdown-item>
-            <b-dropdown-item>second action 1</b-dropdown-item>
-            <b-dropdown id="dropdown-2" text="dropdown button 2" class="m-md-2">
-                <b-dropdown-item>first action 2</b-dropdown-item>
-                <b-dropdown-item>second action 2</b-dropdown-item>
-            </b-dropdown>
+        <b-dropdown variant="success" id="dropdown-1" text="CMS" class="m-md-2">
+                <b-dropdown-item v-for="menu in cmenus" :key="menu.id"  :id="menu.id"  >
+                    {{menu.name}}
+                </b-dropdown-item>
         </b-dropdown>
-
     </div>
 </template>
 
 <script>
+
+import * as axios from 'axios'
+
 export default {
     name:'cmsMenu',
     props:{
           } ,
     data(){
       return {
-        isDropdown2Visible:false
+        isDropdown2Visible:false,
+        cType:9,
+        cId:1,
+        cmenus:[],
+        menus:[],
       }
     } ,
-    methods:{
+    methods:{    
+        returnSubArray(){
 
+        }   , 
+        loadCMSMenus(id,type){
+                var self = this;
+                const url = `http://localhost:8080/f2f/Category/listById`;
+                axios.get(url,{
+                params:{id:id,cId:type}
+            })
+                .then(function(res){
+                     //console.log(res.data);
+                    self.cmenus = res.data;                   
+                    //console.log(res.data);
+                })
+                .catch(function(error){
+                    console.log(error)    ;
+                });
+        },
     } ,
     mounted:function(){
         this.$root.$on('bv::dropdown::show',bvEvent=>{
@@ -40,6 +59,8 @@ export default {
                 bvEvent.preventDefault()
             }
         })
+    },created(){
+        this.loadCMSMenus(this.cId,this.cType);
     }     
 }
 </script>

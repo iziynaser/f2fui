@@ -39,28 +39,7 @@
                     {{$t('CONTENT_CREATE_purpose')}} 
               </b-col>
               <b-col>
-                  <b-form-select>
-                      <template v-slot:first>
-                          <b-form-select-option :value="null" disabled>select a purpose</b-form-select-option>
-                      </template>
-                      <b-form-select-option value="company info">company info</b-form-select-option>
-                      <b-form-select-option value="general Info">general Info</b-form-select-option>
-                      <b-form-select-option value="product Info">product Info</b-form-select-option>
-                      <b-form-select-option value="project Info">project Info</b-form-select-option>
-                      <b-form-select-option value="sub content">sub content</b-form-select-option>
-                      <b-form-select-option value="topic">topic</b-form-select-option>
-                      <b-form-select-option value="feedback">feedback</b-form-select-option>
-                      <b-form-select-option value="advertisement">advertisement</b-form-select-option>
-                      <b-form-select-option value="main content">main content</b-form-select-option>
-                      <b-form-select-option value="article">article</b-form-select-option>
-                      <b-form-select-option value="comment">comment</b-form-select-option>
-                      <b-form-select-option value="description">description</b-form-select-option>
-                      <b-form-select-option value="ledgal info">ledgal info</b-form-select-option>
-                      <b-form-select-option value="response">response</b-form-select-option>
-                      <b-form-select-option value="faq">faq</b-form-select-option>
-                      <b-form-select-option value="owner">owner</b-form-select-option>
-                      <b-form-select-option value="user">user</b-form-select-option>
-                      <b-form-select-option value="personal info">personal info</b-form-select-option>
+                  <b-form-select v-model="form.purposeType" :options="purposeTypeOptions">
                   </b-form-select>
               </b-col>
           </b-row>         
@@ -78,30 +57,33 @@
                     {{$t('CONTENT_CREATE_contentType')}}                                                                        
               </b-col>
               <b-col>
-                   <b-form-select>
-                       <b-form-select-option>error root</b-form-select-option>
-                       <b-form-select-option>forum root</b-form-select-option>
-                       <b-form-select-option>maintance</b-form-select-option>
-                       <b-form-select-option>menu root</b-form-select-option>
-                       <b-form-select-option>web page</b-form-select-option>
-                       <b-form-select-option>blog root</b-form-select-option>
-                       <b-form-select-option>alert</b-form-select-option>
-                       <b-form-select-option>info</b-form-select-option>
-                   </b-form-select>
+                   <b-form-select v-model="form.contentType" :options="contentTypeOptions"></b-form-select>
               </b-col>
           </b-row> 
           <b-row class="my-1">
-              <b-col></b-col>
               <b-col>
                     {{$t('CONTENT_CREATE_status')}} 
               </b-col>
+             <b-col>
+                <b-button-group>
+                      <b-dropdown right text="change state to">
+                          <b-dropdown-item>inProgress</b-dropdown-item>
+                          <b-dropdown-item>initial draft</b-dropdown-item>
+                          <b-dropdown-item>revised draft</b-dropdown-item>
+                          <b-dropdown-item>final draft</b-dropdown-item>
+                          <b-dropdown-item>available</b-dropdown-item>
+                          <b-dropdown-item>deactivated</b-dropdown-item>
+                          <b-dropdown-item>published</b-dropdown-item>
+                      </b-dropdown>
+                </b-button-group>
+             </b-col>
           </b-row>
           <b-row class="my-1">
               <b-col>
                     {{$t('CONTENT_CREATE_fromDate')}}
               </b-col>
               <b-col>
-                   <b-input type="date"></b-input> 
+                   <b-input v-model="form.fromDate" type="date"></b-input> 
               </b-col>
           </b-row>
           <b-row>
@@ -109,7 +91,7 @@
                   {{$t('CONTENT_CREATE_toDate')}}
               </b-col>
               <b-col>
-                  <b-input type="date"></b-input>
+                  <b-input v-model="form.toDate" type="date"></b-input>
               </b-col>
           </b-row>
           <b-button>
@@ -125,7 +107,48 @@ export default {
           } ,
     data(){
       return {
-        
+        purposeTypeOptions:[
+            {value:0,text:'select a purpose'},
+            {value:0,text:'company info'},
+            {value:0,text:'general Info'},
+            {value:0,text:'product Info'},
+            {value:0,text:'project Info'},
+            {value:0,text:'sub content'},
+            {value:0,text:'topic'},
+            {value:0,text:'feedback'},
+            {value:0,text:'advertisement'},
+            {value:0,text:'main content'},
+            {value:0,text:'article'},
+            {value:0,text:'comment'},
+            {value:0,text:'description'},
+            {value:0,text:'ledgal info'},
+            {value:0,text:'response'},
+            {value:0,text:'faq'},
+            {value:0,text:'owner'},
+            {value:0,text:'user'},
+            {value:0,text:'personal info'},
+        ],  
+        contentTypeOptions:[
+            {value:0,text:'error root'},
+            {value:1,text:'forum root'},
+            {value:2,text:'maintance'},
+            {value:3,text:'menu root'},
+            {value:4,text:'web page'},
+            {value:5,text:'blog root'},
+            {value:6,text:'alert'},
+            {value:7,text:'info'},
+        ],
+        form:{
+            name:'',
+            title:'',
+            description:'',
+            seq:'',
+            fromDate:'',
+            toDate:'',
+            contentType:'',            
+            purposeType:'',
+            isPublic:'',
+        }
       }
     } ,
     methods:{
