@@ -112,9 +112,9 @@ export default {
       axios({
                 method:'GET',
                 url:'http://localhost:8080/f2f/InvoiceActionTypes/list',
-                params:{
-                     'access_token' : localStorage.getItem('access_token')
-                  },
+            //     params:{
+            //          'access_token' : localStorage.getItem('access_token')
+            //       },
                 withCredentials:true
             })
               .then(function (res) {
