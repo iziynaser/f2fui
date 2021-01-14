@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div>content:{{content.id}},{{content.name}}</div>
         <div>
             <b-row class="my-1">
                     <b-col>
@@ -36,10 +37,7 @@ import * as axios from 'axios'
 export default {
     name:'contentEditor',
     props:{
-            title :{
-                type:String,
-                default: "sdfsdfdsdsfs"
-            },
+            content:{type:Object},
             desciption:{
                 type:String,
                 default: "dfsdfsf"
@@ -49,7 +47,7 @@ export default {
     data(){
       return {
           form:{
-                body : "enter your text here" ,
+                body : '',//this.contentLoaded() ,
                 language: 'fa',
                 code: '123' ,
                 date:'1398/05/25',
@@ -68,6 +66,10 @@ export default {
     } ,
     components:{
         VueEditor
+    },computed:{
+        contentLoaded(){
+            return this.content.body;
+        }
     },
     mounted(){
         //this.title = this.$t('REDITOR_TITLE');
