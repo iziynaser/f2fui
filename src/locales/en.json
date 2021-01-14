@@ -362,6 +362,17 @@
     "user_roles" : "roles" ,
     "user_additional" : "additional data" ,
     "user_list" : "user list" ,
-    "user_setting": "user setting"
+    "user_setting": "user setting" ,
+    "edit_cell" : "edit" ,
+
+    "hr_menu_main":"main",
+    "hr_menu_employee":"employee",
+    "hr_menu_employment":"employment",
+    "hr_menu_employPosition":"position",
+    "hr_menu_skills":"skills",
+    "hr_menu_training":"training",
+    "hr_menu_resume":"resume",
+    "hr_menu_leave":"leave"
+
   }
 }

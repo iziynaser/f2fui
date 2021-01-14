@@ -487,7 +487,18 @@
        "user_roles" : "نقش کاربر" ,
        "user_additional" : "اطلاعات بیشتر" ,
        "user_list" : "لیست کاربران" ,
-       "user_setting" : "تنظیمات کاربر"
+       "user_setting" : "تنظیمات کاربر" ,
+       "edit_cell" : "ویرایش" ,
+
+       "hr_menu_main":"جستجو",
+       "hr_menu_employee":"کارمندان",
+       "hr_menu_employment":"استخدام",
+       "hr_menu_employPosition":"مکان سازمانی",
+       "hr_menu_skills":"مهارت ها",
+       "hr_menu_training":"آموزش ها",
+       "hr_menu_resume":"رزومه",
+       "hr_menu_leave":"ترک کار"
+
 
     }
 }

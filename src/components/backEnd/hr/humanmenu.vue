@@ -1,16 +1,33 @@
 <template>
     <div>
-            <b-tabs>
-              <b-tab title="hrmain"><p>hrmain</p></b-tab>
-              <b-tab title="employee">employee</b-tab>
-              <b-tab title="employment">employment</b-tab>
-              <b-tab title="employeeposition">employeePosition</b-tab>
-              <b-tab title="skills">skills</b-tab>
-              <b-tab title="training">training</b-tab>
-              <b-tab title="resume">resumes</b-tab>
-              <b-tab title="leave">leave</b-tab>
-              <b-tab title="hrsetting">hrsetting</b-tab>
+      <b-card no-body>
+            <b-tabs id="tabs" pills card v-model="step">
+              <b-tab :title="this.$t('hr_menu_main')">
+                <p>hrmain</p>
+              </b-tab>
+              <b-tab :title="this.$t('hr_menu_employee')">
+                employee
+              </b-tab>
+              <b-tab :title="this.$t('hr_menu_employment')">
+                employment
+              </b-tab>
+              <b-tab :title="this.$t('hr_menu_employPosition')">
+                employeePosition
+              </b-tab>
+              <b-tab :title="this.$t('hr_menu_skills')">
+                skills
+              </b-tab>
+              <b-tab :title="this.$t('hr_menu_training')">
+                training
+              </b-tab>
+              <b-tab :title="this.$t('hr_menu_resume')">
+                resumes
+              </b-tab>
+              <b-tab :title="this.$t('hr_menu_leave')">
+                leave
+              </b-tab>
             </b-tabs>
+      </b-card>
     </div>
 
 </template>
@@ -26,7 +43,7 @@ export default {
           } ,
     data(){
       return {
-        
+        step:0,
       }
     } ,
     methods:{
