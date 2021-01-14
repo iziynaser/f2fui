@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div>content:{{content.id}},{{content.name}}</div>
         <div>
             <label>tag name :</label>
             <b-input type="text"/>
@@ -42,6 +43,7 @@ import f2fTable from '../../base/f2fTable'
 export default {
     name:'contentTags',
     props:{
+        content:{type:Object},
           } ,
     data(){
       return {
@@ -78,7 +80,7 @@ export default {
         f2fTable
     },
     mounted(){
-        this.listOfOtherSellers();
+        //this.listOfOtherSellers();
     }        
 }
 </script>
