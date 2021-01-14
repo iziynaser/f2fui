@@ -21,6 +21,7 @@ export default {
             {key:"id",label:'title'},
             {key:"username",label:'user name'},
             {key:"action",label:'action'},
+            {key:"detailr",label:'show details'}
         ],            
       } 
     },
