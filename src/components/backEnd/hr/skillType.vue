@@ -1,6 +1,28 @@
 <template>
     <div>
+        <div>skill types</div>
           <b-card>
+              <div>
+                  <b-form-group>
+                      <b-row class="my-1">
+                          <b-col>
+                              skill name
+                          </b-col>
+                          <b-col>
+                              <b-input/>
+                          </b-col>
+                        </b-row>
+                      <b-row class="my-1">
+                          <b-col>skill rate</b-col>
+                          <b-col>
+                              <b-input/>
+                          </b-col>
+                      </b-row>
+                      <b-row>
+                          <b-button class="alert-primary">save</b-button>
+                      </b-row>
+                  </b-form-group>
+              </div>
                   <f2fTable :items="searchResult" :fields="searchFields" caption="search results" :busy="isBusy" />
           </b-card>
     </div>
@@ -20,10 +42,7 @@ export default {
       return {
         id:'',
         name:'',
-        title:'',
-        productType:'',
-        description:'',
-        productDimension:'',
+        rate:'',
         isBusy:false,
         errors:{},
         searchResult:[],    
@@ -42,9 +61,6 @@ export default {
                 axios({
                     method:'GET',
                     url:'http://localhost:8080/f2f/skillType/list',
-                    params:{
-                        'access_token' : localStorage.getItem('access_token')                            
-                    }
                 })
                 .then(function(res){
                       self.searchResult = res.data; 
