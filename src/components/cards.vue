@@ -18,7 +18,7 @@
             </b-card-header>
 
             <b-card-body
-                        title="some product"
+                        :title="product.name"
                         :sub-title="product.subtitle"> 
                         <p class="card-text mt-3 text-justify">
                                {{$t('CART_minPrice')}}
