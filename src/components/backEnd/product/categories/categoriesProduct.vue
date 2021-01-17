@@ -123,7 +123,7 @@ export default {
                 //var self = this;
                 this.errors= {};
                 this.isBusy = true;
-                const url = `http://localhost:8080/f2f/productCategories/delete`;
+                const url = `/productCategories/delete`;
                 axios.get(url,{
                     params:{
                         categoryId: categoryId,
@@ -141,7 +141,7 @@ export default {
         },
         save(){
             var self = this;
-            const url = `http://localhost:8080/f2f/productCategories/save`;
+            const url = `/productCategories/save`;
             axios.post(url,self.form,
             {
             }).then((res)=>{
@@ -155,7 +155,7 @@ export default {
                 var self = this;
                 this.errors= {};
                 this.isBusy = true;
-                const url = `http://localhost:8080/f2f/productCategories/list`;
+                const url = `/productCategories/list`;
                 axios.get(url,{
                     params:{
                         categoryId: "3"
@@ -174,7 +174,7 @@ export default {
                 var self = this;
                 this.errors= {};
                 this.isBusy = true;
-                const url = `http://localhost:8080/f2f/products/nameValue`;
+                const url = `/products/nameValue`;
                 axios.get(url,{
                     params:{
                         // categoryId: "3"

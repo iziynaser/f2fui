@@ -37,7 +37,7 @@
                                       </b-col>
                                       <b-col sm="9">
                                            <f2fInvoiceType :labell="this.$t('INVOICE_TYPE_COMMON_select')" 
-                                                           fetchUrl="http://localhost:8080/f2f/ProductType/list"
+                                                           fetchUrl="/ProductType/list"
                                                            :selectOptionLabel="this.$t('INVOICE_TYPE_COMMON_selectOptionLabel')"/> 
                                       </b-col>
                                   </b-row>
@@ -146,7 +146,7 @@ export default {
             //headers.append('Authorization','Bearer '+ access_token);
             //headers.append('Accept','application/json');
 
-            const url = `http://localhost:8080/f2f/products/save`;
+            const url = `/products/save`;
             axios.post(url,self.product,
             {
                 headers:{

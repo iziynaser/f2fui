@@ -4,14 +4,14 @@
           <b-col>
              <b-button variant="outline-primary">
                 zemanate asl boodane kala
-                <img src="http://localhost:8080/images/icon/warranti.png" 
+                <b-img src="/images/icon/warranti.png" 
                      class="w-25 img-rounded" 
                      @click="showProduct()"/>
              </b-button>
           </b-col>
           <b-col>
             <b-button variant="outline-primary">
-                <img src="http://localhost:8080/images/icon/gift.png"      
+                <b-img src="/images/icon/gift.png"      
                      class="w-25 img-rounded" 
                      @click="showProduct()"/>  
             </b-button>    
@@ -19,7 +19,7 @@
           <b-col>
             <b-button variant="outline-primary">
               emkan bazgasht kala
-              <img src="http://localhost:8080/images/icon/exam.png"      
+              <b-img src="/images/icon/exam.png"      
                    class="w-25 img-rounded" 
                    @click="showProduct()"/>  
             </b-button>  
@@ -27,7 +27,7 @@
           <b-col>
             <b-button variant="outline-primary">
                 express delivery and other
-                <img src="http://localhost:8080/images/icon/delivery.png"  
+                <b-img src="/images/icon/delivery.png"  
                      class="w-25 img-rounded" 
                      @click="showProduct()"/>  
             </b-button>    
@@ -35,7 +35,7 @@
           <b-col>
             <b-button variant="outline-primary">
                 emkan pardakht dar mahal
-                <img src="http://localhost:8080/images/icon/buy.png"   
+                <b-img src="/images/icon/buy.png"   
                      class="w-25 img-rounded" 
                      @click="showProduct()"/>            
             </b-button>    

@@ -79,7 +79,7 @@ export default {
         saveForm(){
                //console.log('saveForm is called');
                var self = this;
-               const url="http://localhost:8080/f2f/content/save" ;
+               const url="/content/save" ;
                axios.post(url,self.form)
                     .then((res) => {
                         console.log(res);

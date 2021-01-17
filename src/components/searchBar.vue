@@ -18,7 +18,7 @@ import axios from 'axios'
         methods:{
             onTermChange:function(searchTerm){
                 console.log(searchTerm);
-                axios.get('http://localhost:8080/f2f/hello',
+                axios.get('/hello',
                 {
                   params:{
                         'access_token' : localStorage.getItem('access_token')

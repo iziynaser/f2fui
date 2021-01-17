@@ -128,7 +128,7 @@ export default {
 
               axios({
                 method:'POST',
-                url:'http://localhost:8080/f2f/emailAdress/create',
+                url:'/emailAdress/create',
                 data: JSON.stringify(vx),
                 params: vx,
                 headers:{ 
@@ -145,14 +145,14 @@ export default {
               console.log(error);              
         }) ;
 
-           // axios.post('http://localhost:8080/f2f/emailAdress/create',vx,{headers: {Authorization:"Bearer "+token}})
+           // axios.post('/emailAdress/create',vx,{headers: {Authorization:"Bearer "+token}})
 
         },
           doUserProfile:function(){ 
             let self = this;
               axios({
                 method:'GET',
-                url:'http://localhost:8080/f2f/userProfile',
+                url:'/userProfile',
                 // params:{
                 //      'access_token' : localStorage.getItem('access_token')
                 //   },

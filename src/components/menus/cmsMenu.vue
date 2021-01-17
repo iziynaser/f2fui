@@ -31,7 +31,7 @@ export default {
         }   , 
         loadCMSMenus(id,type){
                 var self = this;
-                const url = `http://localhost:8080/f2f/Category/listById`;
+                const url = `/Category/listById`;
                 axios.get(url,{
                 params:{id:id,cId:type}
             })

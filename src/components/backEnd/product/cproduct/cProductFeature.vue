@@ -46,7 +46,7 @@ export default {
             var self = this;
             const access_token=localStorage.getItem('access_token');
 
-            const url = `http://localhost:8080/f2f/productFeatureGroup/save`;
+            const url = `/productFeatureGroup/save`;
             axios.post(url,self.form,
             {
                 headers:{
@@ -71,7 +71,7 @@ export default {
         //     if(self.id==0)
         //         return
             
-        //     const url = `http://localhost:8080/f2f/productFeatureGroup/load`;
+        //     const url = `/productFeatureGroup/load`;
         //     axios.get(url,{
         //         params:{
         //             productId: self.id

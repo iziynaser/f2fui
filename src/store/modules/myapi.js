@@ -30,7 +30,7 @@ export default{
                 //this.isBusy = true;
                 axios({
                     method:'GET',
-                    url:'http://localhost:8080/f2f/products/list',
+                    url:'/products/list',
                     // params:{
                     //     'access_token' : localStorage.getItem('access_token')                            
                     // }

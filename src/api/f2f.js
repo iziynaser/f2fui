@@ -1,7 +1,7 @@
 import qs from 'qs';
 
 const CLIENT_ID='spring-security-oauth2-read-write-client' ;
-const CLIENT_SECRET='spring-security-oauth2-read-write-client-password1234';
+//const CLIENT_SECRET='spring-security-oauth2-read-write-client-password1234';
 const ROOT_URL='http://localhost:8080' ;
 
 export default{
@@ -15,6 +15,9 @@ export default{
                 responseType: 'token'
             };
             window.location = `${ROOT_URL}/oauth/token?${qs.stringify(queryString)}`
-    }
+    },
 
+    url(address){
+        return `${ROOT_URL}/${qs.stringify(address)}`
+    }    
 };

@@ -2,7 +2,7 @@
 <div>
         <div v-for="person in persons" :key="person.id" v-bind:value="person.id">
             <div>
-                <img :src="person.img"/>
+                <b-img :src="person.img"/>
                 <!-- <h3 @click="gotoDetail()">{{person.title}} {{person.name}}</h3> -->
             </div>    
         </div>
@@ -90,7 +90,7 @@ export default {
             persons:[
                 {
                     name:'iziy',
-                    img:'http://localhost:8080/images/logo/logo.png',
+                    img:'/images/logo/logo.png',
                     title:'naser',
                     id:17566
                 },
@@ -100,7 +100,7 @@ export default {
     methods:{
         load(){
             //var self = this;
-            const url = `http://localhost:8080/f2f/aboutUs/list/`;
+            const url = `/aboutUs/list/`;
             axios.get(url,{
                 params:{
                 }

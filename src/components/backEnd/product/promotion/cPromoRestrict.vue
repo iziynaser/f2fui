@@ -11,7 +11,7 @@
                     <b-col sm="9">
                         default,minimum,maximum,box,wholesale,promotional,list price
                         <f2fPriceType v-model="form.priceType" :labell="this.$t('PROFILE_emailType')" 
-                                                  fetchUrl="http://localhost:8080/f2f/InvoiceType/list"
+                                                  fetchUrl="/InvoiceType/list"
                                                   :selectOptionLabel="this.$t('PROFILE_selectEmailType')"/> 
                     </b-col>
                 </b-row>      

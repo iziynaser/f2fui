@@ -13,7 +13,7 @@
                     </b-col>
                     <b-col sm="9">
                         <f2fPriceType v-model="form.priceType"  
-                                                  fetchUrl="http://localhost:8080/f2f/priceType/list"
+                                                  fetchUrl="/priceType/list"
                                                   :selectOptionLabel="this.$t('C_PRICE_TYPE')"/> 
                     </b-col>
                 </b-row>      
@@ -113,7 +113,7 @@ export default {
                 this.isBusy = true;
                 axios({
                     method:'GET',
-                    url:'http://localhost:8080/f2f/ProductPrice/list',
+                    url:'/ProductPrice/list',
                 })
                 .then(function(res){
                       self.items = res.data; 
@@ -126,7 +126,7 @@ export default {
             var self = this;
             const access_token=localStorage.getItem('access_token');
 
-            const url = `http://localhost:8080/f2f/ProductPrice/save`;
+            const url = `/ProductPrice/save`;
             axios.post(url,self.form,
             {
                 params:{

@@ -30,7 +30,7 @@ export default {
               let self = this;
               axios({
                 method:'GET',
-                url:'http://localhost:8080/user/me',
+                url:'/user/me',
                 // params:{
                 //      'access_token' : localStorage.getItem('access_token')
                 //   },

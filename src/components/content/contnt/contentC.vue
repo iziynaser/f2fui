@@ -31,7 +31,7 @@ export default {
     methods:{
         loadContent(){
             var self = this;
-            const url = `http://localhost:8080/f2f/content/load`;
+            const url = `/content/load`;
             axios.get(url,{
                 params:{
                     code : '123',

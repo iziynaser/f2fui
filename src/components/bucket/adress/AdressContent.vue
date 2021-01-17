@@ -85,7 +85,7 @@ export default {
 
             //var self = this;
             console.log("delete:"+delivery.id);
-            const url = `http://localhost:8080/f2f/Delivery/delete`;
+            const url = `/Delivery/delete`;
             axios.delete(url,{data:delivery})
                 .then(function(res){
                     console.log(res); 
@@ -96,7 +96,7 @@ export default {
         },
         loadAdressDeliveryList(){
             var self = this;
-            const url = `http://localhost:8080/f2f/Delivery/list`;
+            const url = `/Delivery/list`;
             axios.get(url,{
                 params:{}
             })

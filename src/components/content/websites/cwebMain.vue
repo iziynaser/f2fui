@@ -94,7 +94,7 @@ export default {
         },
         save(){
                var self = this;
-               const url="http://localhost:8080/f2f/aboutUs/save" ;
+               const url="/aboutUs/save" ;
                self.form.product= self.id;
                axios.post(url,self.form)
                     .then((res) => {
@@ -106,7 +106,7 @@ export default {
         },
         load(){
                         var self = this;
-            const url = `http://localhost:8080/f2f/aboutUs/list`;
+            const url = `/aboutUs/list`;
             axios.get(url,{
                 params:{
                     form: self.form

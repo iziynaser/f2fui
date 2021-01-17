@@ -113,7 +113,7 @@ export default {
         },
         onSubmit:function(event) {            
             event.preventDefault();
-            this.axios.post('http://localhost:8080/person/',{
+            this.axios.post('/person/',{
                 person:this.$data
             }).then(function (response){
                 console.log(response.data)    ;

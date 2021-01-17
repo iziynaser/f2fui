@@ -135,7 +135,7 @@ export default {
       },
       saveinvoice(){
         var self = this;
-        axios.post('http://localhost:8080/Invoice/save',self.form).then(function (res){
+        axios.post('/Invoice/save',self.form).then(function (res){
           console.log(res);
         }).catch(function(err){
            console.log("err :"+err) ;

@@ -23,7 +23,7 @@
                 </b-col>
                 <b-col sm="9">
                     <f2fInvoiceType 
-                        fetchUrl="http://localhost:8080/f2f/ProductType/list"
+                        fetchUrl="/ProductType/list"
                         :selectOptionLabel="this.$t('CPRODUCT_MAIN_productType_select')"/> 
                 </b-col>
             </b-row>            
@@ -83,7 +83,7 @@ export default {
     methods:{
         save(){
             var self = this;
-            const url = `http://localhost:8080/f2f/Category/save`;
+            const url = `/Category/save`;
             axios.post(url,self.form)
                  .then((res)=>{
                      console.log(res);
@@ -96,7 +96,7 @@ export default {
         },
         loadCategories(){
                 var self = this;
-                const url = `http://localhost:8080/f2f/Category/list`;
+                const url = `/Category/list`;
                 axios.get(url,{
                 params:{}
             })

@@ -60,7 +60,7 @@ export default {
                 this.isBusy = true;
                 axios({
                     method:'GET',
-                    url:'http://localhost:8080/f2f/skillType/list',
+                    url:'/skillType/list',
                 })
                 .then(function(res){
                       self.searchResult = res.data; 

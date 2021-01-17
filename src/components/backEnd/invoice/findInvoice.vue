@@ -40,7 +40,7 @@
           </b-container> 
 
           <f2fInvoiceType :labell="this.$t('INVOICE_TYPE_COMMON_select')" 
-                          fetchUrl="http://localhost:8080/f2f/InvoiceType/list"
+                          fetchUrl="/InvoiceType/list"
                           :selectOptionLabel="this.$t('INVOICE_TYPE_COMMON_selectOptionLabel')"/>
 
             <b-form-group label="status ">
@@ -111,7 +111,7 @@ export default {
       
       axios({
                 method:'GET',
-                url:'http://localhost:8080/f2f/InvoiceActionTypes/list',
+                url:'/InvoiceActionTypes/list',
             //     params:{
             //          'access_token' : localStorage.getItem('access_token')
             //       },
@@ -134,7 +134,7 @@ export default {
                 var self = this;
                 this.errors= {};
                 this.isBusy = true;
-                axios.get('http://localhost:8080/f2f/Invoice/list')
+                axios.get('/Invoice/list')
                 .then(function(res){
                       self.searchResult = res.data; 
                       self.isBusy=false;

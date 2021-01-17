@@ -31,7 +31,7 @@ export default {
                 this.isBusy = true;
                 axios({
                     method:'GET',
-                    url:'http://localhost:8080/f2f/management/user/list',
+                    url:'/management/user/list',
                 })
                 .then(function(res){
                       console.log(res.data);  

@@ -10,7 +10,7 @@
                         name:'product',
                         params:{id:product.id,title:product.name}
                     }">
-                <img :src="cardImage"/>      
+                <b-img :src="cardImage"/>      
             </router-link>
 
             <b-card-header>

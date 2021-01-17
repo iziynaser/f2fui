@@ -81,7 +81,7 @@ export default {
             self.form.parentCategory = self.categoryCode;
             self.form.categoryType = self.categoryType;
 
-            const url = `http://localhost:8080/f2f/Category/save`;
+            const url = `/Category/save`;
             axios.post(url,self.form)
                  .then((res)=>{
                      //console.log(res);

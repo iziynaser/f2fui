@@ -57,7 +57,7 @@ doLoginWithDefaultData(){
 
 var self = this;//.errorMessage;
 console.log('username:',self.form.username,',password:',self.form.password);
-axios.get('http://localhost:8080/oauth/token',{
+axios.get('/oauth/token',{
   params:{
      client_id:'SampleClientId',
      client_secret:'tgb.258',
@@ -83,7 +83,7 @@ checkTokenIsValid:()=>{
   var token = this.$store.
   axios({
     method: 'get',
-    url: 'http://localhost:8080/oauth/check_token',  
+    url: '/oauth/check_token',  
     params:{
       token: {token}
     }

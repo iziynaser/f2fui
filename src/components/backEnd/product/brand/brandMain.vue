@@ -75,7 +75,7 @@ export default {
         },
         saveBrand(){
                var self = this;
-               const url="http://localhost:8080/f2f/brand/save" ;
+               const url="/brand/save" ;
                axios.post(url,self.form)
                     .then((res) => {
                         console.log(res);
@@ -89,7 +89,7 @@ export default {
             var self = this;
             // self.form.categoryId=cId;
             self.form.categoryId=form.cCode;
-            const url = `http://localhost:8080/f2f/brand/byCategoryId`;
+            const url = `/brand/byCategoryId`;
             axios.get(url,{
                 params:{
                     // categoryId: cId

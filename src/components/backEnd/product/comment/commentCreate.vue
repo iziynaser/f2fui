@@ -55,7 +55,7 @@ export default {
       saveCommentClick(){
         //this.comments.push({title:this.title,benefits:this.benefits,upsets:this.upsets,content:this.content});
         var self = this;
-        const url="http://localhost:8080/f2f/comments/save" ;
+        const url="/comments/save" ;
         self.form.productId= self.id;
         axios.post(url,self.form)
              .then((res) => {

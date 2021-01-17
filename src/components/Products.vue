@@ -4,7 +4,7 @@
             <h1>products {{this.productSize}}</h1>
             <div class="row">
                 <div v-for="product in listOfProducts" :key="product.id" >
-                    <cards :product="product"    cardImage="http://localhost:8080/images/flw/f1.jpg">
+                    <cards :product="product"    cardImage="/images/flw/f1.jpg">
                     </cards>
                 </div>
             </div>

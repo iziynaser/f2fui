@@ -59,7 +59,7 @@ export default {
                 self.form.categoryId=idv;
                 self.cName = idt;
 
-                const url = `http://localhost:8080/f2f/Category/listById`;
+                const url = `/Category/listById`;
                 axios.get(url,{
                 params:{id:idv}
             })
@@ -101,7 +101,7 @@ export default {
         },
         loadBrands(cId){
             var self = this;
-            const url = `http://localhost:8080/f2f/brand/byCategoryId`;
+            const url = `/brand/byCategoryId`;
             axios.get(url,{
                 params:{
                     categoryId: cId

@@ -2,7 +2,7 @@
         
   <div>
     <h4>F2F App</h4>
-      <b-card img-src="http://localhost:8080/images/icon/userProfile.png" img-alt="Card image" img-right>
+      <b-card img-src="/images/icon/userProfile.png" img-alt="Card image" img-right>
         <b-card-title>registration was successfully done..</b-card-title>
         <b-card-text>
           Some quick example text to build on the card and make up the bulk of the card's content.

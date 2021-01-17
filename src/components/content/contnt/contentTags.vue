@@ -66,7 +66,7 @@ export default {
                 this.isBusy = true;
                 axios({
                     method:'GET',
-                    url:'http://localhost:8080/f2f/ProductPrice/list',
+                    url:'/ProductPrice/list',
                 })
                 .then(function(res){
                       self.items = res.data; 

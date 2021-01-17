@@ -3,7 +3,7 @@
       <b-form >
 
           <b-form-group id="logoF2f" >
-              <b-img src="http://localhost:8080/images/logo/logo.png"></b-img>
+              <b-img src="/images/logo/logo.png"></b-img>
               <label v-if="signUpmessage">
                 {{signUpmessage}} 
               </label>
@@ -69,7 +69,7 @@ import router from '../router'
             var self = this;
               axios({
                 method:'GET',
-                url:'http://localhost:8080/oauth/signUp',
+                url:'/oauth/signUp',
                 headers:{
                     'Content-Type':'x-www-form-urlencoded'
                 },
@@ -101,12 +101,10 @@ import router from '../router'
         //console.log(welcome);
 
         var self = this;
-        axios.get('http://localhost:8080/captcha/graph')
+        axios.get('/captcha/graph')
              .then(function (response){
                 self.form.graphId=response.data.graphId;
                 self.captchaImg='http://localhost:8080'+response.data.graphUrl;
-                //console.log(self.from.graphUrl);
-                //console.log(self.form.graphUrl);
              })
              .catch(function(error){               
                 console.log(error)

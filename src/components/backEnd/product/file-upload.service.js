@@ -1,7 +1,7 @@
 import * as axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080/f2f/storage/upload-multiple-files';
-//const BASE_URL = 'http://localhost:8080/f2f/storage/upload-file?access_token=';
+const BASE_URL = '/storage/upload-multiple-files';
+//const BASE_URL = '/storage/upload-file?access_token=';
 
 
 
@@ -43,7 +43,7 @@ function upload(formData) {
 }
 
 function loadListOfImages(productId,type){
-    const url = `http://localhost:8080/f2f/storage/list`;
+    const url = `/storage/list`;
     return axios.get(url,{
         params:{
             productId: productId,

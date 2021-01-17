@@ -68,7 +68,7 @@ export default {
         },
         saveKeyword(){
                var self = this;
-               const url="http://localhost:8080/f2f/productKeywords/save" ;
+               const url="/productKeywords/save" ;
                self.form.product= self.id;
                axios.post(url,self.form)
                     .then((res) => {
@@ -82,7 +82,7 @@ export default {
         },
         loadKeyowrds(){
             var self = this;
-            const url = `http://localhost:8080/f2f/productKeywords/list`;
+            const url = `/productKeywords/list`;
             axios.get(url,{
                 params:{
                     productId: self.id

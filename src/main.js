@@ -25,6 +25,9 @@ import f2fInvoiceType from './components/base/f2fInvoiceType';
 //general axios call
 //import f2fApi from './f2fApi' ;
 
+//test appUrl method
+import {appUrl,baseUrl} from './api/util'
+
 //test interceptor
 import interceptorSetup from './interceptors'
 
@@ -38,17 +41,21 @@ Vue.use(BootstrapVueIcons)
 Vue.use(VueI18Next);
 
 //new setting 2
-//axios.defaults.baseURL='http://localhost:8080/f2f/'
 //end of new setting 2
 
 //new setting
 axios.interceptors.request.use(
   function(config){
     config.headers.authorization = localStorage.getItem('access_token');
-    //config.params['access_token']=  localStorage.getItem('access_token');
     config.params = {...config.params, access_token: localStorage.access_token}
-    //console.log('config:'+ config);
-    return config;
+    
+    if(config.url.includes("oauth") || config.url.includes("captcha"))
+      config.url = baseUrl(config.url);
+    else
+      config.url = appUrl(config.url);
+
+      console.log(config.url);
+      return config;
   },
 );
 

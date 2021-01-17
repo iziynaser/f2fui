@@ -1,7 +1,7 @@
 <template>
   <div >      
-        <!-- <img :src="icons[en]" />
-        <img :src="icons[fa]" /> -->
+        <!-- <b-img :src="icons[en]" />
+        <b-img :src="icons[fa]" /> -->
   </div>
 </template>
 

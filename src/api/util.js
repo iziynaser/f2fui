@@ -1,3 +1,18 @@
+const APP_URL = 'http://localhost:8080/f2f'
+const IMG_URL = 'http://localhost:8080'
+
+export function imgUrl(address){
+     return IMG_URL + address
+}
+
+export function baseUrl(address){
+    return IMG_URL + address
+}
+
+export function appUrl(address){
+    return APP_URL + address    
+}
+
 export function switchDocumentLocale(locale, dir, opt = {}) {
     const html = window.document.documentElement
 

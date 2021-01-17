@@ -75,7 +75,7 @@ export default {
                 self.form.cName = idt;
                 self.form.cCode = idv;
 
-                const url = `http://localhost:8080/f2f/Category/listById`;
+                const url = `/Category/listById`;
                 axios.get(url,{
                 params:{id:idv,cId:self.cType}
             })

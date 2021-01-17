@@ -47,16 +47,16 @@
         <b-col>
                   <span>{{$t('C_FOOTER_FOLLOW_US')}}</span>
                   <b-link :href="form.instagramUrl">
-                      <img src="http://localhost:8080/images/footer/instagram.png" class="p-2 w-20 img-rounded" />
+                      <b-img src="/images/footer/instagram.png" class="p-2 w-20 img-rounded" />                      
                   </b-link>
                   <b-link :href="form.twitterUrl">
-                      <img src="http://localhost:8080/images/footer/twitter.png" class="p-2 w-20 img-rounded" />
+                      <b-img src="/images/footer/twitter.png" class="p-2 w-20 img-rounded" />
                   </b-link>
                   <b-link :href="form.aparatUrl">
-                      <img src="http://localhost:8080/images/footer/aparat.png" class="p-2 w-20 img-rounded" />
+                      <b-img src="/images/footer/aparat.png" class="p-2 w-20 img-rounded" />
                   </b-link>
                   <b-link :href="form.linkedInUrl">
-                      <img src="http://localhost:8080/images/footer/linkedin.png" class="p-2 w-20 img-rounded" />
+                      <b-img src="/images/footer/linkedin.png" class="p-2 w-20 img-rounded" />
                   </b-link>
         </b-col>
      </b-row>

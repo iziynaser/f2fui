@@ -113,7 +113,7 @@ export default {
             if(self.id==0)
                 return
             
-            const url = `http://localhost:8080/f2f/productFeatureGroup/load`;
+            const url = `/productFeatureGroup/load`;
             axios.get(url,{
                 params:{
                     productId: self.id

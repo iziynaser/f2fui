@@ -158,7 +158,7 @@ export default {
       },
       loadDefaultDelivery(){
             var self = this;
-            const url = `http://localhost:8080/f2f/Delivery/defaultDelivery`;
+            const url = `/Delivery/defaultDelivery`;
             axios.get(url,{
                 params:{}
             })

@@ -14,7 +14,7 @@
                     </b-form-group>
                     <b-form-group>
                                   <f2fInvoiceType :labell="this.$t('PROFILE_emailType')" 
-                                                  fetchUrl="http://localhost:8080/f2f/InvoiceType/list"
+                                                  fetchUrl="/InvoiceType/list"
                                                   :selectOptionLabel="this.$t('PROFILE_selectEmailType')"/>
                     </b-form-group>
                     <b-form-group>
@@ -44,7 +44,7 @@
                     </b-form-group>
                     <b-form-group>
                                   <f2fInvoiceType :labell="this.$t('PROFILE_emailType')" 
-                                                  fetchUrl="http://localhost:8080/f2f/InvoiceType/list"
+                                                  fetchUrl="/InvoiceType/list"
                                                   :selectOptionLabel="this.$t('PROFILE_selectEmailType')"/>
                     </b-form-group>
                     <b-form-group>

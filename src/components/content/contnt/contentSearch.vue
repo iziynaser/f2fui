@@ -187,7 +187,7 @@ export default {
     methods:{
         searchForm(){
             var self = this;
-            const url = "http://localhost:8080/f2f/content/search" ;
+            const url = "/content/search" ;
             axios.post(url,self.form)
                  .then((res) => {
                     //console.log(res);

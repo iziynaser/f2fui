@@ -102,7 +102,7 @@ export default {
         },
         saveProduct(){
             var self = this;
-            const url = `http://localhost:8080/f2f/products/save`;
+            const url = `/products/save`;
             axios.post(url,self.product)
                         .then((res)=>{
                             console.log(res);

@@ -73,7 +73,7 @@ export default {
             var self = this;
             axios({
                 method:"GET",
-                url: "http://localhost:8080/f2f/comments/list",
+                url: "/comments/list",
                 params:{
                     'access_token': localStorage.getItem('access_token'),
                     'productId':self.id 

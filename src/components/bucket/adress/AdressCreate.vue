@@ -127,7 +127,7 @@ export default {
     methods:{
             loadOstan(){
                 var self = this;
-                const url = `http://localhost:8080/f2f/ostan/list`;
+                const url = `/ostan/list`;
                 axios.get(url,{
                     params:{
                     }
@@ -141,7 +141,7 @@ export default {
             },
             loadCity(){
                 var self = this;
-                const url = `http://localhost:8080/f2f/shahr/list`;
+                const url = `/shahr/list`;
                 axios.get(url,{
                     params:{
                         id:self.form.ostanId,
@@ -156,7 +156,7 @@ export default {
             },
             saveForm(){
                var self = this;
-               const url="http://localhost:8080/f2f/Delivery/save" ;
+               const url="/Delivery/save" ;
                axios.post(url,self.form)
                     .then((res) => {
                         console.log(res);

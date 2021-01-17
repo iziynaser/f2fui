@@ -30,26 +30,26 @@
                             <b-collapse v-model="c[0]" ref="c1" id="c1">
                                 <div>                                       
                                         <f2fBaseInfo  label="price types"
-                                                      url="http://localhost:8080/f2f/ProductPrice/list"
-                                                      saveUrl="http://localhost:8080/f2f/ProductPrice/save"
-                                                      deleteUrl="http://localhost:8080/f2f/ProductPrice/del"  />
+                                                      url="/ProductPrice/list"
+                                                      saveUrl="/ProductPrice/save"
+                                                      deleteUrl="/ProductPrice/del"  />
                                 </div>
                             </b-collapse>
                             <b-collapse v-model="c[1]" ref="c2" id="c2">
                                 <div>                                        
                                         <f2fBaseInfo  label="measure types"
-                                                      url="http://localhost:8080/f2f/MeasureType/list" 
-                                                      saveUrl="http://localhost:8080/f2f/MeasureType/save"
-                                                      deleteUrl="http://localhost:8080/f2f/MeasureType/del"
+                                                      url="/MeasureType/list" 
+                                                      saveUrl="/MeasureType/save"
+                                                      deleteUrl="/MeasureType/del"
                                         />
                                 </div>
                             </b-collapse>
                             <b-collapse v-model="c[2]" ref="c3" id="c3">
                                 <div>                                       
                                         <f2fBaseInfo  label="product types"
-                                                      url="http://localhost:8080/f2f/ProductType/list"
-                                                      saveUrl="http://localhost:8080/f2f/ProductType/save"
-                                                      deleteUrl="http://localhost:8080/f2f/ProductType/del"
+                                                      url="/ProductType/list"
+                                                      saveUrl="/ProductType/save"
+                                                      deleteUrl="/ProductType/del"
                                         />
                                 </div>
                             </b-collapse>

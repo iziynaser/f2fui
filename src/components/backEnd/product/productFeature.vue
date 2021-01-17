@@ -71,7 +71,7 @@ export default {
 
                 this.errors= {};
                 this.isBusy = true;
-                const url = `http://localhost:8080/f2f/feature/features`;
+                const url = `/feature/features`;
                 axios.get(url,{
                     params:{
                         productId: self.id

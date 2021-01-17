@@ -1,7 +1,7 @@
 <template>
 <div>
       <router-link left to="/aboutUs">
-        <b-img left src="http://localhost:8080/images/logo/logo.png" ></b-img> 
+        <b-img left src="/images/logo/logo.png" ></b-img> 
       </router-link>
     
   <!-- main menu -->

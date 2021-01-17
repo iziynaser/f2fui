@@ -13,7 +13,7 @@
                   </b-col>
                   <b-col>
                         <f2fInvoiceType  v-model="form.widthType"
-                            fetchUrl="http://localhost:8080/f2f/MeasureType/list"
+                            fetchUrl="/MeasureType/list"
                             :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
                   </b-col>
               </b-row>
@@ -26,7 +26,7 @@
                   </b-col>
                   <b-col>
                         <f2fInvoiceType v-model="form.hightType"
-                            fetchUrl="http://localhost:8080/f2f/MeasureType/list"
+                            fetchUrl="/MeasureType/list"
                             :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
                   </b-col>
 
@@ -40,7 +40,7 @@
                   </b-col>
                   <b-col>
                         <f2fInvoiceType  v-model="form.depthType"
-                            fetchUrl="http://localhost:8080/f2f/MeasureType/list"
+                            fetchUrl="/MeasureType/list"
                             :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
                   </b-col>
               </b-row>
@@ -53,7 +53,7 @@
                   </b-col>
                   <b-col>
                         <f2fInvoiceType v-model="form.weightType"
-                            fetchUrl="http://localhost:8080/f2f/MeasureType/list"
+                            fetchUrl="/MeasureType/list"
                             :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
                   </b-col>
               </b-row>
@@ -103,7 +103,7 @@ export default {
         },
         save(){
             var self = this;
-            const url = `http://localhost:8080/f2f/productMeasure/save`;
+            const url = `/productMeasure/save`;
             axios.post(url,self.form,
             {
             }).then((res)=>{
@@ -117,7 +117,7 @@ export default {
         },
         loadMeasure(){
             var self = this;
-            const url='http://localhost:8080/f2f/productMeasure/load'
+            const url='/productMeasure/load'
             axios.get(url,
             {
                 params:{
