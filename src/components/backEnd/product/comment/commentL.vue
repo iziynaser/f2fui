@@ -75,7 +75,7 @@ export default {
                 method:"GET",
                 url: "/comments/list",
                 params:{
-                    'access_token': localStorage.getItem('access_token'),
+                    // 'access_token': localStorage.getItem('access_token'),
                     'productId':self.id 
                 }
             }).then(function(res){

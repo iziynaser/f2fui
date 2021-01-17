@@ -83,9 +83,6 @@ export default {
                 axios({
                     method:'GET',
                     url:'/f2f/products',
-                    // params:{
-                    //     'access_token' : localStorage.getItem('access_token')                            
-                    // }
                 })
                 .then(function(res){
                       self.searchResult = res.data; 

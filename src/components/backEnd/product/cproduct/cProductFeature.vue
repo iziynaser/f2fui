@@ -44,7 +44,7 @@ export default {
         },
         save(){
             var self = this;
-            const access_token=localStorage.getItem('access_token');
+            // const access_token=localStorage.getItem('access_token');
 
             const url = `/productFeatureGroup/save`;
             axios.post(url,self.form,
@@ -53,7 +53,7 @@ export default {
                     "Authorization":"Bearer bbbbbb"
                 },
                 params:{
-                    "access_token":access_token
+                    // "access_token":access_token
                 }
             }
             )

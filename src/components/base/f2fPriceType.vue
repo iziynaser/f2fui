@@ -39,11 +39,7 @@ export default {
                 method:'GET',
                 url:self.fetchUrl,
                 params:{
-                     //'access_token' : localStorage.getItem('access_token')
                 },
-            //     params:{
-            //          'access_token' : localStorage.getItem('access_token')
-            //       },
                 withCredentials:true
             })
               .then(function (response) {
