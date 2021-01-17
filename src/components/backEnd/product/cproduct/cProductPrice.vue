@@ -124,13 +124,11 @@ export default {
         },
         save(){
             var self = this;
-            // const access_token=localStorage.getItem('access_token');
 
             const url = `/ProductPrice/save`;
             axios.post(url,self.form,
             {
                 params:{
-                    // "access_token":access_token
                 }
             }).then((res)=>{
                     self.$store.commit("showToast","the product price Saved....");

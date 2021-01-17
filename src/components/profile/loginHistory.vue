@@ -53,9 +53,6 @@ export default {
                   axios({
                         method:'GET',
                         url:'/loginHistory/',
-                        // params:{
-                        //       'access_token' : localStorage.getItem('access_token')
-                        //       },
                         withCredentials:true
                   })
                   .then(function (res) {

@@ -141,20 +141,10 @@ export default {
         },
         saveProduct(){
             var self = this;
-            //const headers = new Headers();
-            // const access_token=localStorage.getItem('access_token');
-            //headers.append('Authorization','Bearer '+ access_token);
-            //headers.append('Accept','application/json');
 
             const url = `/products/save`;
             axios.post(url,self.product,
             {
-                // headers:{
-                //     "Authorization":"Bearer bbbbbb"
-                // },
-                // params:{
-                //     "access_token":access_token
-                // }
             })
                         .then((res)=>{
                             console.log(res);
