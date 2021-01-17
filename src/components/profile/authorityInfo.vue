@@ -1,14 +1,14 @@
 <template>
     <div>
-        authority information
-        <b-collapse id="loginHistory">
+        <!-- authority information -->
+        <!-- <b-collapse id="loginHistory"> -->
           <b-card>
-              <b-card-header>authority information </b-card-header>
+              <!-- <b-card-header>authority information </b-card-header> -->
               <b-list-group v-for="authority in userAuthorities" :key="authority">
                 <b-list-group-item>{{authority}}</b-list-group-item>
               </b-list-group>   
           </b-card>          
-      </b-collapse>
+      <!-- </b-collapse> -->
     </div>
 </template>
 
@@ -31,14 +31,12 @@ export default {
               axios({
                 method:'GET',
                 url:'/user/me',
-                // params:{
-                //      'access_token' : localStorage.getItem('access_token')
-                //   },
                 withCredentials:true
               })
-              .then(function (response) {
+              .then(function (response) {                
                 self.userAuthorities = response.data.authorities;
                 self.nickName = response.data.nickName;
+                //console.log(response.data.authorities);  
           }).catch(function (error) {              
               console.log(error);              
         }) ;          
