@@ -21,7 +21,6 @@ import axios from 'axios'
                 axios.get('/hello',
                 {
                   params:{
-                        'access_token' : localStorage.getItem('access_token')
                          }
                 })
                 .then(function (response) {

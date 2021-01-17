@@ -8,10 +8,6 @@ const BASE_URL = '/storage/upload-multiple-files';
 // function upload(formData) {
     
 //     console.log('upload is called......')
-//     const access_token = localStorage.getItem('access_token');
-//     const token = `Bearer ${access_token}`;
-//     console.log(token);
-
 //     const url = `${BASE_URL}/`;
 //     return axios.post(url, formData)
 //         // get data
@@ -24,15 +20,10 @@ const BASE_URL = '/storage/upload-multiple-files';
 function upload(formData) {
     
     console.log('upload is called......')
-    //const access_token = localStorage.getItem('access_token');
-    //const token = `Bearer ${access_token}`;
-    //console.log(token);
 
     const headers = new Headers();
-    //headers.append('Authorization','Bearer '+ access_token);
     headers.append('Accept','application/json');
 
-    //const url = `${BASE_URL}${access_token}`;
     const url = `${BASE_URL}`;
     return axios.post(url, formData,{headers:headers})
         // get data

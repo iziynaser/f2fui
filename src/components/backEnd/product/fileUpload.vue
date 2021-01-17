@@ -128,10 +128,7 @@
         upload(formData)
           .then(wait(1500)) // DEV ONLY: wait for 1.5s 
           .then(x => {
-            // for(let i in x){
-            //   i.uri = x.uri + '?access_token=' + localStorage.getItem('access_token');
-            //   i.url = x.url  + '?access_token=' + localStorage.getItem('access_token');
-            // }
+
             this.uploadedFiles = [].concat(x);
             console.log(x);
             //console.log(this.uploadedFiles);
