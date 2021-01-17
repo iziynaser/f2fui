@@ -47,16 +47,16 @@
         <b-col>
                   <span>{{$t('C_FOOTER_FOLLOW_US')}}</span>
                   <b-link :href="form.instagramUrl">
-                      <b-img src="/images/footer/instagram.png" class="p-2 w-20 img-rounded" />                      
+                      <b-img :src="urlI('/images/footer/instagram.png')" class="p-2 w-20 img-rounded" />                      
                   </b-link>
                   <b-link :href="form.twitterUrl">
-                      <b-img src="/images/footer/twitter.png" class="p-2 w-20 img-rounded" />
+                      <b-img :src="urlI('/images/footer/twitter.png')" class="p-2 w-20 img-rounded" />
                   </b-link>
                   <b-link :href="form.aparatUrl">
-                      <b-img src="/images/footer/aparat.png" class="p-2 w-20 img-rounded" />
+                      <b-img :src="urlI('/images/footer/aparat.png')" class="p-2 w-20 img-rounded" />
                   </b-link>
                   <b-link :href="form.linkedInUrl">
-                      <b-img src="/images/footer/linkedin.png" class="p-2 w-20 img-rounded" />
+                      <b-img :src="urlI('/images/footer/linkedin.png')" class="p-2 w-20 img-rounded" />
                   </b-link>
         </b-col>
      </b-row>
@@ -65,6 +65,9 @@
 </template>
 
 <script>
+
+import {baseUrl} from '../api/util'
+
 export default {
     name:'footers',   
     data(){
@@ -77,6 +80,11 @@ export default {
               instagramUrl:''
           }
         }
+    },
+    methods:{
+      urlI(u){
+        return baseUrl(u)
+      }
     } 
 }
 </script>

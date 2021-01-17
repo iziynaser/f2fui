@@ -4,7 +4,7 @@
             <h1>products {{this.productSize}}</h1>
             <div class="row">
                 <div v-for="product in listOfProducts" :key="product.id" >
-                    <cards :product="product"    cardImage="/images/flw/f1.jpg">
+                    <cards :product="product"   :cardImage="urlI('/images/flw/f1.jpg')">
                     </cards>
                 </div>
             </div>
@@ -17,6 +17,8 @@
 import { mapActions,mapGetters } from 'vuex';
 import cards from './cards'
 
+import {baseUrl} from '../api/util'
+
 export default {
     name:'Products',
     props:{
@@ -27,6 +29,9 @@ export default {
       }
     } ,
     methods:{
+              urlI(u){
+        return baseUrl(u)
+      },
         ...mapActions(['fetchProducts'])
     },
     components:{

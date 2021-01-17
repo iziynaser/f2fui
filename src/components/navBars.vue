@@ -1,7 +1,7 @@
 <template>
 <div>
       <router-link left to="/aboutUs">
-        <b-img left src="/images/logo/logo.png" ></b-img> 
+        <b-img left :src="urlI('/images/logo/logo.png')" ></b-img> 
       </router-link>
     
   <!-- main menu -->
@@ -94,6 +94,8 @@ import customMenus from './menus/customMenus'
 import userMenu from './menus/userMenu'
 import cmsMenu from './menus/cmsMenu'
 
+import {baseUrl} from '../api/util'
+
 export default {
       name:'navBars',
       components:{
@@ -111,7 +113,10 @@ export default {
         cmsMenu
       },
       methods:{
-         
+               urlI(u){
+        return baseUrl(u)
+      }
+
       }
     }
 </script>
