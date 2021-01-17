@@ -12,7 +12,7 @@
             <h4>list of basket</h4>
             <!-- <b-card-group deck> -->
                 <div v-for="product in listOfCarts" :key="product.id" class="mt-4">                  
-                  <b-card img-src="http://localhost:8080/images/product/8/medium/pic1.jpg" img-width="70" img-height="70" img-left >
+                  <b-card img-src="/images/product/8/medium/pic1.jpg" img-width="70" img-height="70" img-left >
                       <h4>{{product.name}},{{product.quantity}}</h4>
                       <b-card-text>
                         description of product

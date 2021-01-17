@@ -7,7 +7,7 @@
         <strong>list of images on server</strong>
         <ul>
           <li v-for="item in listOfImages" :key="item">
-            <!-- <img :src="item" class="img-responsive img-thumnail"> -->
+            <!-- <b-img :src="item" class="img-responsive img-thumnail"> -->
             <b-img rounded thumbnail fluid :src="item"></b-img>
           </li>
         </ul>
@@ -39,7 +39,7 @@
         </p>
         <ul class="list-unstyled">
           <li v-for="item in uploadedFiles" :key="item.url">
-            <img :src="item.uri" class="img-responsive img-thumbnail" :alt="item.originalName">
+            <b-img :src="item.uri" class="img-responsive img-thumbnail" :alt="item.originalName"/>
           </li>
         </ul>
       </div>
