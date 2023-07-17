@@ -1,8 +1,6 @@
 <template>
 <div>
-      <router-link left to="/aboutUs">
-        <b-img left :src="urlI('/images/logo/logo.png')" ></b-img> 
-      </router-link>
+      <!-- <Logo/> -->
     
   <!-- main menu -->
   <b-navbar toggleable="sm" type="dark" variant="dark" >
@@ -95,23 +93,25 @@ import userMenu from './menus/userMenu'
 import cmsMenu from './menus/cmsMenu'
 
 import {baseUrl} from '../api/util'
+// import Logo from '../front/Logo.vue'
 
 export default {
       name:'navBars',
       components:{
-        categoriesMenu,
-        orderMenu,
-        portalMenu,
-        humanResMenu,
-        catalogMenu,
-        langMenu,
-        contentMenu,
-        accountingMenu,
-        reportMenu,
-        customMenus ,
-        userMenu ,
-        cmsMenu
-      },
+    categoriesMenu,
+    orderMenu,
+    portalMenu,
+    humanResMenu,
+    catalogMenu,
+    langMenu,
+    contentMenu,
+    accountingMenu,
+    reportMenu,
+    customMenus,
+    userMenu,
+    cmsMenu,
+    // Logo
+},
       methods:{
                urlI(u){
         return baseUrl(u)
