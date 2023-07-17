@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+//import Home from './views/Home.vue'
 import user from './components/user'
 import contact from './components/contact'
 import aboutUs from './components/aboutUs'
@@ -61,6 +61,10 @@ import contentC from './components/content/contnt/contentC.vue'
 
 import userMain from './components/backEnd/user/userMain.vue'
 
+import FrontEnd from './front/FrontEnd.vue'
+import BackEnd from './back/BackEnd.vue'
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -68,9 +72,19 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      path:'/front/FrontEnd',
+      name:'FrontEnd',
+      component: FrontEnd
+    },
+    {
+      path:'/back/BackEnd',
+      name: 'BackEnd',
+      component: BackEnd
+    },
+    {
       path: '/',
       name: 'home',
-      component: Home
+      component: FrontEnd
     },
     {
        path:'/invoice',
