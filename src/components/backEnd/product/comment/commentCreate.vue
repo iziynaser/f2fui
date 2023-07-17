@@ -38,7 +38,7 @@ export default {
     methods:{
       editorContentChanged(c){
         this.form.content = c;
-        console.log(this.form.content);
+        //console.log(this.form.content);
       },
       updateListOfBenefits(benifitsArray){
           this.form.benefits = benifitsArray
@@ -55,7 +55,7 @@ export default {
       saveCommentClick(){
         //this.comments.push({title:this.title,benefits:this.benefits,upsets:this.upsets,content:this.content});
         var self = this;
-        const url="/comments/save" ;
+        const url=`/comments/save` ;
         self.form.productId= self.id;
         axios.post(url,self.form)
              .then((res) => {
