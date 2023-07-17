@@ -16,11 +16,15 @@ export default {
         address:{
             required : true,
             type: String
+        },
+        count:{
+            required : true ,
+            type: String
         }
           } ,
     data(){
       return {
-        count: 0
+        //count: 0
       }
     } ,
     methods:{
