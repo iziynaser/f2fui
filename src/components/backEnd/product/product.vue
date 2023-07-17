@@ -21,15 +21,15 @@
               <div>
                 <b-list-group horizontal>
                   <b-list-group-item>                  
-                    <f2fBadge name="comments" address="urlComments"/>
+                    <f2fBadge name="comments" address="urlComments" count="10"/>
                   </b-list-group-item>
 
                   <b-list-group-item>
-                    <f2fBadge name="sales" address="urlsales"/>
+                    <f2fBadge name="sales" address="urlsales" count="20"/>
                   </b-list-group-item>
                   
                   <b-list-group-item>
-                    <f2fBadge name ="views" address="urlviews"/>
+                    <f2fBadge name ="views" address="urlviews" count="30" />
                   </b-list-group-item>
                   
                 </b-list-group>                
@@ -166,7 +166,7 @@ import productFeature from './productFeature'
 import {loadListOfImages} from './file-upload.service'
 import moreLess from './moreLess'
 import colorMoreLess from './colorMoreLess'
-
+import * as axios from 'axios';
 import contentC from '../../content/contnt/contentC'
 import f2fBadge from '../../base/f2fBadge'
 
@@ -194,7 +194,7 @@ export default {
       return {
         numberOfStars:'',
         numberOfViewsOfUsers:'',
-        numberOfComments:'',
+        numberOfComments: 0,
         brand:'',
         category:'',
         availableColors:'',
@@ -216,6 +216,21 @@ export default {
       }
     } ,
     methods:{
+         getNumberOfCommentsForProduct(){
+          var self = this;
+            const url = `/productComments/numberOfCommentsForProduct`;
+            axios.get(url,{
+                params:{
+                    productId: self.id
+                }
+            })
+                .then((res)=>{
+                    self.numberOfComments = res.data;
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+         },
           addToCart(){
             this.$store.dispatch("addToCart",this.id);            
           },
@@ -238,6 +253,12 @@ export default {
                 })
           }
     }      ,
+    created() {
+            //this.$store.commit("showToast","the product page loaded....");
+            if(this.id!==0){
+                this.getNumberOfCommentsForProduct();
+            }
+    }, 
     mounted(){
         this.showThumbnailImages();
         this.showMediumImages();
