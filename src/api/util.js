@@ -1,5 +1,6 @@
 const APP_URL = 'http://localhost:8080/f2f'
 const IMG_URL = 'http://localhost:8080'
+const FRONT_URL = 'http://localhost:8080/front'
 
 export function imgUrl(address){
      return IMG_URL + address
@@ -11,6 +12,10 @@ export function baseUrl(address){
 
 export function appUrl(address){
     return APP_URL + address    
+}
+
+export function frontUrl(address){
+    return FRONT_URL + address
 }
 
 export function switchDocumentLocale(locale, dir, opt = {}) {
