@@ -56,7 +56,7 @@
                                   </b-row>      
                         <b-row class="my-1">
                             <b-col>
-                                <b-button size="small" variant="primary" v-on:click="saveProduct">{{$t('C_WEB_SAVE')}}</b-button>
+                                <b-button size="small" variant="primary" v-on:click="saveSocialSetting">{{$t('C_WEB_SAVE')}}</b-button>
                             </b-col>
                         </b-row>
 
@@ -99,6 +99,17 @@ export default {
             self.releaseDate="";
             self.disContinuedDate="";
             self.brand="";
+        },
+        saveSocialSetting(){
+            var self = this ;
+            const url = `/socialSetting/saveOrUpdate`
+            axios.post(url,self)
+                .then((res)=>{
+                     console.log(res);   
+                })
+                .catch((err)=>{
+                    console.log(err);
+                });
         },
         saveProduct(){
             var self = this;
