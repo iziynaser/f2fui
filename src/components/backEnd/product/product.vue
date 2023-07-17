@@ -21,15 +21,15 @@
               <div>
                 <b-list-group horizontal>
                   <b-list-group-item>                  
-                    <f2fBadge name="comments" address="urlComments" count="10"/>
+                    <f2fBadge name="comments"  count="10"/>
                   </b-list-group-item>
 
                   <b-list-group-item>
-                    <f2fBadge name="sales" address="urlsales" count="20"/>
+                    <f2fBadge name="sales"  count="20"/>
                   </b-list-group-item>
                   
                   <b-list-group-item>
-                    <f2fBadge name ="views" address="urlviews" count="30" />
+                    <f2fBadge name ="views"  count="30" />
                   </b-list-group-item>
                   
                 </b-list-group>                
@@ -216,6 +216,22 @@ export default {
       }
     } ,
     methods:{
+         getAvailableColors(){
+          var self = this;
+            const url = `productColors/list`; 
+            axios.get(url,{
+                params:{
+                    productId: self.id
+                }
+            })
+                .then((res)=>{
+                    //self.numberOfComments = res.data;
+                    console.log("available colors:"+ res.data);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+         },
          getNumberOfCommentsForProduct(){
           var self = this;
             const url = `/productComments/numberOfCommentsForProduct`;
