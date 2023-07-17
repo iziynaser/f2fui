@@ -4,7 +4,7 @@
         <b-dropdown no-caret variant="link" toggle-class="text-decoration-none">
             <template slot="button-content">
                 <b-button variant="outline-primary">
-                    <b-icon-bucket-fill></b-icon-bucket-fill>basket
+                    <b-icon-bucket-fill></b-icon-bucket-fill>
                 </b-button>    
             </template>
 
