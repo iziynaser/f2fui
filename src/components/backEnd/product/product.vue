@@ -27,6 +27,11 @@
                   <b-list-group-item>
                     <f2fBadge name="sales" address="urlsales"/>
                   </b-list-group-item>
+                  
+                  <b-list-group-item>
+                    <f2fBadge name ="views" address="urlviews"/>
+                  </b-list-group-item>
+                  
                 </b-list-group>                
               </div>
 
