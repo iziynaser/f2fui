@@ -13,10 +13,10 @@ export default {
             required : true,
             type: String
         },
-        address:{
-            required : true,
-            type: String
-        },
+        // address:{
+        //     required : true,
+        //     type: String
+        // },
         count:{
             required : true ,
             type: String
