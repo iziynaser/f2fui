@@ -55,7 +55,8 @@ const actions={
         window.localStorage.setItem('expires_in',e_i);
         window.localStorage.setItem('scope',s_c);
         window.localStorage.setItem('token_type',t_t);
-        router.push('/');
+        //router.push('/');
+        router.push({name:'BackEnd'});
     }
 };
 
