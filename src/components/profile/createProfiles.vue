@@ -13,7 +13,7 @@
                             <authorityInfo/>    
                         </b-tab>
                         <b-tab :title="$t('address')">
-                            <myAddress/>
+                            <!-- <myAddress/> -->
                         </b-tab>
                         <b-tab :title="$t('emails')">
                             <emails/>
@@ -27,7 +27,7 @@
 
 import loginHistory from './loginHistory'
 import personalInfo from './personalInfo'
-import myAddress from './myAddress'
+//import myAddress from './myAddress'
 import emails from './emails'
 import authorityInfo from './authorityInfo'
 
@@ -46,7 +46,7 @@ export default {
     components:{
         loginHistory,
         personalInfo,
-        myAddress,
+        //myAddress,
         emails,
         authorityInfo
     }
