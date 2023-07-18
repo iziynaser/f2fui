@@ -14,7 +14,7 @@
                      {{prod.product.price}}
                 </div>
             </li>
-            </li>
+            <!-- </li> -->
         </ul>        
     </div>
 </template>
