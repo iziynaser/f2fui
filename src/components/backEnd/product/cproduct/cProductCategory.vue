@@ -9,7 +9,7 @@
                             <label>row</label> 
                         </b-col>
                         <b-col sm="9">
-                            <b-form-input readonly="true" type="text"></b-form-input> 
+                            <b-form-input readonly=true type="text"></b-form-input> 
                         </b-col>
                 </b-row>  
                 <b-row  class="my-1">
@@ -61,9 +61,10 @@ export default {
           items:[],
           fields:[
               {key:'id',label:'شناسه'},
+              {key:'name',label:'nam'},
               {key:'fromDate',label:'از تاریخ'},
               {key:'toDate',label:'تا تاریخ'},
-              {key:'category',label:'دسته'},
+              {key:'description',label:'description'}
           ] ,
       }
     } ,
@@ -74,7 +75,8 @@ export default {
                 this.isBusy = true;
                 axios({
                     method:'GET',
-                    url:'/ProductPrice/list',
+                    url:'/productCategories/listOfCategoriesRelatedToProduct',
+                    params:{productId:self.id} 
                 })
                 .then(function(res){
                       self.items = res.data; 
