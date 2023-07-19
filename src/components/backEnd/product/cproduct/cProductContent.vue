@@ -12,22 +12,22 @@
                </b-tab>
                 <b-tab :title="$t('CPRODUCT_CONTENT_medium_images')">
                     <b-card-text>
-                            <fileUpload type="medium" :productId="id" /> 
+                            <fileUpload type="medium" :productId="Number(id)" /> 
                     </b-card-text>
                 </b-tab>
                <b-tab :title="$t('CPRODUCT_CONTENT_large_images')">
                    <b-card-text>
-                            <fileUpload type="large" :productId="id" /> 
+                            <fileUpload type="large" :productId="Number(id)" /> 
                    </b-card-text>             
                </b-tab>
                <b-tab :title="$t('CPRODUCT_CONTENT_detail_images')">
                    <b-card-text>
-                            <fileUpload type="detail" :productId="id" /> 
+                            <fileUpload type="detail" :productId="Number(id)" /> 
                    </b-card-text>            
                </b-tab>
                <b-tab :title="$t('CPRODUCT_CONTENT_original_images')">
                    <b-card-text>
-                           <fileUpload type="original" :productId="id"/> 
+                           <fileUpload type="original" :productId="Number(id)"/> 
                    </b-card-text> 
                </b-tab>
                
