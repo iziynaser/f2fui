@@ -75,7 +75,7 @@ export default {
               {key:'fromDate',label:'از تاریخ'},
               {key:'toDate',label:'تا تاریخ'},
               {key:'price',label:'قیمت'},
-              {key:'productPriceType',label:'قیمت گذاری'},
+              {key:'tax',label:'قیمت گذاری'},
               {key:'currency',label:'ارز'},
           ] ,
           form:{
@@ -114,9 +114,11 @@ export default {
                 axios({
                     method:'GET',
                     url:'/ProductPrice/list',
+                    params: {productId : self.id}
                 })
                 .then(function(res){
-                      self.items = res.data; 
+                    console.log("list of product prices.");
+                    self.items = res.data; 
                 })
                 .catch(function(error){
                     console.log(error)    ;
