@@ -132,7 +132,8 @@ export default {
                 })
                 .then(function(res){
                     //self.items = res.data; 
-                    console.log(res);
+                    if(res!= undefined)
+                        console.log(res);
                 })
                 .catch(function(error){
                     //console.log('error load keywords....');
@@ -162,7 +163,10 @@ export default {
                     }
                 })
                 .then(function(res){
-                    self.items = res.data; 
+                    if (res!= undefined)
+                        self.items = res.data;
+                    else 
+                        self.items = [];     
                     //console.log(self.items);
                 })
                 .catch(function(error){
