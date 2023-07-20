@@ -497,7 +497,13 @@
        "hr_menu_skills":"مهارت ها",
        "hr_menu_training":"آموزش ها",
        "hr_menu_resume":"رزومه",
-       "hr_menu_leave":"ترک کار"
+       "hr_menu_leave":"ترک کار" ,
+
+       "M":"M" ,
+       "xl":"xl" ,
+       "L":"L" ,
+       "s":"s" ,
+       "freeSize":"free Size"
 
 
     }

@@ -372,7 +372,13 @@
     "hr_menu_skills":"skills",
     "hr_menu_training":"training",
     "hr_menu_resume":"resume",
-    "hr_menu_leave":"leave"
+    "hr_menu_leave":"leave" ,
+
+    "M":"M" ,
+    "xl":"xl" ,
+    "L":"L" ,
+    "s":"s" ,
+    "freeSize":"free Size"
 
   }
 }
