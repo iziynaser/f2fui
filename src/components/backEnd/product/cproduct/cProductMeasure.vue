@@ -12,9 +12,10 @@
                       </b-row>
                   </b-col>
                   <b-col>
-                        <f2fInvoiceType  v-model="form.widthType"
-                            fetchUrl="/MeasureType/list"
-                            :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
+                        <f2fInvoiceType id="widthType" 
+                                        v-model="form.widthType"
+                                        fetchUrl="/MeasureType/list"
+                                        :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
                   </b-col>
               </b-row>
               <b-row  class="my-1">
@@ -25,9 +26,10 @@
                       </b-row>                      
                   </b-col>
                   <b-col>
-                        <f2fInvoiceType v-model="form.hightType"
-                            fetchUrl="/MeasureType/list"
-                            :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
+                        <f2fInvoiceType id="hightType" 
+                                        v-model="form.hightType"
+                                        fetchUrl="/MeasureType/list"
+                                        :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
                   </b-col>
 
               </b-row>
@@ -39,9 +41,10 @@
                       </b-row>
                   </b-col>
                   <b-col>
-                        <f2fInvoiceType  v-model="form.depthType"
-                            fetchUrl="/MeasureType/list"
-                            :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
+                        <f2fInvoiceType id="depthType"  
+                                        v-model="form.depthType"
+                                        fetchUrl="/MeasureType/list"
+                                        :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
                   </b-col>
               </b-row>
               <b-row  class="my-1">
@@ -52,9 +55,10 @@
                       </b-row>       
                   </b-col>
                   <b-col>
-                        <f2fInvoiceType v-model="form.weightType"
-                            fetchUrl="/MeasureType/list"
-                            :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
+                        <f2fInvoiceType id="weightType" 
+                                        v-model="form.weightType"
+                                        fetchUrl="/MeasureType/list"
+                                        :selectOptionLabel="this.$t('C_PRODUCT_MEASURE_TYPE')"/>
                   </b-col>
               </b-row>
               <b-row  class="my-1">
@@ -133,7 +137,7 @@ export default {
         }
     },created() {
             if(this.id){
-                console.log('load measure called...');
+                //console.log('load measure called...');
                 this.loadMeasure();
             }
         },      

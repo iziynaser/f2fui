@@ -6,11 +6,13 @@
           <b-container fluid>
                 <b-row  class="my-1">
                     <b-col sm="3">
-                        <label>priceType</label> 
+                        <label for="priceType">priceType</label> 
                     </b-col>
                     <b-col sm="9">
                         default,minimum,maximum,box,wholesale,promotional,list price
-                        <f2fPriceType v-model="form.priceType" :labell="this.$t('PROFILE_emailType')" 
+                        <f2fPriceType             id="priceType"
+                                                  v-model="form.priceType" 
+                                                  :labell="this.$t('PROFILE_emailType')" 
                                                   fetchUrl="/InvoiceType/list"
                                                   :selectOptionLabel="this.$t('PROFILE_selectEmailType')"/> 
                     </b-col>

@@ -9,10 +9,11 @@
           <b-container fluid>
                 <b-row  class="my-1">
                     <b-col sm="3">
-                        <label>priceType</label> 
+                        <label for="priceType">priceType</label> 
                     </b-col>
                     <b-col sm="9">
-                        <f2fPriceType v-model="form.priceType"  
+                        <f2fPriceType             id="priceType"
+                                                  v-model="form.priceType"  
                                                   fetchUrl="/priceType/list"
                                                   :selectOptionLabel="this.$t('C_PRICE_TYPE')"/> 
                     </b-col>

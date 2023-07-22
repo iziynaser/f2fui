@@ -5,7 +5,7 @@
                        {{labell}}
                  </b-col>
                  <b-col class="col-4">
-                        <select class="m-2" id="t" v-model="invoiceType">
+                        <select class="m-2" :id="id" v-model="invoiceType">
                               <option disabled value="" selected="selected">{{selectOptionLabel}}</option>
                               <option v-for="item in invoiceTypes" :key="item.id" v-bind:value="item.id">
                                     {{item.name}},{{item.description}}
@@ -27,6 +27,7 @@ export default {
           labell: String,
           fetchUrl: String,
           selectOptionLabel:String,
+          id: String
           },
     data(){
       return {

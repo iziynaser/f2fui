@@ -19,12 +19,12 @@
             </b-row>
 			<b-row   class="my-1">
                 <b-col sm="3">
-                    <label>{{$t('CPRODUCT_MAIN_productType')}}</label> 
+                    <label for="productType">{{$t('CPRODUCT_MAIN_productType')}}</label> 
                 </b-col>
                 <b-col sm="9">
-                    <f2fInvoiceType 
-                        fetchUrl="/ProductType/list"
-                        :selectOptionLabel="this.$t('CPRODUCT_MAIN_productType_select')"/> 
+                    <f2fInvoiceType id="productType"
+                                    fetchUrl="/ProductType/list"
+                                    :selectOptionLabel="this.$t('CPRODUCT_MAIN_productType_select')"/> 
                 </b-col>
             </b-row>            
             <b-row  class="my-1">
@@ -75,7 +75,7 @@ export default {
             name:"",
             parentCategory:"",
             description:"",
-            categoryCode:"",
+            categoryCode:"1",
         },
         categoryList:[],
       }

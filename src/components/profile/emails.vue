@@ -13,7 +13,8 @@
                       </b-row>
                     </b-form-group>
                     <b-form-group>
-                                  <f2fInvoiceType :labell="this.$t('PROFILE_emailType')" 
+                                  <f2fInvoiceType :id="invoiceType"
+                                                  :labell="this.$t('PROFILE_emailType')" 
                                                   fetchUrl="/InvoiceType/list"
                                                   :selectOptionLabel="this.$t('PROFILE_selectEmailType')"/>
                     </b-form-group>
@@ -43,7 +44,8 @@
                       </b-row>
                     </b-form-group>
                     <b-form-group>
-                                  <f2fInvoiceType :labell="this.$t('PROFILE_emailType')" 
+                                  <f2fInvoiceType id="invoiceType"
+                                                  :labell="this.$t('PROFILE_emailType')" 
                                                   fetchUrl="/InvoiceType/list"
                                                   :selectOptionLabel="this.$t('PROFILE_selectEmailType')"/>
                     </b-form-group>

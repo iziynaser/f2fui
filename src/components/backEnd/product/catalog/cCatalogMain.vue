@@ -36,7 +36,8 @@
                                            <label>{{$t('CPRODUCT_MAIN_productType')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <f2fInvoiceType :labell="this.$t('INVOICE_TYPE_COMMON_select')" 
+                                           <f2fInvoiceType id="productType"
+                                                           :labell="this.$t('INVOICE_TYPE_COMMON_select')" 
                                                            fetchUrl="/ProductType/list"
                                                            :selectOptionLabel="this.$t('INVOICE_TYPE_COMMON_selectOptionLabel')"/> 
                                       </b-col>

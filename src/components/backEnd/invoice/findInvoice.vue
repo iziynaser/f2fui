@@ -2,7 +2,7 @@
     <div>
                      
           <b-card header="search options" border-variant="dark" >
-          <b-button :pressed="true" v-b-toggle.searchCollapse>collapse</b-button>
+          <b-button :pressed=true v-b-toggle.searchCollapse>collapse</b-button>
                   <b-collapse id="searchCollapse" visible>
 
           <b-container>                        
@@ -39,7 +39,8 @@
                 <label for="ignoreCase">ignoreCase</label>                    
           </b-container> 
 
-          <f2fInvoiceType :labell="this.$t('INVOICE_TYPE_COMMON_select')" 
+          <f2fInvoiceType id="invoiceType" 
+                          :labell="this.$t('INVOICE_TYPE_COMMON_select')" 
                           fetchUrl="/InvoiceType/list"
                           :selectOptionLabel="this.$t('INVOICE_TYPE_COMMON_selectOptionLabel')"/>
 

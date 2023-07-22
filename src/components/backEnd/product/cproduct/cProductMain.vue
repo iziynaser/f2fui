@@ -6,60 +6,65 @@
                             <b-container fluid>
                                   <b-row  class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_productCode')}}</label> 
+                                           <label for="productCode">{{$t('CPRODUCT_MAIN_productCode')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input v-model="product.productCode" 
+                                           <b-form-input id="productCode"
+                                                         v-model="product.productCode" 
                                                          size="sm" 
                                                          type="text"></b-form-input> 
                                       </b-col>
                                   </b-row>            
                                   <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_InternalName')}}</label> 
+                                           <label for="internalName">{{$t('CPRODUCT_MAIN_InternalName')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input v-model="product.internalName" 
+                                           <b-form-input id="internalName"
+                                                         v-model="product.internalName" 
                                                          size="sm" 
                                                          type="text"></b-form-input> 
                                       </b-col>
                                   </b-row>      
                                   <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_Name')}}</label> 
+                                           <label for="productName">{{$t('CPRODUCT_MAIN_Name')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input  v-model="product.name" 
+                                           <b-form-input  id="productName"
+                                                          v-model="product.name" 
                                                           size="sm" 
                                                           type="text"></b-form-input> 
                                       </b-col>
                                   </b-row>  
                                 <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_productType')}}</label> 
+                                           <label for="productType">{{$t('CPRODUCT_MAIN_productType')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <f2fInvoiceType 
+                                           <f2fInvoiceType id="productType"
                                                            fetchUrl="/ProductType/list"
                                                            :selectOptionLabel="this.$t('CPRODUCT_MAIN_productType_select')"/> 
                                       </b-col>
                                 </b-row>
                                   <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_Comment')}}</label> 
+                                           <label for="productComment">{{$t('CPRODUCT_MAIN_Comment')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input v-model="product.comment" 
+                                           <b-form-input id="productComment"
+                                                         v-model="product.comment" 
                                                          size="sm" 
                                                          type="text"></b-form-input> 
                                       </b-col>
                                   </b-row>      
                                   <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_Brand')}}</label> 
+                                           <label for="productBrand">{{$t('CPRODUCT_MAIN_Brand')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input v-model="product.brand" 
+                                           <b-form-input id="productBrand"
+                                                         v-model="product.brand" 
                                                          size="sm" 
                                                          type="text"></b-form-input> 
                                       </b-col>

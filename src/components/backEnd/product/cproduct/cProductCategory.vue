@@ -14,26 +14,26 @@
                 </b-row>  
                 <b-row  class="my-1">
                         <b-col sm="3">
-                            <label>from date</label> 
+                            <label for="fromDate">from date</label> 
                         </b-col>
                         <b-col sm="9">
-                            <b-form-input type="text"></b-form-input> 
+                            <b-form-input id="fromDate" type="text"></b-form-input> 
                         </b-col>
                 </b-row>  
                 <b-row  class="my-1">
                         <b-col sm="3">
-                            <label>to date</label> 
+                            <label for="toDate">to date</label> 
                         </b-col>
                         <b-col sm="9">
-                            <b-form-input type="text"></b-form-input> 
+                            <b-form-input id="toDate" type="text"></b-form-input> 
                         </b-col>
                 </b-row>  
                 <b-row  class="my-1">
                         <b-col sm="3">
-                            <label>{{$t('CPRODUCT_CATEGORY_parentCategory')}}</label> 
+                            <label for="parentCategory">{{$t('CPRODUCT_CATEGORY_parentCategory')}}</label> 
                         </b-col>
                         <b-col sm="9">
-                            <b-form-input type="text"></b-form-input> 
+                            <b-form-input id="parentCategory" type="text"></b-form-input> 
                         </b-col>
                 </b-row>
                 <b-row class="my-1">

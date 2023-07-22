@@ -35,7 +35,7 @@
                            <template v-slot:cell(editp)="data">                               
                                     <router-link :to="{
                                                         name:'createProduct',
-                                                        params:{id:data.item.id,title:data.item.name}
+                                                        params:{id:Number(data.item.id),title:data.item.name}
                                                       }">
                                           edit product      
                                     </router-link>
