@@ -28,9 +28,9 @@
                 </b-col>
             </b-row>
             
-            <label>name</label><b-input type="text"></b-input>
-            <label>caption</label><b-input type="text"></b-input>
-            <label>description</label><b-input type="text"></b-input>
+            <label for="name">name</label><b-input id="name" type="text"></b-input>
+            <label for="caption">caption</label><b-input id="caption" type="text"></b-input>
+            <label for="description">description</label><b-input id="description" type="text"></b-input>
             <b-form-checkbox name="instacheckButton" switch>allow user update his comment </b-form-checkbox>
             <b-form-checkbox name="instacheckButton" switch>allow user insert multiple comment</b-form-checkbox>
             <b-form-checkbox name="instacheckButton" switch>allow anonymous user  insert comment</b-form-checkbox>

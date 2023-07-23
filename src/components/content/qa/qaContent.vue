@@ -1,21 +1,27 @@
 <template>
     <div>
         <b-row  class="my-1">
-            <b-col>question</b-col>
             <b-col>
-                <b-input/>
+               <label for="question"> question </label>    
+            </b-col>
+            <b-col>
+                <b-input id="question"/>
             </b-col>
         </b-row>
         <b-row  class="my-1">
-            <b-col>brief answer</b-col>
             <b-col>
-                <b-input/>
+                <label for="briefanswer">brief answer</label> 
+            </b-col>
+            <b-col>
+                <b-input id="briefanswer"/>
             </b-col>
         </b-row>
         <b-row  class="my-1">
-            <b-col>additional answer</b-col>
             <b-col>
-                <b-input/>
+                <label for="additionalanswer">additional answer</label>
+            </b-col>
+            <b-col>
+                <b-input id="additionalanswer"/>
             </b-col>
         </b-row>
         <b-row  class="my-1">
@@ -23,21 +29,27 @@
             <b-col></b-col>
         </b-row>
         <b-row  class="my-1">
-            <b-col>select category</b-col>
             <b-col>
-                <b-input/>
+                <label for="selectcategory">select category</label>                
+            </b-col>
+            <b-col>
+                <b-input id="selectcategory"/>
             </b-col>
         </b-row>
         <b-row  class="my-1">
-            <b-col>select content</b-col>
             <b-col>
-                <b-input/>
+                <label id="selectcontent">select content</label>
+            </b-col>
+            <b-col>
+                <b-input id="selectcontent"/>
             </b-col>
         </b-row>
         <b-row class="my-1">
-            <b-col>select product</b-col>
             <b-col>
-                <b-input/>
+                <label for="selectproduct"> select product</label>              
+            </b-col>
+            <b-col>
+                <b-input id="selectproduct"/>
             </b-col>
         </b-row>                                                        
         <b-row  class="my-1">

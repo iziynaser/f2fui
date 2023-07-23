@@ -6,16 +6,16 @@
                 <b-col sm="9">b + -</b-col>
             </b-row>
             <b-row class="my-1">
-                <label>title</label>
-                <b-input/>
+                <label for="title">title</label>
+                <b-input id="title"/>
             </b-row>
             <b-row class="my-1">
-                <label>urlPath</label>
-                <b-input/>
+                <label id="urlPath">urlPath</label>
+                <b-input id="urlPath"/>
             </b-row>
             <b-row class="my-1">
-                <label>content</label>
-                <b-input/>
+                <label id="content">content</label>
+                <b-input id="content"/>
             </b-row>
             <b-row class="my-1">
                 <b-button>savebtn</b-button>

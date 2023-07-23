@@ -1,31 +1,31 @@
 <template>
     <div>
-        <b-button pressed=false v-b-toggle.quickCategoryCreate>+</b-button>
+        <b-button pressed="false" v-b-toggle.quickCategoryCreate>+</b-button>
         <b-collapse id="quickCategoryCreate" >
         <b-container fluid>
             <!-- {{categoryCode}} -->
             <b-row  class="my-1">
                 <b-col sm="5">
-                    <label>{{$t('CATEGORIES_MAIN_categoryCode')}}</label> 
+                    <label for="categoryCode">{{$t('CATEGORIES_MAIN_categoryCode')}}</label> 
                 </b-col>
                 <b-col sm="7">
-                    <b-form-input v-model="form.categoryCode" size="sm" type="text"></b-form-input> 
+                    <b-form-input id="categoryCode" v-model="form.categoryCode" size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>            
             <b-row  class="my-1">
                 <b-col sm="5">
-                    <label>{{$t('CATEGORIES_MAIN_categoryName')}}</label> 
+                    <label for="categoryName">{{$t('CATEGORIES_MAIN_categoryName')}}</label> 
                 </b-col>
                 <b-col sm="7">
-                    <b-form-input v-model="form.name" size="sm" type="text"></b-form-input> 
+                    <b-form-input id="categoryName" v-model="form.name" size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>
             <b-row  class="my-1">
                 <b-col sm="5">
-                    <label>{{$t('CATEGORIES_MAIN_categoryDesc')}}</label> 
+                    <label for="categoryDesc">{{$t('CATEGORIES_MAIN_categoryDesc')}}</label> 
                 </b-col>
                 <b-col sm="7">
-                    <b-form-input v-model="form.description"  size="sm" type="text"></b-form-input> 
+                    <b-form-input id="categoryDesc" v-model="form.description"  size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>
             <b-row class="my-1">
@@ -85,8 +85,10 @@ export default {
             axios.post(url,self.form)
                  .then((res)=>{
                      //console.log(res);
-                     self.$emit('loadCategories',res.data);
-                     self.clear();
+                     if(res!=undefined){
+                        self.$emit('loadCategories',res.data);
+                        self.clear();
+                     }
                     //if(res.data.id)
                     //    self.setProductId(res.data.id);
                     })
