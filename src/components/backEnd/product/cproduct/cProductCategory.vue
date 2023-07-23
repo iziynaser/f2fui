@@ -1,15 +1,15 @@
 <template>
     <div>
 
-          <f2fTable :items="items" :fields="fields" caption="list of categories related to this product" />  
+          <f2fTable :searchResult="items" :searchFields="fields" caption="list of categories related to this product" />  
 
           <b-container fluid>
                 <b-row  class="my-1">
                         <b-col sm="3">
-                            <label>row</label> 
+                            <label for="row">row</label> 
                         </b-col>
                         <b-col sm="9">
-                            <b-form-input readonly=true type="text"></b-form-input> 
+                            <b-form-input id="row" readonly type="text"></b-form-input> 
                         </b-col>
                 </b-row>  
                 <b-row  class="my-1">
@@ -72,7 +72,7 @@ export default {
         listOfCategoriesRelatedToProduct(){
                 var self = this;
                 this.errors= {};
-                this.isBusy = true;
+                this.isBusy = "true";
                 axios({
                     method:'GET',
                     url:'/productCategories/listOfCategoriesRelatedToProduct',

@@ -149,7 +149,7 @@
                     @click="searchForm()">search</b-button>
 
     <b-row>
-        <f2fTable :items="datas.content" :fields="fields"/>
+        <f2fTable :searchResult="datas.content" :searchFields="fields"/>
     </b-row>
 
     </div>

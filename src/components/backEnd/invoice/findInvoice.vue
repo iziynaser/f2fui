@@ -66,7 +66,7 @@
           </b-card>
       
           <b-card>
-                  <f2fTable :items="searchResult" :fields="searchFields" :busy="isBusy" caption="search results"  />
+                  <f2fTable :searchResult="searchResult" :searchFields="searchFields" :busy="isBusy" caption="search results"  />
           </b-card>
           
     </div>

@@ -30,7 +30,7 @@
                     </b-input-group> -->
         </b-form-group>
           
-        <f2fTable :fields="fields" :items="items" caption="list of tags" /> 
+        <f2fTable :searchFields="fields" :searchResult="items" caption="list of tags" /> 
 
     </div>
 </template>

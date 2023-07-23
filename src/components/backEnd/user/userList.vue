@@ -1,6 +1,6 @@
 <template>
     <div>
-           <f2fTable :items="items"  :fields="fields" caption="list of users" @rowSelected="rowSelected" />                  
+           <f2fTable :searchResult="items"  :searchFields="fields" caption="list of users" @rowSelected="rowSelected" />                  
     </div>
 </template>
 

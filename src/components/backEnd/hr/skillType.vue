@@ -23,7 +23,7 @@
                       </b-row>
                   </b-form-group>
               </div>
-                  <f2fTable :items="searchResult" :fields="searchFields" caption="search results" :busy="isBusy" />
+                  <f2fTable :searchResult="searchResult" :searchFields="searchFields" caption="search results" :busy="isBusy" />
           </b-card>
     </div>
 </template>

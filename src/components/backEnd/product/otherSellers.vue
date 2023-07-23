@@ -2,7 +2,7 @@
     <div>
         
         name of seller,amount, add to basket button          
-        <f2fTable :fields="fields" :items="items" caption="list of other sellers (table)"  />
+        <f2fTable :searchFields="fields" :searchResult="items" caption="list of other sellers (table)"  />
 
         seeMore<br/>
         seeLess

@@ -6,7 +6,7 @@
             create a new keyword
         </div>
 
-        <f2fTable :items="searchResult" :fields="searchFields" caption="product related key" />
+        <f2fTable :searchResult="searchResult" :searchFields="searchFields" caption="product related key" />
 
 <b-container fluid>
     <b-row class="my-1">

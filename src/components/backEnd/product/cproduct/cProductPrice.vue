@@ -4,7 +4,7 @@
         <!-- <span v-if="id">id : {{id}}</span>
         and <span v-if="title">title : {{title}}</span> -->
         
-          <f2fTable  :items="items" :fields="fields" caption="list of prices related to this product" /> 
+          <f2fTable  :searchResult="searchResult" :searchFields="searchFields" caption="list of prices related to this product" /> 
 
           <b-container fluid>
                 <b-row  class="my-1">
@@ -70,8 +70,8 @@ export default {
           } ,
     data(){
       return {
-          items:[],
-          fields:[
+        searchResult:[],
+          searchFields:[
               {key:'id',label:'شناسه'},
               {key:'fromDate',label:'از تاریخ'},
               {key:'toDate',label:'تا تاریخ'},

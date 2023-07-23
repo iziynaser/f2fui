@@ -11,8 +11,8 @@
                  head-variant="dark" 
                  responsive 
                  caption-top 
-                 :fields="fields"
-                 :items="items"                  
+                 :fields="searchFields"
+                 :items="searchResult"                  
                  :current-page="currentPage" 
                  :per-page="perPage" 
                  @row-selected="rowSelected"
@@ -36,7 +36,7 @@
                 <template v-slot:cell(editp)="data">                               
                     <router-link :to="{
                         name:'createProduct',
-                        params:{id:data.item.id,title:data.item.name}
+                        params:{id:Number(data.item.id),title:data.item.name}
                         }">
                     edit product      
                     </router-link>
@@ -59,8 +59,8 @@
 export default {
     name:'f2fTable',
     props:{
-            items : [],
-            fields: [],
+            searchResult : Array,
+            searchFields: Array,
             busy:{
                 type:Boolean ,
                 default : false

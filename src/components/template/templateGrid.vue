@@ -1,6 +1,6 @@
 <template>
     <div>
-           <f2fTable :items="items"  :fields="fields"  />                  
+           <f2fTable :searchResult="items"  :searchFields="fields"  />                  
     </div>
 </template>
 
