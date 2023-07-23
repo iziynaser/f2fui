@@ -3,18 +3,18 @@
         <b-container fluid>
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label>{{$t('CATEGORIES_MAIN_categoryCode')}}</label> 
+                    <label for="categoryCode">{{$t('CATEGORIES_MAIN_categoryCode')}}</label> 
                 </b-col>
                 <b-col sm="9">
-                    <b-form-input v-model="form.categoryCode" size="sm" type="text"></b-form-input> 
+                    <b-form-input id="categoryCode" v-model="form.categoryCode" size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>            
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label>{{$t('CATEGORIES_MAIN_categoryName')}}</label> 
+                    <label for="name">{{$t('CATEGORIES_MAIN_categoryName')}}</label> 
                 </b-col>
                 <b-col sm="9">
-                    <b-form-input v-model="form.name" size="sm" type="text"></b-form-input> 
+                    <b-form-input id="name" v-model="form.name" size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>
 			<b-row   class="my-1">
@@ -29,18 +29,18 @@
             </b-row>            
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label>{{$t('CATEGORIES_MAIN_categoryDesc')}}</label> 
+                    <label for="description">{{$t('CATEGORIES_MAIN_categoryDesc')}}</label> 
                 </b-col>
                 <b-col sm="9">
-                    <b-form-input v-model="form.description"  size="sm" type="text"></b-form-input> 
+                    <b-form-input id="description" v-model="form.description"  size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label>{{$t('CATEGORIES_MAIN_parentCategory')}}</label> 
+                    <label for="parentCategory">{{$t('CATEGORIES_MAIN_parentCategory')}}</label> 
                 </b-col>
                 <b-col sm="9">
-                    <b-form-select v-model="form.parentCategory">
+                    <b-form-select id="parentCategory" v-model="form.parentCategory">
                         <template v-slot:first>
                             <b-form-select-option :value="null" disabled >select a parent category code</b-form-select-option>
                         </template>

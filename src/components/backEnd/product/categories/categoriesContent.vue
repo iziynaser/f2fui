@@ -3,10 +3,10 @@
         <b-container fluid>
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label>lookup content id</label> 
+                    <label for="contentId">lookup content id</label> 
                 </b-col>
                 <b-col sm="9">
-                    <b-form-input  size="sm" type="text"></b-form-input> 
+                    <b-form-input id="contentId"  size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>
             <b-row  class="my-1">
@@ -44,19 +44,19 @@
             </b-row> -->
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label>{{$t('categories_purchaceFdate')}}</label> 
+                    <label for="purchaceFdate">{{$t('categories_purchaceFdate')}}</label> 
                 </b-col>
                 <b-col sm="9">
-                    <b-form-input  size="sm" type="text"></b-form-input> 
+                    <b-form-input id="purchaceFdate" size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>
 
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label>{{$t('categories_purchaceTdate')}}</label> 
+                    <label for="purchaceTdate">{{$t('categories_purchaceTdate')}}</label> 
                 </b-col>
                 <b-col sm="9">
-                    <b-form-input  size="sm" type="text"></b-form-input> 
+                    <b-form-input id="purchaceTdate" size="sm" type="text"></b-form-input> 
                 </b-col>
             </b-row>
         </b-container>                          

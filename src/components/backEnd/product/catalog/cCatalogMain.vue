@@ -3,30 +3,33 @@
                             <b-container fluid>
                                   <b-row  class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_productCode')}}</label> 
+                                           <label for="productCode">{{$t('CPRODUCT_MAIN_productCode')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input v-model="product.productCode" 
+                                           <b-form-input id="productCode"
+                                                         v-model="product.productCode" 
                                                          size="sm" 
                                                          type="text"></b-form-input> 
                                       </b-col>
                                   </b-row>            
                                   <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_InternalName')}}</label> 
+                                           <label for="internalName">{{$t('CPRODUCT_MAIN_InternalName')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input v-model="product.internalName" 
+                                           <b-form-input id="internalName" 
+                                                         v-model="product.internalName" 
                                                          size="sm" 
                                                          type="text"></b-form-input> 
                                       </b-col>
                                   </b-row>      
                                   <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_Name')}}</label> 
+                                           <label for="name">{{$t('CPRODUCT_MAIN_Name')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input  v-model="product.name" 
+                                           <b-form-input  id="name"
+                                                          v-model="product.name" 
                                                           size="sm" 
                                                           type="text"></b-form-input> 
                                       </b-col>
@@ -44,20 +47,22 @@
                                   </b-row>
                                   <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_Comment')}}</label> 
+                                           <label for="comment">{{$t('CPRODUCT_MAIN_Comment')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input v-model="product.comment" 
+                                           <b-form-input id="comment"
+                                                         v-model="product.comment" 
                                                          size="sm" 
                                                          type="text"></b-form-input> 
                                       </b-col>
                                   </b-row>      
                                   <b-row   class="my-1">
                                       <b-col sm="3">
-                                           <label>{{$t('CPRODUCT_MAIN_Brand')}}</label> 
+                                           <label for="brand">{{$t('CPRODUCT_MAIN_Brand')}}</label> 
                                       </b-col>
                                       <b-col sm="9">
-                                           <b-form-input v-model="product.brand" 
+                                           <b-form-input id="brand"
+                                                         v-model="product.brand" 
                                                          size="sm" 
                                                          type="text"></b-form-input> 
                                       </b-col>
@@ -67,15 +72,15 @@
                                     <b-row>
                                         <b-col>
                                             {{$t('CPRODUCT_MAIN_intro_date')}}
-                                            <date-picker type="date"  v-model="product.introDate"></date-picker>
+                                            <date-picker id="introDate" type="date"  v-model="product.introDate"></date-picker>
                                         </b-col>
                                         <b-col>
                                             {{$t('CPRODUCT_MAIN_release_date')}}
-                                            <date-picker type="date"  v-model="product.releaseDate"></date-picker>
+                                            <date-picker id="releaseDate" type="date"  v-model="product.releaseDate"></date-picker>
                                         </b-col>
                                         <b-col>
                                             {{$t('CPRODUCT_MAIN_sales_discontinuation')}}
-                                            <date-picker type="date"  v-model="product.disContinuedDate"></date-picker>
+                                            <date-picker  id="disContinuedDate" type="date"  v-model="product.disContinuedDate"></date-picker>
                                         </b-col>
                                     </b-row>
                                 </b-list-group-item>
