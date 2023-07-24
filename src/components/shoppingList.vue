@@ -4,9 +4,12 @@
       <b-button-group>
             <b-dropdown>
                   <div v-if="!isLoggedIn">
-                        <b-dropdwon-item>
+                        <BDropdownItem>
                               <router-link to="/login">signIn</router-link>
-                        </b-dropdwon-item>
+                        </BDropdownItem>
+                        <!-- <b-dropdwon-item>
+                              <router-link to="/login">signIn</router-link>
+                        </b-dropdwon-item> -->
                   </div>
                   <div v-else>
                         <b-dropdown-item >
@@ -34,6 +37,8 @@
 <script>
 
 import {mapActions,mapGetters} from 'vuex'
+import { BDropdown } from 'bootstrap-vue';
+import { BDropdownItem } from 'bootstrap-vue';
 
 export default {
       name:'shoppingList',
@@ -45,7 +50,8 @@ export default {
       computed: {
             ...mapGetters(["isLoggedIn"])
       },
-      components:{        
+      components:{  
+            BDropdown,BDropdownItem      
       },
       methods:{
             ...mapActions(['logout']),
