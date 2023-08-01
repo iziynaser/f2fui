@@ -173,7 +173,7 @@ import f2fBadge from '../../base/f2fBadge'
 export default {
     name:'product',
     props:{
-            id:Number,
+            id:[Number,String],
             title:String
           } ,
     components:{
