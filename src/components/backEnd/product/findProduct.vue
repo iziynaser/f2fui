@@ -26,7 +26,7 @@
                            <template v-slot:cell(name)="data">                               
                                     <router-link :to="{
                                                         name:'product',
-                                                        params:{id:data.item.id,title:data.item.name}
+                                                        params:{id:Number(data.item.id),title:data.item.name}
                                                       }">
                                           show detail of product      
                                     </router-link>
