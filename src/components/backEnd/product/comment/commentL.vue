@@ -27,7 +27,7 @@ import viewComment from './viewComment'
 export default {
     name:'commentL',
     props:{
-      comments:[],
+      comments:Array,
       id:Number
           } ,
     data(){
