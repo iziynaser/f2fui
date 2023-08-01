@@ -7,6 +7,11 @@ f2fui call rest services of F2fCore application
 ### usage 
 for practical use,its better to use  the f2f application.this app is not recommended.
 
+### errors during deploy app
+1.  vue-cli-service: command not found
+    solve : rm -rf node_modules and npm install
+
+
 ### parts
 this app consist of the following parts:
 1. login
