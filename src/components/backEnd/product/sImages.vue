@@ -27,8 +27,8 @@
   export default {
     name:'sImages',
     props:{
-        thumbnailImages:[],
-        productImages:[]
+        thumbnailImages:Array,
+        productImages:Array
     },
     data(){
         return{
