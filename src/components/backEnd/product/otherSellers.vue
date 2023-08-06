@@ -1,19 +1,23 @@
 <template>
-    <div>
-        
-        name of seller,amount, add to basket button          
-        <f2fTable :searchFields="fields" :searchResult="items" caption="list of other sellers (table)"  />
-
-        seeMore<br/>
-        seeLess
-
+    <div class="container">
+        <div class="card-deck">            
+            <div class="card" v-for="ops in otherProductSellers" :key="ops.id">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ ops.name }} </h5>
+                        <p class="card-text">{{ops.imgUrl}}</p>
+                        <!-- <p class="card-text"><small class="text-muted">{{smp.shortDesc}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{smp.amazingDesc}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{smp.price}}</small></p> -->
+                    </div>
+                </div>
+        </div>
     </div>
 </template>
 
 <script>
 
-import * as axios from 'axios';
-import f2fTable from '../../base/f2fTable'
+import axios from 'axios';
+
 
 export default {
     name:'otherSellers',
@@ -21,38 +25,28 @@ export default {
           } ,
     data(){
       return {
-          isBusy:false,
-          errors:{},
-          items:[],
-          fields:[
-              {key:'id',label:'شناسه'},
-              {key:'fromDate',label:'از تاریخ'},
-              {key:'toDate',label:'تا تاریخ'},
-              {key:'price',label:'قیمت'},
-              {key:'productPriceType',label:'قیمت گذاری'},
-              {key:'currency',label:'ارز'},
-          ] ,                
+           otherProductSellers : [],    
       }
     } ,
     methods:{
         listOfOtherSellers(){
-                var self = this;
-                this.errors= {};
-                this.isBusy = true;
-                axios({
-                    method:'GET',
-                    url:'/ProductPrice/list',
-                })
-                .then(function(res){
-                      self.items = res.data; 
-                })
-                .catch(function(error){
-                    console.log(error)    ;
-                });
+            var self = this;
+            axios.get('/otherSellers/list',{
+                params : {
+                    productId : 1
+                }
+            })
+            .then(function(res){
+                //console.log(res);
+                self.otherProductSellers = res.data ;
+            })
+            .catch(function(error){
+                console.log(error);
+            })
         },
     } ,
     components:{
-        f2fTable
+        
     },
     mounted(){
         this.listOfOtherSellers();
