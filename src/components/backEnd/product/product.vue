@@ -21,15 +21,15 @@
               <div>
                 <b-list-group horizontal>
                   <b-list-group-item>                  
-                    <f2fBadge name="comments"  count="10"/>
+                    <f2fBadge name="comments" address="/products/countCommentsForProduct" />
                   </b-list-group-item>
 
                   <b-list-group-item>
-                    <f2fBadge name="sales"  count="20"/>
+                    <f2fBadge name="sales" address="/products/countStarsForProduct" />
                   </b-list-group-item>
                   
                   <b-list-group-item>
-                    <f2fBadge name ="views"  count="30" />
+                    <f2fBadge name ="views" address="/products/countViewsForProduct" />
                   </b-list-group-item>
                   
                 </b-list-group>                
