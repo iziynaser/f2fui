@@ -1,44 +1,53 @@
 <template>
     <div class="container">
-        <div class="card-deck">
-                <div class="card">
+        <div class="card-deck">            
+            <div class="card" v-for="smp in similarProducts" :key="smp.id">
                     <div class="card-body">
-                        <h5 class="card-title">Panel title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <h5 class="card-title"> {{ smp.name }} </h5>
+                        <p class="card-text">{{smp.imgUrl}}</p>
+                        <p class="card-text"><small class="text-muted">{{smp.shortDesc}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{smp.amazingDesc}}</small></p>
+                        <p class="card-text"><small class="text-muted">{{smp.price}}</small></p>
                     </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                        <h5 class="card-title">Panel title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Panel title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
         </div>
     </div>
 </template>
 
 <script>
+
+
+import axios from 'axios'
+
 export default {
     name:'similarProduct',
     props:{
           } ,
     data(){
       return {
-        
+        similarProducts: []
       }
     } ,
+    mounted(){
+        this.listofsimilarProducts();
+    },
     methods:{
-
-    }      
+        listofsimilarProducts(){
+            var self = this;
+            axios.get('/relatedProducts/list',{
+                params : {
+                    productId : 1
+                }
+            })
+            .then(function(res){
+                //console.log(res);
+                self.similarProducts = res.data ;
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+        }
+    } ,   
 }
 </script>
 
