@@ -1,6 +1,6 @@
 <template>
     <div>
-            <div  v-if=" comments.length > 0 ">                
+            <div  v-if=" commentsArrayLength > 0 ">                
                 <b-list-group >
                   <b-list-group-item v-for="comment in comments" :key="comment.id">
                     <b-row>  
@@ -71,7 +71,7 @@
 export default {
     name:'viewComment',
     props:{
-            comments:[]
+            comments:Array
           } ,
     data(){
       return {
@@ -79,9 +79,22 @@ export default {
         noButtonPressesd:false,
       }
     } ,
+    // computed :{
+    //     commentsArrayLenght(){
+    //       console.log("length comments:"+comments?.length);
+    //       return comments?.length || 0 ;
+    //     }
+    //   },
     methods:{
 
-    }      
+    }  ,
+    computed:{
+      commentsArrayLength(){
+        console.log("lenght comments:...");
+        return 1;
+        
+      }
+    }    
 }
 </script>
 

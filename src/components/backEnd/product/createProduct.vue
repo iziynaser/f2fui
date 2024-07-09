@@ -1,9 +1,10 @@
 <template>
     <div>
-           <span v-if="id!==0">
+           <span v-if="Number(id)!==0">
                edit product with 
                  <span v-if="id">id : {{id}}</span>
-                 and <span v-if="title">title : {{title}}</span>
+                 and 
+                 <span v-if="title">title : {{title}}</span>
            </span>
            <span v-else>
                 create product view
@@ -42,7 +43,7 @@
                              <cProductContent :id=Number(id) :title="title"/> 
                         </b-tab>
                         <b-tab :title="this.$t('CPRODUCT_CREATE_content')">
-                              <cProductPics/>               
+                              <!-- <cProductPics/>                -->
                         </b-tab>
 
                   </b-tabs>
@@ -61,12 +62,12 @@ import cProductKeyword from './cproduct/cProductKeyword'
 import cProductMeasure from './cproduct/cProductMeasure'
 import cProductFeature from './cproduct/cProductFeature'
 //import cProductInventory from './cproduct/cProductInventory'
-import cProductPics from './cproduct/cProductPics'
+//import cProductPics from './cproduct/cProductPics'
 
 export default {
     name:'createProduct',
     props:{
-            id:Number,
+            id:[Number,String],
             title:String
           } ,
     data(){
@@ -87,7 +88,7 @@ export default {
         cProductMeasure,
         cProductFeature,
         //cProductInventory,
-        cProductPics        
+        //cProductPics        
     }
 }
 </script>

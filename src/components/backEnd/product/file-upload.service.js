@@ -34,8 +34,8 @@ function upload(formData) {
 }
 
 function loadListOfImages(productId,type){
-    //const url = `/storage/list`;
-    const url = `/images/product/list`;
+    const url = `/storage/list`;
+    //const url = `/images/product/list`;
     return axios.get(url,{
         params:{
             productId: productId,

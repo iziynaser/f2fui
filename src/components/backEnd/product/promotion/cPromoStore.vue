@@ -1,6 +1,6 @@
 <template>
     <div>
-        <f2fTree /> 
+    productfeatures    <f2fTree /> 
     </div>
 </template>
 

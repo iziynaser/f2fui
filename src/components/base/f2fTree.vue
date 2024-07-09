@@ -121,8 +121,10 @@ export default {
             })
                 .then(function(res){
                     //self.form.treeData = res.data;
-                    self.treeData = res.data.treeData;
-                    console.log("treeData:"+self.treeData); 
+                    if(res!=undefined){
+                      self.treeData = res.data.treeData;
+                      console.log("treeData:"+self.treeData); 
+                    }
                 })
                 .catch(function(error){
                     console.log(error)    ;

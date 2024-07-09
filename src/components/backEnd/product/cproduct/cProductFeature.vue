@@ -2,7 +2,7 @@
     <div>
                          <!-- <span v-if="id">id : {{id}}</span>
                  and <span v-if="title">title : {{title}}</span> -->
-
+        productFeatures                    
         <b-button v-on:click="save">{{$t('C_PRODUCT_FEATURE_SAVE_FINAL')}}</b-button>
         <f2fTree :id="Number(id)" v-model="form.treeData" v-on:selectedRootEvent="handleTreeData" /> 
     </div>

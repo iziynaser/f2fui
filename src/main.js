@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import {BootstrapVue,BootstrapVueIcons} from 'bootstrap-vue'
+//import BootstrapVue from 'bootstrap-vue'
+//import BootstrapVueIcons from 'bootstrap-vue'
 //import {BootstrapVue,BootstrapVueIcons, ToastPlugin} from 'bootstrap-vue'
 import router from './router'
 import store from './store'
@@ -128,6 +130,8 @@ new Vue({
   router,
   store,
   i18n:i18n,
+  BootstrapVue,
+  BootstrapVueIcons,
   //axios:axios,
   render: h => h(App)
 }).$mount('#app')

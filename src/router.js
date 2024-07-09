@@ -8,9 +8,10 @@ import details from './components/details'
 import AuthHandler from './components/AuthHandler'
 import humanres from './components/backEnd/hr/humanres'
 
-import login from './components/login'
+//import login from './components/login'
 import signUp from './components/signUp'
 //import profile from './components/profile'
+import signInC from './components/signInC'
 
 import invoice from './components/backEnd/invoice/invoice'
 import invoiceItems from './components/backEnd/invoice/invoiceItems'
@@ -109,7 +110,7 @@ export default new Router({
     {
       path:'/login',
       name:'login',
-      component:login
+      component:signInC
     },{
       path:'/signUp',
       name:'signUp',
