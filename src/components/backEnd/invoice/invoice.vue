@@ -5,7 +5,7 @@
     </div>
     <div>
       <b-card no-body>
-        <b-tabs>
+        <b-tabs pills card>
           <b-tab title="find invoice">
             <findInvoice />
           </b-tab>
