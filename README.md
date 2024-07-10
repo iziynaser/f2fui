@@ -4,10 +4,10 @@ F2fui is a small a single page application(SPA)
 it is project base learning(PBL) for bootstrap and vue js.
 f2fui call rest services of F2fCore application
 ### pics
-![alt text](f2f_ui_1.jpg?raw=true)
-![alt text](f2f_ui_2.jpg?raw=true)
-![alt text](f2f_ui_3.jpg?raw=true)
-![alt text](f2f_ui_4.jpg?raw=true)
+![alt text](f2f_ui_1.png?raw=true)
+![alt text](f2f_ui_2.png?raw=true)
+![alt text](f2f_ui_3.png?raw=true)
+![alt text](f2f_ui_4.png?raw=true)
 
 ### usage 
 for practical use,its better to use  the f2f application.this app is not recommended.
