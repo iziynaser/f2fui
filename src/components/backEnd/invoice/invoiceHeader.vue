@@ -21,9 +21,23 @@
 
       <b-form-group>
         <b-row>
-          <b-col class="col-2">{{ $t('INVOICE_HEADER_currentDate') }}</b-col>
+
+          <b-col class="col-2">person</b-col>
           <b-col class="col-4">
-            <b-form-input id="creattor" v-model="invoice.creator" readonly required />
+            <!-- <tPerson @click="showModalForm" /> -->
+            <!-- <b-form-input id="creattor" v-model="invoice.creator" readonly required /> -->
+            <b-row>
+              <b-col>
+                <b-form-input id="code" v-model="code" placeholder="" />
+              </b-col>
+              <b-col>
+                <b-form-input id="desc" v-model="desc" placeholder="" />
+              </b-col>
+              <b-col>
+                <b-button variant="primary" @click="showModalForm"></b-button>
+              </b-col>
+            </b-row>
+            <personModal title="lookup person" />
           </b-col>
         </b-row>
       </b-form-group>
@@ -105,10 +119,18 @@
 <script>
 
 import axios from 'axios'
+// import tPerson from '../hr/person/tPerson.vue';
+import personModal from '../hr/person/personModal.vue';
 
 export default {
   name: 'invoiceHeader',
+  components: {
+    // tPerson
+    // ,
+    personModal
+  },
   props: {
+
   },
   data() {
     return {
@@ -133,6 +155,9 @@ export default {
     }
   },
   methods: {
+    showModalForm() {
+      this.$bvModal.show("personModal");
+    },
     resetInvoice() {
       this.invoice.currentDate = '45646';
       this.invoice.date = '45646';
