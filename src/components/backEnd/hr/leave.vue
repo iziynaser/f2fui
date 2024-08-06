@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <b-container fluid>
 
             <div v-if="errors.length">
@@ -13,50 +12,51 @@
             <b-form @submit="onSubmit" @reset="onReset" v-if="visible">
 
                 <b-row class="my-1">
-                    <b-col sm="3">title</b-col>
+                    <b-col sm="3">person id</b-col>
                     <b-col sm="9">
                         <b-form-select v-model="form.title" :options="form.titleoptions" />
                     </b-col>
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">name</b-col>
+                    <b-col sm="3">leave id</b-col>
                     <b-col sm="9">
-                        <b-form-input id="name" v-model="form.name" required placeholder="enter your name" />
+                        <b-form-select v-model="form.title" :options="form.titleoptions" />
                     </b-col>
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">lastname</b-col>
+                    <b-col sm="3">fromDate</b-col>
                     <b-col sm="9">
-                        <b-form-input id="lastname" v-model="form.lastname" required placeholder="enter your lastname" />
+                        <date-picker v-model="form.fromDate" type="date"></date-picker>
+                    </b-col>
+                </b-row>
+                <b-row class="my-1">
+                    <b-col sm="3">toDate</b-col>
+                    <b-col sm="9">
+                        <date-picker v-model="form.toDate" type="date"></date-picker>
                     </b-col>
                 </b-row>
 
                 <b-row>
-                    <b-col sm="3">address</b-col>
+                    <b-col sm="3">appover person</b-col>
                     <b-col sm="9">
                         <b-form-input id="address" v-model="form.address" required placeholder="enter your adress" />
                     </b-col>
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">description</b-col>
+                    <b-col sm="3">leave status</b-col>
                     <b-col sm="9">
-                        <b-form-textarea id="description" v-model="form.description" placeholder="description" rows="3"
-                            max-rows="6" />
+                        <b-form-select v-model="form.title" :options="form.titleoptions" />
                     </b-col>
                 </b-row>
 
-                <b-row class="my-1">
-                    <b-col sm="3">date of birth</b-col>
+                <b-row>
                     <b-col sm="9">
-                        <pdate />
+                        <b-button type="submit" variant="primary">submit</b-button>
                     </b-col>
                 </b-row>
-
-                <b-button type="submit" variant="primary">submit</b-button>
-                <b-button type="reset" variant="danger">reset</b-button>
             </b-form>
 
         </b-container>
@@ -65,11 +65,11 @@
 </template>
 
 <script>
+import VuePersianDateTimePicker from 'vue-persian-datetime-picker'
 
-import pdate from '../../../components/pdate'
 
 export default {
-    name: 'personinsert',
+    name: 'leave',
     props: {
 
     },
@@ -77,16 +77,7 @@ export default {
         return {
             visible: true,
             errors: [],
-            form: {
-                title: '',
-                name: '',
-                address: '',
-                description: '',
-                titleoptions: [
-                    { value: 'male', text: 'male' },
-                    { value: 'female', text: 'female' }
-                ]
-            }
+            form: {}
         }
     },
     methods: {
@@ -94,23 +85,14 @@ export default {
             console.log(event);
         },
         onSubmit: function (event) {
-            event.preventDefault();
-            this.axios.post('/person/', {
-                person: this.$data
-            }).then(function (response) {
-                console.log(response.data);
-            }).catch(function (error) {
-                console.log(error.data);
-            });
-            console.log('submit person insert');
+            console.log(event);
         },
         onReset: function (event) {
-            event.preventDefault()
-            this.form.name = ''
+            console.log(event);
         }
     },
     components: {
-        pdate
+        datePicker: VuePersianDateTimePicker
     }
 }
 </script>

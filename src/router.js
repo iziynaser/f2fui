@@ -36,7 +36,7 @@ import bucketView from './components/bucket/bucketView'
 import createPromotion from './components/backEnd/product/promotion/createPromotion'
 import createCatalog from './components/backEnd/product/catalog/createCatalog'
 import createCategories from './components/backEnd/product/categories/createCategories'
-import createContent from './components/content/createContent' 
+import createContent from './components/content/createContent'
 
 import Adress from './components/bucket/adress/AdressMain.vue'
 import registerOrder from './components/bucket/registerOrder.vue'
@@ -65,6 +65,7 @@ import userMain from './components/backEnd/user/userMain.vue'
 import FrontEnd from './front/FrontEnd.vue'
 import BackEnd from './back/BackEnd.vue'
 
+import createPayment from './components/backEnd/payment/createPayment.vue'
 
 Vue.use(Router)
 
@@ -73,12 +74,12 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path:'/front/FrontEnd',
-      name:'FrontEnd',
+      path: '/front/FrontEnd',
+      name: 'FrontEnd',
       component: FrontEnd
     },
     {
-      path:'/back/BackEnd',
+      path: '/back/BackEnd',
       name: 'BackEnd',
       component: BackEnd
     },
@@ -88,33 +89,33 @@ export default new Router({
       component: FrontEnd
     },
     {
-       path:'/invoice',
-       component: invoice
+      path: '/invoice',
+      component: invoice
     },
     {
-      path:'/invoiceItems',
+      path: '/invoiceItems',
       component: invoiceItems
-   },
-   {
-    path:'/findInvoice',
-    component: findInvoice
-   },
-   {
-     path:'/invoiceOverview',
-     component: invoiceOverview
-   },
-   {
-     path:'/invoiceHeader',
-     component: invoiceHeader
-   },
+    },
     {
-      path:'/login',
-      name:'login',
-      component:signInC
-    },{
-      path:'/signUp',
-      name:'signUp',
-      component:signUp
+      path: '/findInvoice',
+      component: findInvoice
+    },
+    {
+      path: '/invoiceOverview',
+      component: invoiceOverview
+    },
+    {
+      path: '/invoiceHeader',
+      component: invoiceHeader
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: signInC
+    }, {
+      path: '/signUp',
+      name: 'signUp',
+      component: signUp
     },
     // {
     //   path:'/profile',
@@ -122,186 +123,193 @@ export default new Router({
     //   component:profile
     // },
     {
-      path:'/users',
-      name:'users',
-      component:user
+      path: '/users',
+      name: 'users',
+      component: user
     },
     {
-      path:'/contact',
-      name:'contact',
-      component:contact
+      path: '/contact',
+      name: 'contact',
+      component: contact
     },
     {
-      path:'/aboutus',
-      name:'aboutUs',
-      component:aboutUs
+      path: '/aboutus',
+      name: 'aboutUs',
+      component: aboutUs
     },
     {
-      path:'/humanres',
-      component:humanres
+      path: '/humanres',
+      component: humanres
     },
     {
-      path:'/details/:pid',
-      name:'details',
-      component:details
-    },{
-      path:'/product/:id',
-      name:'product' ,
-      component:product,
-      props:true
+      path: '/details/:pid',
+      name: 'details',
+      component: details
+    }, {
+      path: '/product/:id',
+      name: 'product',
+      component: product,
+      props: true
     },
     {
-      path:'/findProduct',
-      name:findProduct,
-      component:findProduct
+      path: '/findProduct',
+      name: findProduct,
+      component: findProduct
     },
     {
-      path:'/skillType',
-      name:skillType,
-      component:skillType
+      path: '/skillType',
+      name: skillType,
+      component: skillType
     },
     {
-      path:'/employees',
-      name:employees,
-      component:employees
+      path: '/employees',
+      name: employees,
+      component: employees
     },
     {
-      path:'/newEmployee',
-      name:newEmployee,
-      component:newEmployee
+      path: '/newEmployee',
+      name: newEmployee,
+      component: newEmployee
     },
     {
-      path:'/signUpC',
-      name:signUpC,
-      component:signUpC
+      path: '/signUpC',
+      name: signUpC,
+      component: signUpC
     },
     {
-      path:'/oauth2/callback',
-      component:AuthHandler,
+      path: '/oauth2/callback',
+      component: AuthHandler,
     },
     {
-      path:"/createProduct/:id/:title",
-      name:"createProduct",
-      component:createProduct,
-      props:true
+      path: "/createProduct/:id/:title",
+      name: "createProduct",
+      component: createProduct,
+      props: true
     },
     {
-      path:'/payment',
-      name:'payment',
-      component:payment,
+      path: '/payment',
+      name: 'payment',
+      component: payment,
     },
     {
-      path:'/delivery',
-      name:'delivery',
-      component:delivery
+      path: '/delivery',
+      name: 'delivery',
+      component: delivery
     },
     {
-      path:'/cProductBase',
-      name:cProductBase,
-      component:cProductBase
+      path: '/cProductBase',
+      name: cProductBase,
+      component: cProductBase
     },
     {
-      path:'/bucketView',
-      name:'bucketView',
-      component:bucketView,
+      path: '/bucketView',
+      name: 'bucketView',
+      component: bucketView,
     },
     {
-      path:'/createPromotion' ,
-      name:'createPromotion',
-      component:createPromotion
+      path: '/createPromotion',
+      name: 'createPromotion',
+      component: createPromotion
     },
     {
-      path:'/createCatalog',
-      name:'createCatalog',
-      component:createCatalog
+      path: '/createCatalog',
+      name: 'createCatalog',
+      component: createCatalog
     },
     {
-      path:'/createCategories',
+      path: '/createCategories',
       name: 'createCategories',
-      component:createCategories
+      component: createCategories
     },
     {
-        path:'/createContent',
-        name:'createContent',
-        component:createContent
+      path: '/createContent',
+      name: 'createContent',
+      component: createContent
     }
-    ,{
-      path:'/Adress',
-      name:'Adress',
-      component:Adress
+    , {
+      path: '/Adress',
+      name: 'Adress',
+      component: Adress
     },
     {
-      path:'/registerOrder',
-      name:'registerOrder',
-      component:registerOrder
+      path: '/registerOrder',
+      name: 'registerOrder',
+      component: registerOrder
     },
     {
-      path:'/surveyMain',
-      name:'surveyMain',
-      component:surveyMain
+      path: '/surveyMain',
+      name: 'surveyMain',
+      component: surveyMain
     },
     {
-      path:'/blogMain',
-      name:'blogMain',
-      component:blogMain
+      path: '/blogMain',
+      name: 'blogMain',
+      component: blogMain
     },
     {
-      path:'/forumMain',
-      name:'forumMain',
-      component:forumMain
+      path: '/forumMain',
+      name: 'forumMain',
+      component: forumMain
     },
     {
-      path:'/qaMain',
-      name:'qaMain',
-      component:qaMain
+      path: '/qaMain',
+      name: 'qaMain',
+      component: qaMain
     },
     {
-      path:'/createBrands',
-      name:'createBrands',
-      component:createBrands
+      path: '/createBrands',
+      name: 'createBrands',
+      component: createBrands
     },
     {
-      path:'/createProfiles',
-      name:'createProfiles',
-      component:createProfiles
+      path: '/createProfiles',
+      name: 'createProfiles',
+      component: createProfiles
     },
     {
-      path:'/myOrders',
-      name:'myOrders',
-      component:myOrders
+      path: '/myOrders',
+      name: 'myOrders',
+      component: myOrders
     },
     {
-      path:'/contentMain',
-      name:'contentMain',
-      component:contentMain
+      path: '/contentMain',
+      name: 'contentMain',
+      component: contentMain
     },
     {
-      path:'/publicQa',
-      name:'publicQa',
-      component:publicQa
-    },{
-      path:'/articleMain',
-      name:'articleMain',
-      component:articleMain
+      path: '/publicQa',
+      name: 'publicQa',
+      component: publicQa
+    }, {
+      path: '/articleMain',
+      name: 'articleMain',
+      component: articleMain
     },
     {
-      path:'/categoriesPage',
-      name:'categoriesPage',
-      component:categoriesPage
+      path: '/categoriesPage',
+      name: 'categoriesPage',
+      component: categoriesPage
     },
     {
-      path:'/contentC' ,
-      name:'contentC' ,
-      component:contentC
+      path: '/contentC',
+      name: 'contentC',
+      component: contentC
     },
     {
-      path:'/userMain',
-      name : userMain ,
-      component:userMain
-    },
+      path: '/userMain',
+      name: userMain,
+      component: userMain
+    }
+    ,
     {
-       path: '/about',
-       name: 'about',
+      path: '/createPayment',
+      name: createPayment,
+      component: createPayment
+    }
+    ,
+    {
+      path: '/about',
+      name: 'about',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

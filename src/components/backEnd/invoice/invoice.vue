@@ -21,7 +21,15 @@
             <invoiceOverview />
             <!-- <router-link to="/invoiceOverview">overview</router-link> -->
           </b-tab>
-          <b-tab></b-tab>
+          <b-tab>
+            content
+          </b-tab>
+          <b-tab>
+            payments
+          </b-tab>
+          <b-tab>
+            notes
+          </b-tab>
         </b-tabs>
       </b-card>
     </div>

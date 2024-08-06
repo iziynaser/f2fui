@@ -51,11 +51,16 @@
 
 
       </b-form>
+      <b-card>
+        <f2fTable :searchResult="searchResult" :searchFields="searchFields" :busy="isBusy" caption="search results" />
+      </b-card>
     </b-container>
   </div>
 </template>
 
 <script>
+import f2fTable from '../../base/f2fTable'
+
 export default {
   name: 'invoiceItems',
   props: {
@@ -64,10 +69,15 @@ export default {
     return {
       visible: true,
       errors: [],
+      searchResult: [],
+      searchFields: [],
       form: {
 
       }
     }
+  },
+  components: {
+    f2fTable
   },
   methods: {
 
