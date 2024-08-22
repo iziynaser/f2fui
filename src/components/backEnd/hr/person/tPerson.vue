@@ -1,20 +1,22 @@
 <template>
-    <div>
+    <!-- <div> -->
 
-        <b-container fluid>
-            <b-row class="my-1">
-                <b-col sm="3">
-                    <b-form-input id="code" v-model="code" placeholder="" />
-                </b-col>
-                <b-col sm="7">
-                    <b-form-input id="desc" v-model="desc" placeholder="" />
-                </b-col>
-                <b-col sm="2">
-                    <b-button variant="primary"></b-button>
-                </b-col>
-            </b-row>
-        </b-container>
-    </div>
+    <b-container fluid>
+        <b-row align-h="start" align-v="stretch" class="my-1">
+            <b-col sm="3">
+                <b-form-input id="code" v-model="lkdata[0]" :placeholder="placeHolderCode" />
+            </b-col>
+            <b-col sm="7">
+                <b-form-input id="desc" v-model="lkdata[1]" :placeholder="placeHolderValue" />
+            </b-col>
+            <b-col sm="1">
+                <b-button variant="primary" @click="showModalForm">
+                    <b-icon icon="text-center"></b-icon>
+                </b-button>
+            </b-col>
+        </b-row>
+    </b-container>
+    <!-- </div> -->
 </template>
 
 <script>
@@ -25,15 +27,24 @@ export default {
     components: {
     },
     props: {
+        modalFormName: String,
+        lkdata: [],
+        placeHolderCode: String,
+        placeHolderValue: String
     },
     data() {
         return {
-            code: ''
-            ,
-            desc: ''
+            //lkdata: [],
+            // code: ''
+            // ,
+            // desc: ''
         }
     },
     methods: {
+        showModalForm() {
+            //console.log("property modalFormName is =" + this.modalFormName);
+            this.$bvModal.show(this.modalFormName);
+        },
     },
     created() {
     },

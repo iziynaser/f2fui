@@ -67,6 +67,7 @@ export default {
   },
   data() {
     return {
+      isBusy: false,
       visible: true,
       errors: [],
       searchResult: [],

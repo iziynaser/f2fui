@@ -67,6 +67,9 @@ import BackEnd from './back/BackEnd.vue'
 
 import createPayment from './components/backEnd/payment/createPayment.vue'
 
+
+import FinAccountMain from './components/backEnd/acc/fin/FinAccountMain'
+
 Vue.use(Router)
 
 export default new Router({
@@ -306,7 +309,11 @@ export default new Router({
       name: createPayment,
       component: createPayment
     }
-    ,
+    , {
+      path: '/FinAccountMain',
+      name: FinAccountMain,
+      component: FinAccountMain
+    },
     {
       path: '/about',
       name: 'about',

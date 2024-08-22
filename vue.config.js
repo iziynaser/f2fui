@@ -1,19 +1,22 @@
 //vue config js
 module.exports = {
-    //options
-    devServer:{
-        
-    },
+  //options
+  devServer: {
+    hot: true,
+    watchOptions: {
+      poll: true
+    }
+  },
 
-    configureWebpack:{
-      devtool:'source-map'
-    },
+  configureWebpack: {
+    devtool: 'source-map'
+  },
 
-    pluginOptions: {
+  pluginOptions: {
 
-    } 
-    // build: {
-    //   assetsPublicPath: '/',
-    //   assetsSubdirectory:'public'
-    // }
+  }
+  // build: {
+  //   assetsPublicPath: '/',
+  //   assetsSubdirectory:'public'
+  // }
 }

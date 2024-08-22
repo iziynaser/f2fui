@@ -24,20 +24,10 @@
 
           <b-col class="col-2">person</b-col>
           <b-col class="col-4">
-            <!-- <tPerson @click="showModalForm" /> -->
+            <tPerson @click="showModalForm" :lkdata="lookupdata" modalFormName="personModal" placeHolderCode="1"
+              :key="rerenderThisComponent" placeHolderValue="a" />
             <!-- <b-form-input id="creattor" v-model="invoice.creator" readonly required /> -->
-            <b-row>
-              <b-col>
-                <b-form-input id="code" v-model="code" placeholder="" />
-              </b-col>
-              <b-col>
-                <b-form-input id="desc" v-model="desc" placeholder="" />
-              </b-col>
-              <b-col>
-                <b-button variant="primary" @click="showModalForm"></b-button>
-              </b-col>
-            </b-row>
-            <personModal title="lookup person" />
+            <personModal title="lookup person" @bClicked="showlkdata" />
           </b-col>
         </b-row>
       </b-form-group>
@@ -119,14 +109,14 @@
 <script>
 
 import axios from 'axios'
-// import tPerson from '../hr/person/tPerson.vue';
+import tPerson from '../hr/person/tPerson.vue';
 import personModal from '../hr/person/personModal.vue';
 
 export default {
   name: 'invoiceHeader',
   components: {
-    // tPerson
-    // ,
+    tPerson
+    ,
     personModal
   },
   props: {
@@ -134,6 +124,8 @@ export default {
   },
   data() {
     return {
+      rerenderThisComponent: 0,
+      lookupdata: [],
       invoice: {
         invoiceId: 0,
         invoiceCode: 0,
@@ -155,6 +147,12 @@ export default {
     }
   },
   methods: {
+    showlkdata(lkdata) {
+      this.lookupdata = [];
+      this.lookupdata = lkdata;
+      this.rerenderThisComponent = this.rerenderThisComponent + 1;
+      console.log("lkdata = " + this.lookupdata);
+    },
     showModalForm() {
       this.$bvModal.show("personModal");
     },

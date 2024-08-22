@@ -7,14 +7,14 @@
             :footer-bg-variant="footerBgVariant" :footer-text-variant="footerTextVariant">
             <b-container fluid>
                 <b-row>
-
+                    <employee @items="lkdata" @bClicked="setIndexes" />
                 </b-row>
             </b-container>
 
             <template #modal-footer>
                 <div class="w-100">
-                    <p class="float-left">Modal Footer Content</p>
-                    <b-button variant="primary" size="sm" class="float-right" @click="show = false">
+                    <!-- <p class="float-left">Modal Footer Content</p> -->
+                    <b-button variant="primary" size="sm" class="float-right">
                         Close
                     </b-button>
                 </div>
@@ -24,23 +24,46 @@
 </template>
 
 <script>
+import employee from './employee.vue';
+
 export default {
     name: "personModal",
     props: {
         title: String
     },
-    data() {
+    components: {
+        employee
+    },
+    methods: {
+        setIndexes(selectedItems) {
+            if (selectedItems.length > 0) {
+                this.lkdata[0] = selectedItems[0].id;
+                this.lkdata[1] = selectedItems[0].firstName + " " + selectedItems[0].lastName;
+                //console.log("lk:" + this.lkdata);
+                this.$emit('bClicked', this.lkdata);
+            }
+        }
+    }, data() {
         return {
+            lkdata: [],
+            items: [],
             show: false,
             variants: ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark'],
-            headerBgVariant: 'secondary',
             headerTextVariant: 'light',
+            headerBgVariant: 'secondary',
             bodyBgVariant: 'light',
             bodyTextVariant: 'dark',
             footerBgVariant: 'secondary',
-            footerTextVariant: 'dark'
+            footerTextVariant: 'dark',
+            errors: {},
+            fields: [
+                { key: "id", label: 'id' },
+                { key: "firstName", label: 'firstName' },
+                { key: "lastName", label: 'lastName' },
+                { key: "personCode", label: 'personCode' }
+            ],
         }
-    }
+    },
 }
 </script>
 

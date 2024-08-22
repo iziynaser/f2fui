@@ -23,7 +23,7 @@
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
-                <router-link to="/humanres">{{ $t('ACCOUNTING_financialAccount') }}</router-link>
+                <router-link to="/FinAccountMain">{{ $t('ACCOUNTING_financialAccount') }}</router-link>
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
