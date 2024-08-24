@@ -2,8 +2,10 @@
       <div>
             <b-container fluid>
                   <b-card :header="this.$t('searchOptions')" border-variant="dark">
-                        <b-button :pressed=true v-b-toggle.searchCollapse>collapse</b-button>
-                        <b-collapse id="searchCollapse" visible>
+                        <b-button :pressed=true v-b-toggle.searchCollapse>
+                              <b-icon :icon="iconName"></b-icon>
+                        </b-button>
+                        <b-collapse id="searchCollapse" visible @hide="hideCollapse" @show="showCollapse">
 
                               <b-container>
                                     <label for="">invoice id</label>
@@ -86,6 +88,7 @@ export default {
       },
       data: function () {
             return {
+                  iconName: 'caret-down',
                   isBusy: false,
                   errors: {},
                   simpleArray: ['one', 'two', 'three'],
@@ -129,7 +132,12 @@ export default {
             f2fTable
       },
       methods: {
-
+            hideCollapse() {
+                  this.iconName = 'caret-right';
+            },
+            showCollapse() {
+                  this.iconName = 'caret-down';
+            },
             onSubmit() {
                   var self = this;
                   this.errors = {};
