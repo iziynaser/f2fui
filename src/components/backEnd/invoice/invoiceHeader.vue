@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div>invoice header</div>
-    <div v-if="isDebugEnabled">
+    <!-- <div>invoice header</div> -->
+    <!-- <div v-if="isDebugEnabled">
       isDebugEnabled: {{ isDebugEnabled }},
       global error message :{{ globalErrorMessage }},
-    </div>
+    </div> -->
     <!-- <div>params: {{this.form}}</div> -->
 
     <b-form>
@@ -13,8 +13,8 @@
         <b-row>
           <b-col class="col-2">{{ $t('INVOICE_HEADER_creatorPerson') }}</b-col>
           <b-col class="col-4">
-            <b-form-input id="creattor" v-model="invoice.creator" readonly required
-              :placeholder="this.$t('INVOICE_HEADER_creatorPersonPlaceHolder')" />
+            <!-- <b-form-input id="creattor" v-model="invoice.creator" readonly required
+              :placeholder="this.$t('INVOICE_HEADER_creatorPersonPlaceHolder')" /> -->
           </b-col>
         </b-row>
       </b-form-group>
@@ -22,13 +22,12 @@
       <b-form-group>
         <b-row>
 
-          <b-col class="col-2">person</b-col>
+          <!-- <b-col class="col-2">person</b-col>
           <b-col class="col-4">
-            <tPerson @click="showModalForm" :lkdata="lookupdata" modalFormName="personModal" placeHolderCode="1"
-              :key="rerenderThisComponent" placeHolderValue="a" />
-            <!-- <b-form-input id="creattor" v-model="invoice.creator" readonly required /> -->
-            <personModal title="lookup person" @bClicked="showlkdata" />
-          </b-col>
+            <tPerson @click="showModalForm" :lkdata="lookupdata" modalFormName="personModal"
+              :key="rerenderThisComponent" />
+           
+          </b-col> -->
         </b-row>
       </b-form-group>
 
@@ -65,8 +64,9 @@
           </b-col>
           <b-col class="col-2">{{ $t('INVOICE_HEADER_fromPerson') }}</b-col>
           <b-col class="col-4">
-            <b-form-input id="fromPerson" v-model="invoice.fromPerson" required=""
-              :placeholder="this.$t('INVOICE_HEADER_fromPersonPlaceHolder')" />
+            <personModal id="modalFromPerson" title="lookup from person" @bClicked="showLkFromPerson" />
+            <tPerson @click="showModalForm" id="modalFromPerson" :lkdata="lookupFromPerson" modalFormName="personModal"
+              :key="rerenderFromComponent" />
           </b-col>
         </b-row>
       </b-form-group>
@@ -75,8 +75,9 @@
         <b-row>
           <b-col class="col-2">{{ $t('INVOICE_HEADER_toPerson') }}</b-col>
           <b-col class="col-4">
-            <b-form-input id="toPerson" v-model="invoice.toPerson" required=""
-              :placeholder="this.$t('INVOICE_HEADER_toPersonPlaceHolder')" />
+            <personModal id="modalToPerson" title="lookup to person" @bClicked="showLkToPerson" />
+            <tPerson @click="showModalForm" id="modalToPerson" :lkdata="lookupToPerson" modalFormName="personModal"
+              :key="rerenderToComponent" />
           </b-col>
           <b-col class="col-2">{{ $t('INVOICE_HEADER_invoiceType') }}</b-col>
           <b-col class="col-4">
@@ -124,8 +125,10 @@ export default {
   },
   data() {
     return {
-      rerenderThisComponent: 0,
-      lookupdata: [],
+      rerenderFromComponent: 0,
+      rerenderToComponent: 0,
+      lookupFromPerson: [],
+      lookupToPerson: [],
       invoice: {
         invoiceId: 0,
         invoiceCode: 0,
@@ -147,11 +150,17 @@ export default {
     }
   },
   methods: {
-    showlkdata(lkdata) {
-      this.lookupdata = [];
-      this.lookupdata = lkdata;
-      this.rerenderThisComponent = this.rerenderThisComponent + 1;
-      console.log("lkdata = " + this.lookupdata);
+    showLkToPerson(lkdata) {
+      this.lookupToPerson = [];
+      this.lookupToPerson = lkdata;
+      this.rerenderToComponent = this.rerenderToComponent + 1;
+      console.log("lkdata = " + this.lookupToPerson);
+    },
+    showLkFromPerson(lkdata) {
+      this.lookupFromPerson = [];
+      this.lookupFromPerson = lkdata;
+      this.rerenderFromComponent = this.rerenderFromComponent + 1;
+      console.log("lkdata = " + this.lookupFromPerson);
     },
     showModalForm() {
       this.$bvModal.show("personModal");

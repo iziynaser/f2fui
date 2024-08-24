@@ -6,28 +6,25 @@
     <div>
       <b-card no-body>
         <b-tabs pills card>
-          <b-tab title="find invoice">
+          <b-tab :title="this.$t('INVOICE_MTAB_findInvoice')">
             <findInvoice />
           </b-tab>
-          <b-tab title="header">
+          <b-tab :title="this.$t('INVOICE_MTAB_header')">
             <invoiceHeader />
-            <!-- <router-link to="/invoiceHeader">invoice header</router-link> -->
           </b-tab>
-          <b-tab title="items">
+          <b-tab :title="this.$t('INVOICE_MTAB_items')">
             <invoiceItems />
-            <!-- <router-link to="/invoiceItems">invoice items</router-link> -->
           </b-tab>
-          <b-tab title="overview">
+          <b-tab :title="this.$t('INVOICE_MTAB_overview')">
             <invoiceOverview />
-            <!-- <router-link to="/invoiceOverview">overview</router-link> -->
           </b-tab>
-          <b-tab>
+          <b-tab title="content">
             content
           </b-tab>
-          <b-tab>
+          <b-tab title="payments">
             payments
           </b-tab>
-          <b-tab>
+          <b-tab title="notes">
             notes
           </b-tab>
         </b-tabs>

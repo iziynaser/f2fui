@@ -1,20 +1,17 @@
 <template>
     <div>
-        <!-- <b-button @click="show = true" variant="primary">Show Modal</b-button> -->
-
-        <b-modal id="personModal" v-model="show" :title="title" :header-bg-variant="headerBgVariant"
+        <b-modal :ref="id" :id="id" v-model="show" :title="title" :header-bg-variant="headerBgVariant"
             :header-text-variant="headerTextVariant" :body-bg-variant="bodyBgVariant" :body-text-variant="bodyTextVariant"
             :footer-bg-variant="footerBgVariant" :footer-text-variant="footerTextVariant">
             <b-container fluid>
                 <b-row>
-                    <employee @items="lkdata" @bClicked="setIndexes" />
+                    <employee :id="id" @items="lkdata" @bClicked="setIndexes" />
                 </b-row>
             </b-container>
 
             <template #modal-footer>
                 <div class="w-100">
-                    <!-- <p class="float-left">Modal Footer Content</p> -->
-                    <b-button variant="primary" size="sm" class="float-right">
+                    <b-button variant="primary" size="sm" class="float-right" @click="closeModalForm">
                         Close
                     </b-button>
                 </div>
@@ -29,17 +26,20 @@ import employee from './employee.vue';
 export default {
     name: "personModal",
     props: {
-        title: String
+        title: String,
+        id: String
     },
     components: {
         employee
     },
     methods: {
+        closeModalForm() {
+            this.$bvModal.hide(this.id);
+        },
         setIndexes(selectedItems) {
             if (selectedItems.length > 0) {
                 this.lkdata[0] = selectedItems[0].id;
                 this.lkdata[1] = selectedItems[0].firstName + " " + selectedItems[0].lastName;
-                //console.log("lk:" + this.lkdata);
                 this.$emit('bClicked', this.lkdata);
             }
         }

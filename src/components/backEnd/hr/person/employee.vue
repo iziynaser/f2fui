@@ -24,6 +24,7 @@ export default {
     name: 'employee',
     props: {
         lkdata: [],
+        id: String
     },
     data() {
         return {
@@ -40,8 +41,7 @@ export default {
     },
     methods: {
         rowSelected(item) {
-            //console.log("row selected = " + item[0].personCode);
-            this.$bvModal.hide("personModal");
+            this.$bvModal.hide(this.id);
             this.$emit("bClicked", item);
         },
         onSearchResult() {
