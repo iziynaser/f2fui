@@ -340,6 +340,9 @@
     "INVOICE_MTAB_header": "header",
     "INVOICE_MTAB_items": "items",
     "INVOICE_MTAB_overview": "overview",
+    "INVOICE_MTAB_content": "content",
+    "INVOICE_MTAB_payments": "payments",
+    "INVOICE_MTAB_notes": "notes",
     "searchOptions": "search options",
     "searchResults": "search results"
   }

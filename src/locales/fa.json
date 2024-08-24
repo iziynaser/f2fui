@@ -462,6 +462,9 @@
     "INVOICE_MTAB_header": "سربرگ فاکتور",
     "INVOICE_MTAB_items": "اقلام فاکتور",
     "INVOICE_MTAB_overview": "پیش نمایش فاکتور",
+    "INVOICE_MTAB_content": "محتوای فاکتور",
+    "INVOICE_MTAB_payments": "پرراخت ها",
+    "INVOICE_MTAB_notes": "یادداشت",
     "searchOptions": "امکانات جستجو",
     "searchResults": "نتایج جستجو"
   }
