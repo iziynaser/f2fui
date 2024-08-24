@@ -339,6 +339,8 @@
     "INVOICE_MTAB_findInvoice": "find invoice",
     "INVOICE_MTAB_header": "header",
     "INVOICE_MTAB_items": "items",
-    "INVOICE_MTAB_overview": "overview"
+    "INVOICE_MTAB_overview": "overview",
+    "searchOptions": "search options",
+    "searchResults": "search results"
   }
 }

@@ -52,7 +52,8 @@
 
       </b-form>
       <b-card>
-        <f2fTable :searchResult="searchResult" :searchFields="searchFields" :busy="isBusy" caption="search results" />
+        <f2fTable :searchResult="searchResult" :searchFields="searchFields" :busy="isBusy"
+          :caption="this.$t('searchResults')" />
       </b-card>
     </b-container>
   </div>

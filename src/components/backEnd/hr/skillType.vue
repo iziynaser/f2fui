@@ -1,30 +1,31 @@
 <template>
     <div>
         <div>skill types</div>
-          <b-card>
-              <div>
-                  <b-form-group>
-                      <b-row class="my-1">
-                          <b-col>
-                              skill name
-                          </b-col>
-                          <b-col>
-                              <b-input/>
-                          </b-col>
-                        </b-row>
-                      <b-row class="my-1">
-                          <b-col>skill rate</b-col>
-                          <b-col>
-                              <b-input/>
-                          </b-col>
-                      </b-row>
-                      <b-row>
-                          <b-button class="alert-primary">save</b-button>
-                      </b-row>
-                  </b-form-group>
-              </div>
-                  <f2fTable :searchResult="searchResult" :searchFields="searchFields" caption="search results" :busy="isBusy" />
-          </b-card>
+        <b-card>
+            <div>
+                <b-form-group>
+                    <b-row class="my-1">
+                        <b-col>
+                            skill name
+                        </b-col>
+                        <b-col>
+                            <b-input />
+                        </b-col>
+                    </b-row>
+                    <b-row class="my-1">
+                        <b-col>skill rate</b-col>
+                        <b-col>
+                            <b-input />
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-button class="alert-primary">save</b-button>
+                    </b-row>
+                </b-form-group>
+            </div>
+            <f2fTable :searchResult="searchResult" :searchFields="searchFields" :caption="this.$t('searchResults')"
+                :busy="isBusy" />
+        </b-card>
     </div>
 </template>
 
@@ -35,52 +36,50 @@ import axios from 'axios'
 import f2fTable from '../../base/f2fTable'
 
 export default {
-    name:'skillType',
-    props:{
-          } ,
-    data(){
-      return {
-        id:'',
-        name:'',
-        rate:'',
-        isBusy:false,
-        errors:{},
-        searchResult:[],    
-        searchFields:[
-              {key:'id',label:'شناسه'},
-              {key:'name',label:'نام'},
-              {key:'rate',label:'درجه مهارت'},
-        ],            
-      }
-    } ,
-    methods:{
-          onSearchResult() {                
-                var self = this;
-                this.errors= {};
-                this.isBusy = true;
-                axios({
-                    method:'GET',
-                    url:'/skillType/list',
+    name: 'skillType',
+    props: {
+    },
+    data() {
+        return {
+            id: '',
+            name: '',
+            rate: '',
+            isBusy: false,
+            errors: {},
+            searchResult: [],
+            searchFields: [
+                { key: 'id', label: 'شناسه' },
+                { key: 'name', label: 'نام' },
+                { key: 'rate', label: 'درجه مهارت' },
+            ],
+        }
+    },
+    methods: {
+        onSearchResult() {
+            var self = this;
+            this.errors = {};
+            this.isBusy = true;
+            axios({
+                method: 'GET',
+                url: '/skillType/list',
+            })
+                .then(function (res) {
+                    self.searchResult = res.data;
+                    console.log(res.data);
+                    self.isBusy = false;
                 })
-                .then(function(res){
-                      self.searchResult = res.data; 
-                      console.log(res.data);
-                      self.isBusy=false;
-                })
-                .catch(function(error){
-                    console.log(error)    ;
+                .catch(function (error) {
+                    console.log(error);
                 });
-          }
-    }      ,
-    mounted(){
+        }
+    },
+    mounted() {
         this.onSearchResult();
     },
-    components:{
+    components: {
         f2fTable
     }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

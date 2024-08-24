@@ -1,7 +1,7 @@
 <template>
       <div>
             <b-container fluid>
-                  <b-card header="search options" border-variant="dark">
+                  <b-card :header="this.$t('searchOptions')" border-variant="dark">
                         <b-button :pressed=true v-b-toggle.searchCollapse>collapse</b-button>
                         <b-collapse id="searchCollapse" visible>
 
@@ -68,7 +68,7 @@
 
                   <b-card>
                         <f2fTable :searchResult="searchResult" :searchFields="searchFields" :busy="isBusy"
-                              caption="search results" />
+                              :caption="this.$t('searchResults')" />
                   </b-card>
             </b-container>
       </div>

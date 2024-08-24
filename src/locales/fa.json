@@ -461,6 +461,8 @@
     "INVOICE_MTAB_findInvoice": "جستجوی فاکتور",
     "INVOICE_MTAB_header": "سربرگ فاکتور",
     "INVOICE_MTAB_items": "اقلام فاکتور",
-    "INVOICE_MTAB_overview": "پیش نمایش فاکتور"
+    "INVOICE_MTAB_overview": "پیش نمایش فاکتور",
+    "searchOptions": "امکانات جستجو",
+    "searchResults": "نتایج جستجو"
   }
 }
