@@ -1,59 +1,59 @@
 <template>
     <div>
-        <b-row  class="my-1">
+        <b-row class="my-1">
             <b-col>
-               <label for="question"> question </label>    
+                <label for="question"> {{ $t('qa_c_question') }} </label>
             </b-col>
             <b-col>
-                <b-input id="question"/>
-            </b-col>
-        </b-row>
-        <b-row  class="my-1">
-            <b-col>
-                <label for="briefanswer">brief answer</label> 
-            </b-col>
-            <b-col>
-                <b-input id="briefanswer"/>
-            </b-col>
-        </b-row>
-        <b-row  class="my-1">
-            <b-col>
-                <label for="additionalanswer">additional answer</label>
-            </b-col>
-            <b-col>
-                <b-input id="additionalanswer"/>
-            </b-col>
-        </b-row>
-        <b-row  class="my-1">
-            <b-col></b-col>
-            <b-col></b-col>
-        </b-row>
-        <b-row  class="my-1">
-            <b-col>
-                <label for="selectcategory">select category</label>                
-            </b-col>
-            <b-col>
-                <b-input id="selectcategory"/>
-            </b-col>
-        </b-row>
-        <b-row  class="my-1">
-            <b-col>
-                <label id="selectcontent">select content</label>
-            </b-col>
-            <b-col>
-                <b-input id="selectcontent"/>
+                <b-input id="question" />
             </b-col>
         </b-row>
         <b-row class="my-1">
             <b-col>
-                <label for="selectproduct"> select product</label>              
+                <label for="briefanswer">{{ $t('qa_c_breif') }}</label>
             </b-col>
             <b-col>
-                <b-input id="selectproduct"/>
+                <b-input id="briefanswer" />
             </b-col>
-        </b-row>                                                        
-        <b-row  class="my-1">
-            <b-col>status</b-col>
+        </b-row>
+        <b-row class="my-1">
+            <b-col>
+                <label for="additionalanswer">{{ $t('qa_c_addition') }}</label>
+            </b-col>
+            <b-col>
+                <b-input id="additionalanswer" />
+            </b-col>
+        </b-row>
+        <b-row class="my-1">
+            <b-col></b-col>
+            <b-col></b-col>
+        </b-row>
+        <b-row class="my-1">
+            <b-col>
+                <label for="selectcategory">{{ $t('qa_c_selecCat') }}</label>
+            </b-col>
+            <b-col>
+                <b-input id="selectcategory" />
+            </b-col>
+        </b-row>
+        <b-row class="my-1">
+            <b-col>
+                <label id="selectcontent">{{ $t('qa_c_selectCon') }}</label>
+            </b-col>
+            <b-col>
+                <b-input id="selectcontent" />
+            </b-col>
+        </b-row>
+        <b-row class="my-1">
+            <b-col>
+                <label for="selectproduct"> {{ $t('qa_c_selectProd') }}</label>
+            </b-col>
+            <b-col>
+                <b-input id="selectproduct" />
+            </b-col>
+        </b-row>
+        <b-row class="my-1">
+            <b-col>{{ $t('qa_c_status') }}</b-col>
             <b-col>
                 <b-button>approved</b-button>
                 <b-button>published</b-button>
@@ -67,20 +67,18 @@
 
 <script>
 export default {
-    name:'qaContent',
-    props:{
-          } ,
-    data(){
-      return {
-        
-      }
-    } ,
-    methods:{
+    name: 'qaContent',
+    props: {
+    },
+    data() {
+        return {
 
-    }      
+        }
+    },
+    methods: {
+
+    }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -469,6 +469,16 @@
     "searchResults": "نتایج جستجو",
     "qa_mtab_create": "ایجاد پرسش و پاسخ",
     "qa_mtab_search": "جستجو",
-    "qa_mtab_paq": "پرسش و پاسخ عمومی"
+    "qa_mtab_paq": "پرسش و پاسخ عمومی",
+    "survey_mtab_search": "جستجوی نظرسنجی",
+    "survey_mtab_create": "ایجاد",
+    "survey_mtab_survey": "نظرسنجی",
+    "qa_c_question": "پرسش",
+    "qa_c_breif": "پاسخ کوتاه",
+    "qa_c_addition": "پاسخ های بیشتر",
+    "qa_c_selecCat": "انتخاب دسته",
+    "qa_c_selectCon": "انتخاب محتوا",
+    "qa_c_selectProd": "انتخاب کالا",
+    "qa_c_status": "وضعیت"
   }
 }

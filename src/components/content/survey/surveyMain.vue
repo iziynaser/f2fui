@@ -1,20 +1,20 @@
 <template>
     <div>
         survey
-              <b-card no-body>
-                  <b-tabs pills card>
-                        <b-tab title="search">
-                            action : activate , deactived , fixed , delete 
-                        </b-tab>
-                        <b-tab title="create">
-                            <surveyCreate/>
-                        </b-tab>
-                        <b-tab title="survey">
-                            delete this survey
+        <b-card no-body>
+            <b-tabs pills card>
+                <b-tab :title="this.$t('survey_mtab_search')">
+                    action : activate , deactived , fixed , delete
+                </b-tab>
+                <b-tab :title="this.$t('survey_mtab_create')">
+                    <surveyCreate />
+                </b-tab>
+                <b-tab :title="this.$t('survey_mtab_survey')">
+                    delete this survey
 
-                        </b-tab>
-                  </b-tabs>
-              </b-card>
+                </b-tab>
+            </b-tabs>
+        </b-card>
     </div>
 </template>
 
@@ -23,24 +23,22 @@
 import surveyCreate from './surveyCreate'
 
 export default {
-    name:'surveyMain',
-    props:{
-
-} ,
-    data(){
-      return {
-        
-      }
-    } ,
-    methods:{
+    name: 'surveyMain',
+    props: {
 
     },
-    components:{
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+
+    },
+    components: {
         surveyCreate
     }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
