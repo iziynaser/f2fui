@@ -344,6 +344,9 @@
     "INVOICE_MTAB_payments": "payments",
     "INVOICE_MTAB_notes": "notes",
     "searchOptions": "search options",
-    "searchResults": "search results"
+    "searchResults": "search results",
+    "qa_mtab_create": "create public qa",
+    "qa_mtab_search": "search",
+    "qa_mtab_paq": "public qa"
   }
 }

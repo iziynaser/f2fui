@@ -466,6 +466,9 @@
     "INVOICE_MTAB_payments": "پرراخت ها",
     "INVOICE_MTAB_notes": "یادداشت",
     "searchOptions": "امکانات جستجو",
-    "searchResults": "نتایج جستجو"
+    "searchResults": "نتایج جستجو",
+    "qa_mtab_create": "ایجاد پرسش و پاسخ",
+    "qa_mtab_search": "جستجو",
+    "qa_mtab_paq": "پرسش و پاسخ عمومی"
   }
 }
