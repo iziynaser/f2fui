@@ -63,7 +63,7 @@
                                     <pdate id="toDate"></pdate>
                               </b-form-group>
 
-                              <b-button pill variant="success" v-on:click="onSubmit">find</b-button>
+                              <b-button pill variant="success" v-on:click="findAvailableInvoice">find</b-button>
 
                         </b-collapse>
                   </b-card>
@@ -91,23 +91,24 @@ export default {
                   iconName: 'caret-down',
                   isBusy: false,
                   errors: {},
-                  simpleArray: ['one', 'two', 'three'],
+                  //simpleArray: ['one', 'two', 'three'],
 
                   invoiceActionTypes: [],
                   selectedInvoiceActionTypes: [],
 
                   searchResult: [],
                   searchFields: [
-                        { key: 'id', label: 'شناسه' },
+                        { key: 'invoiceId', label: 'شناسه' },
+                        { key: 'invoiceCode', label: 'کد' },
                         { key: 'date', label: 'تاریخ' },
-                        { key: 'invoice', label: 'فاکتور' },
-                        { key: 'description', label: 'شرح' },
-                        { key: 'creator', label: 'ایجاد کننده' },
-                        { key: 'from', label: 'از' },
-                        { key: 'to', label: 'به' },
-                        { key: 'counts', label: 'تعداد اقلام' },
-                        { key: 'status', label: 'وضعیت' },
-                        { key: 'type', label: 'نوع' }
+                        { key: 'title', label: 'عنوان' },
+                        { key: 'message', label: 'شرح' },
+                        { key: 'description', label: 'ایجاد کننده' },
+                        { key: 'fpFirstName', label: 'از' },
+                        { key: 'fpLastName', label: 'از' },
+                        { key: 'tpFirstName', label: 'به' },
+                        { key: 'tpLastName', label: 'به' },
+                        { key: 'invoiceName', label: 'نوع' }
                   ],
                   form: {}
             };
@@ -126,7 +127,6 @@ export default {
                         console.log(error);
                   });
 
-
       },
       components: {
             f2fTable
@@ -138,13 +138,18 @@ export default {
             showCollapse() {
                   this.iconName = 'caret-down';
             },
-            onSubmit() {
+            findAvailableInvoice() {
                   var self = this;
                   this.errors = {};
                   this.isBusy = true;
-                  axios.get('/Invoice/list')
-                        .then(function (res) {
-                              self.searchResult = res.data;
+                  var url = '/invoice/lInvoice';
+                  axios({
+                        method: 'GET',
+                        url: url,
+                        withCredentials: false
+                  })
+                        .then(function (response) {
+                              self.searchResult = response.data;
                               self.isBusy = false;
                         })
                         .catch(function (error) {

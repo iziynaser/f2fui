@@ -18,13 +18,13 @@
           <b-tab :title="this.$t('INVOICE_MTAB_overview')">
             <invoiceOverview />
           </b-tab>
-          <b-tab title="content">
+          <b-tab :title="this.$t('INVOICE_MTAB_content')">
             content
           </b-tab>
-          <b-tab title="payments">
+          <b-tab :title="this.$t('INVOICE_MTAB_payments')">
             payments
           </b-tab>
-          <b-tab title="notes">
+          <b-tab :title="this.$t('INVOICE_MTAB_notes')">
             notes
           </b-tab>
         </b-tabs>
