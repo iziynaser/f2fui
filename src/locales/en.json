@@ -1,5 +1,6 @@
 {
   "translation": {
+    "search": "search",
     "welcome": "welcome",
     "message": "persian language support",
     "logout": "logout",
@@ -366,6 +367,33 @@
     "blog_mtab_search": "search",
     "blog_mtab_main": "main",
     "blog_mtab_admin": "admin",
-    "blog_mtab_result": "result"
+    "blog_mtab_result": "result",
+    "content_s_company_info": "company info",
+    "content_s_general_Info": "general Info",
+    "content_s_product_Info": "product Info",
+    "content_s_project_Info": "project Info",
+    "content_s_sub_content": "sub content",
+    "content_s_topic": "topic",
+    "content_s_feedback": "feedback",
+    "content_s_advertisement": "advertisement",
+    "content_s_main_content": "main content",
+    "content_s_article": "article",
+    "content_s_comment": "comment",
+    "content_s_description": "description",
+    "content_s_ledgal_info": "ledgal info",
+    "content_s_response": "response",
+    "content_s_faq": "faq",
+    "content_s_owner": "owner",
+    "content_s_user": "user",
+    "content_s_personal_info": "personal info",
+    "content_s_yes": "yes",
+    "content_s_no": "no",
+    "content_s_inProgress": "inProgress",
+    "content_s_initial_draft": "initial draft",
+    "content_s_revised_draft": "revised draft",
+    "content_s_final_draft": "final draft",
+    "content_s_available": "available",
+    "content_s_deactivated": "deactivated",
+    "content_s_published": "published"
   }
 }

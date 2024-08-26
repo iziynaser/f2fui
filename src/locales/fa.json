@@ -1,5 +1,6 @@
 {
   "translation": {
+    "search": "جستجو",
     "welcome": "خوش آمدید",
     "message": "پشتیبانی از زبان فارسی",
     "logout": "خروج از سایت",
@@ -488,6 +489,33 @@
     "blog_mtab_search": "جستجو",
     "blog_mtab_main": "صفحه اصلی",
     "blog_mtab_admin": "مدیریت",
-    "blog_mtab_result": "نتایج"
+    "blog_mtab_result": "نتایج",
+    "content_s_company_info": "اطلاعات شرکت",
+    "content_s_general_Info": "اطلاعات عمومی",
+    "content_s_product_Info": "اطلاعات محصول",
+    "content_s_project_Info": "اطلاعات پروزه",
+    "content_s_sub_content": "زیر محتوا",
+    "content_s_topic": "موضوع",
+    "content_s_feedback": "بازخورد",
+    "content_s_advertisement": "تبلیغات",
+    "content_s_main_content": "محتوای اصلی",
+    "content_s_article": "مقاله",
+    "content_s_comment": "نظر",
+    "content_s_description": "شرح",
+    "content_s_ledgal_info": "اطلاعات حقوقی",
+    "content_s_response": "پاسخ",
+    "content_s_faq": "پرسش و پاسخ",
+    "content_s_owner": "مالک",
+    "content_s_user": "کاربر",
+    "content_s_personal_info": "personal info",
+    "content_s_yes": "بله",
+    "content_s_no": "خیر",
+    "content_s_inProgress": "درجریان",
+    "content_s_initial_draft": "پبش نویس اولیه",
+    "content_s_revised_draft": "پیش نویس بازنویسی شده",
+    "content_s_final_draft": "پیش نویس نهایی",
+    "content_s_available": "در دسترسی",
+    "content_s_deactivated": "غیر فعال شده",
+    "content_s_published": "انتشار یافته"
   }
 }
