@@ -1,29 +1,29 @@
 <template>
     <div>
-              <b-card no-body>
-                  <b-tabs pills card>
-                        <b-tab title="main">
-                            <articleCreate/>
-                        </b-tab>
+        <b-card no-body>
+            <b-tabs pills card>
+                <b-tab :title="this.$t('article_mtab_main')">
+                    <articleCreate />
+                </b-tab>
 
-                        <b-tab title="categories">
-                            <articleCategories/>
-                        </b-tab>
+                <b-tab :title="this.$t('article_mtab_catg')">
+                    <articleCategories />
+                </b-tab>
 
-                        <b-tab title="tags">
-                            <articleTags/>
-                        </b-tab>
+                <b-tab :title="this.$t('article_mtab_tags')">
+                    <articleTags />
+                </b-tab>
 
-                        <b-tab title="related post">
-                            <articleRelatedPost/>
-                        </b-tab>
+                <b-tab :title="this.$t('article_mtab_relpost')">
+                    <articleRelatedPost />
+                </b-tab>
 
-                        <b-tab title="seo">
-                            <articleSeo/>
-                        </b-tab>
+                <b-tab :title="this.$t('article_mtab_seo')">
+                    <articleSeo />
+                </b-tab>
 
-                  </b-tabs>
-              </b-card>
+            </b-tabs>
+        </b-card>
     </div>
 </template>
 
@@ -36,27 +36,25 @@ import articleRelatedPost from './articleRelatedPost'
 import articleCreate from './articleCreate'
 
 export default {
-    name:'articleMain',
-    props:{
-          } ,
-    data(){
-      return {
-        
-      }
-    } ,
-    methods:{
+    name: 'articleMain',
+    props: {
+    },
+    data() {
+        return {
+
+        }
+    },
+    methods: {
 
     },
-    components:{
-        articleCategories ,
-        articleSeo ,
-        articleTags ,
-        articleRelatedPost ,
+    components: {
+        articleCategories,
+        articleSeo,
+        articleTags,
+        articleRelatedPost,
         articleCreate
     }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

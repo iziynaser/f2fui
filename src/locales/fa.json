@@ -479,6 +479,15 @@
     "qa_c_selecCat": "انتخاب دسته",
     "qa_c_selectCon": "انتخاب محتوا",
     "qa_c_selectProd": "انتخاب کالا",
-    "qa_c_status": "وضعیت"
+    "qa_c_status": "وضعیت",
+    "article_mtab_main": "صفحه اصلی",
+    "article_mtab_catg": "دسته بندی ها",
+    "article_mtab_tags": "تگ ها",
+    "article_mtab_relpost": "پست های مرتبط",
+    "article_mtab_seo": "سیو",
+    "blog_mtab_search": "جستجو",
+    "blog_mtab_main": "صفحه اصلی",
+    "blog_mtab_admin": "مدیریت",
+    "blog_mtab_result": "نتایج"
   }
 }

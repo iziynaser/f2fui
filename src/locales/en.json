@@ -357,6 +357,15 @@
     "qa_c_selecCat": "select category",
     "qa_c_selectCon": "select content",
     "qa_c_selectProd": "select product",
-    "qa_c_status": "status"
+    "qa_c_status": "status",
+    "article_mtab_main": "main",
+    "article_mtab_catg": "categories",
+    "article_mtab_tags": "tags",
+    "article_mtab_relpost": "related posts",
+    "article_mtab_seo": "seo",
+    "blog_mtab_search": "search",
+    "blog_mtab_main": "main",
+    "blog_mtab_admin": "admin",
+    "blog_mtab_result": "result"
   }
 }
