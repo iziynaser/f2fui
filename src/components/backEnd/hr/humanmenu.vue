@@ -1,5 +1,6 @@
 <template>
   <div>
+    human res
     <b-card no-body>
       <b-tabs id="tabs" pills card v-model="step">
         <b-tab :title="this.$t('hr_menu_main')">

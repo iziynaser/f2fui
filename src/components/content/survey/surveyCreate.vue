@@ -2,11 +2,11 @@
     <div>
         <b-container fluid>
             <!-- <cProductMain :id="id" :title="title"/> -->
-            <label>assign survey to:</label>
+            <label>{{ this.$t('survey_c_assign_to') }}</label>
             <b-row class="my-1">
                 <b-col>
-                    <b-form-checkbox>content</b-form-checkbox>
-                    <b-form-checkbox>product</b-form-checkbox>
+                    <b-form-checkbox>{{ this.$t('survey_c_content') }}</b-form-checkbox>
+                    <b-form-checkbox>{{ this.$t('survey_c_product') }}</b-form-checkbox>
                 </b-col>
                 <b-col>
                     <b-form-group label="Filter" label-cols-sm="3" label-align-sm="right" label-size="sm"
@@ -23,7 +23,7 @@
             </b-row>
             <b-row class="my-1">
                 <b-col sm="3">
-                    <label for="name">name</label>
+                    <label for="name">{{ this.$t('') }}</label>
                 </b-col>
                 <b-col sm="9">
                     <b-input id="name" type="text"></b-input>
@@ -31,7 +31,7 @@
             </b-row>
             <b-row class="my-1">
                 <b-col sm="3">
-                    <label for="status">status</label>
+                    <label for="status">{{ this.$t('survey_c_status') }}</label>
                 </b-col>
                 <b-col sm="9">
                     <b-input id="status" type="text"></b-input>
@@ -39,7 +39,7 @@
             </b-row>
             <b-row class="my-1">
                 <b-col sm="3">
-                    <label for="caption">caption</label>
+                    <label for="caption">{{ this.$t('survey_c_caption') }}</label>
                 </b-col>
                 <b-col sm="9">
                     <b-input id="caption" type="text"></b-input>
@@ -47,7 +47,7 @@
             </b-row>
             <b-row class="my-1">
                 <b-col sm="3">
-                    <label for="description">description</label>
+                    <label for="description">{{ this.$t('survey_c_description') }}</label>
                 </b-col>
                 <b-col sm="9">
                     <b-input id="description" type="text"></b-input>
@@ -55,7 +55,7 @@
             </b-row>
             <b-row class="my-1">
                 <b-col sm="3">
-                    <label for="description">options</label>
+                    <label for="description">{{ this.$t('survey_c_options') }}</label>
                 </b-col>
                 <b-col sm="9">
                     <b-form-checkbox name="instacheckButton" switch>allow user update his comment </b-form-checkbox>
@@ -65,7 +65,7 @@
             </b-row>
             <b-row class="my-1">
                 <b-col>
-                    <b-button size="small" variant="primary" v-on:click="saveSurvey">save survey</b-button>
+                    <b-button size="small" variant="primary" v-on:click="saveSurvey">{{ this.$t('') }}</b-button>
                 </b-col>
             </b-row>
 

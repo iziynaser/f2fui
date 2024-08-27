@@ -26,13 +26,13 @@
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">fromDate</b-col>
+                    <b-col sm="3">{{ this.$t('fromDate') }}</b-col>
                     <b-col sm="9">
                         <date-picker v-model="form.fromDate" type="date"></date-picker>
                     </b-col>
                 </b-row>
                 <b-row class="my-1">
-                    <b-col sm="3">toDate</b-col>
+                    <b-col sm="3">{{ this.$t('toDate') }}</b-col>
                     <b-col sm="9">
                         <date-picker v-model="form.toDate" type="date"></date-picker>
                     </b-col>

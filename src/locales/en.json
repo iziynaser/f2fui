@@ -1,5 +1,9 @@
 {
   "translation": {
+    "list_of_search_result": "list of search result",
+    "submit": "submit",
+    "fromDate": "from date:",
+    "toDate": "to date:",
     "search": "search",
     "welcome": "welcome",
     "message": "persian language support",
@@ -394,6 +398,30 @@
     "content_s_final_draft": "final draft",
     "content_s_available": "available",
     "content_s_deactivated": "deactivated",
-    "content_s_published": "published"
+    "content_s_published": "published",
+    "article_tag_list": "list of tags related to this",
+    "article_tags": "article_tags",
+    "survey_c_assign_to": "assign survey to:",
+    "survey_c_content": "content",
+    "survey_c_product": "product",
+    "survey_c_name": "name",
+    "survey_c_status": "status",
+    "survey_c_caption": "caption",
+    "survey_c_description": "description",
+    "survey_c_options": "options",
+    "survey_c_save survey": "save survey",
+    "survey_d_delete_survey": "delete this survey",
+    "hr_i_title": "title",
+    "hr_i_name": "name",
+    "hr_i_lastname": "lastname",
+    "hr_i_address": "address",
+    "hr_i_description": "description",
+    "hr_i_date_of_birth": "date of birth",
+    "hr_re_resume_id": "resume id",
+    "hr_re_content_id": "content id",
+    "hr_re_person_id": "person id:",
+    "hr_re_resume_date": "resume date",
+    "hr_re_resume_text": "resume text",
+    "hr_re_submit": "submit"
   }
 }

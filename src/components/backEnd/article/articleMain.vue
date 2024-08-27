@@ -1,6 +1,8 @@
 <template>
     <div>
+        article
         <b-card no-body>
+
             <b-tabs pills card>
                 <b-tab :title="this.$t('article_mtab_main')">
                     <articleCreate />

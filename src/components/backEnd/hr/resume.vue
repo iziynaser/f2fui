@@ -12,41 +12,42 @@
             <b-form @submit="onSubmit" @reset="onReset" v-if="visible">
 
                 <b-row class="my-1">
-                    <b-col sm="3">resume id</b-col>
+                    <b-col sm="3">{{ this.$t('hr_re_resume_id') }}</b-col>
                     <b-col sm="9">
                         <b-form-select v-model="form.title" :options="form.titleoptions" />
                     </b-col>
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">content id</b-col>
+                    <b-col sm="3">{{ this.$t('hr_re_content_id') }}</b-col>
                     <b-col sm="9">
                         <b-form-input id="name" v-model="form.name" required placeholder="enter your name" />
                     </b-col>
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">person id </b-col>
+                    <b-col sm="3">{{ this.$t('hr_re_person_id') }}</b-col>
                     <b-col sm="9">
                         <b-form-input id="lastname" v-model="form.lastname" required placeholder="enter your lastname" />
                     </b-col>
                 </b-row>
 
                 <b-row>
-                    <b-col sm="3">resume date</b-col>
+                    <b-col sm="3">{{ this.$t('hr_re_resume_date') }}</b-col>
                     <b-col sm="9">
                         <b-form-input id="address" v-model="form.address" required placeholder="enter your adress" />
                     </b-col>
                 </b-row>
 
                 <b-row>
-                    <b-col sm="3">resume text</b-col>
+                    <b-col sm="3">{{ this.$t('hr_re_resume_text') }}</b-col>
                     <b-col sm="9">
                         <b-form-input id="address" v-model="form.address" required placeholder="enter your adress" />
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col sm="11"><b-button type="submit" variant="primary">submit</b-button></b-col>
+                    <b-col sm="11"><b-button type="submit" variant="primary">{{ this.$t('hr_re_submit')
+                    }}</b-button></b-col>
                 </b-row>
             </b-form>
 

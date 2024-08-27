@@ -1,5 +1,9 @@
 {
   "translation": {
+    "list_of_search_result": "نتایج جستجو",
+    "submit": "submit",
+    "fromDate": "از تاریخ :",
+    "toDate": "تا تاریخ:",
     "search": "جستجو",
     "welcome": "خوش آمدید",
     "message": "پشتیبانی از زبان فارسی",
@@ -516,6 +520,30 @@
     "content_s_final_draft": "پیش نویس نهایی",
     "content_s_available": "در دسترسی",
     "content_s_deactivated": "غیر فعال شده",
-    "content_s_published": "انتشار یافته"
+    "content_s_published": "انتشار یافته",
+    "article_tag_list": "لیست تگ های مرتبط با این مقاله",
+    "article_tags": "تگ های مقاله",
+    "survey_c_assign survey to": "اختصاص مقاله به:",
+    "survey_c_content": "محتوا",
+    "survey_c_product": "کالا",
+    "survey_c_name": "نام",
+    "survey_c_status": "وضعیت",
+    "survey_c_caption": "کپشن",
+    "survey_c_description": "شرح",
+    "survey_c_options": "گزینه ها",
+    "survey_c_save survey": "ذخیره نظرسنجی",
+    "survey_d_delete_survey": "حذف این نظرسنجی",
+    "hr_i_title": "عنوان",
+    "hr_i_name": "نام",
+    "hr_i_lastname": "نام خانوادگی",
+    "hr_i_address": "آدرس",
+    "hr_i_description": "شرح",
+    "hr_i_date_of_birth": "تاریخ تولد",
+    "hr_re_resume_id": "کد رزومه",
+    "hr_re_content_id": "کد محتوا",
+    "hr_re_person_id": "کد شخص",
+    "hr_re_resume_date": "تاریخ رزومه",
+    "hr_re_resume_text": "متن رزومه",
+    "hr_re_submit": "تایید"
   }
 }

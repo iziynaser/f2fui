@@ -10,7 +10,7 @@
                     <surveyCreate />
                 </b-tab>
                 <b-tab :title="this.$t('survey_mtab_survey')">
-                    delete this survey
+                    {{ this.$t('survey_d_delete_survey') }}
 
                 </b-tab>
             </b-tabs>

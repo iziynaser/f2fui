@@ -56,10 +56,10 @@
                               </b-form-group>
 
                               <b-form-group>
-                                    <label for="fromDate">from Date</label>
+                                    <label for="fromDate">{{ this.$t('fromDate') }}</label>
                                     <pdate id="fromDate"></pdate>
 
-                                    <label for="toDate">to Date</label>
+                                    <label for="toDate">{{ this.$t('toDate') }}</label>
                                     <pdate id="toDate"></pdate>
                               </b-form-group>
 
