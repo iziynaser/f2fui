@@ -38,7 +38,7 @@
             </b-row>
             <b-row class="my-1">
                 <b-col sm="3">
-                    <b-button>save</b-button>
+                    <b-button>{{ this.$t('save') }}</b-button>
                 </b-col>
             </b-row>
         </b-container>

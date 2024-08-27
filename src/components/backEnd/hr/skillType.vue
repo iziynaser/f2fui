@@ -19,7 +19,7 @@
                         </b-col>
                     </b-row>
                     <b-row>
-                        <b-button class="alert-primary">save</b-button>
+                        <b-button class="alert-primary">{{ this.$t('save') }}</b-button>
                     </b-row>
                 </b-form-group>
             </div>

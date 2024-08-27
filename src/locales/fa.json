@@ -1,6 +1,9 @@
 {
   "translation": {
     "list_of_search_result": "نتایج جستجو",
+    "preview": "پیش نمایش",
+    "find": "جستجو",
+    "save": "ذخیره",
     "title": "عنوان",
     "users": "کاربران",
     "status": "وضعیت",
@@ -555,6 +558,9 @@
     "article_preview": "پیش نمایش",
     "article_draft": "پیش نویس",
     "article_assign_to": "اختصاص به",
-    "article_save": "ذخیره"
+    "article_save": "ذخیره",
+    "change_status_to": "تغیر وضعیت به",
+    "change_state_to": "تغیر وضعیت به",
+    "product_id": "کد کالا"
   }
 }

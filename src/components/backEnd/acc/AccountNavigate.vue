@@ -58,14 +58,14 @@
             </b-col>
             <b-col>
                 <b-button-group>
-                    <b-dropdown right text="change state to">
-                        <b-dropdown-item>inProgress</b-dropdown-item>
-                        <b-dropdown-item>initial draft</b-dropdown-item>
+                    <b-dropdown right :text="this.$t('change_state_to')">
+                        <b-dropdown-item>{{ this.$t('content_s_inProgress') }}</b-dropdown-item>
+                        <b-dropdown-item>{{ this.$t('content_s_initial_draft') }}</b-dropdown-item>
                         <b-dropdown-item>revised draft</b-dropdown-item>
-                        <b-dropdown-item>final draft</b-dropdown-item>
-                        <b-dropdown-item>available</b-dropdown-item>
-                        <b-dropdown-item>deactivated</b-dropdown-item>
-                        <b-dropdown-item>published</b-dropdown-item>
+                        <b-dropdown-item>{{ this.$t('content_s_final_draft') }}</b-dropdown-item>
+                        <b-dropdown-item>{{ this.$t('content_s_available') }}</b-dropdown-item>
+                        <b-dropdown-item>{{ this.$t('content_s_deactivated') }}</b-dropdown-item>
+                        <b-dropdown-item>{{ this.$t('content_s_published') }}</b-dropdown-item>
                     </b-dropdown>
                 </b-button-group>
             </b-col>

@@ -9,7 +9,7 @@
             </b-col>
         </b-row>
         <b-row>
-            <b-button>find</b-button>
+            <b-button>{{ this.$t('find') }}</b-button>
         </b-row>
         <f2fTable :searchResult="items" :searchFields="fields" caption="list of persons" @rowSelected="rowSelected" />
     </b-container>

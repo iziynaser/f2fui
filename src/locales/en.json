@@ -1,6 +1,9 @@
 {
   "translation": {
     "list_of_search_result": "list of search result",
+    "preview": "preview",
+    "find": "find",
+    "save": "save",
     "title": "title",
     "users": "users",
     "status": "status",
@@ -427,6 +430,15 @@
     "hr_re_resume_text": "resume text",
     "hr_re_submit": "submit",
     "qa_c_approved": "approved",
-    "qa_c_deactive": "deactive"
+    "qa_c_deactive": "deactive",
+    "qa_c_active": "active",
+    "article_publish": "publish",
+    "article_preview": "preview",
+    "article_draft": "draft",
+    "article_assign_to": "assign to",
+    "article_save": "save",
+    "change_status_to": "change status to",
+    "change_state_to": "change state to",
+    "product_id": "product id"
   }
 }

@@ -90,7 +90,7 @@
                     </b-col>
                     <b-col>
                         <b-button-group>
-                            <b-dropdown right text="change state to">
+                            <b-dropdown right :text="this.$t('change_state_to')">
                                 <b-dropdown-item>{{ $t('content_s_inProgress') }}</b-dropdown-item>
                                 <b-dropdown-item>{{ $t('content_s_initial_draft') }}</b-dropdown-item>
                                 <b-dropdown-item>{{ $t('content_s_revised_draft') }}</b-dropdown-item>
