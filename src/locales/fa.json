@@ -579,6 +579,13 @@
     "answer_public_questions": "پاسخ به سوالات عمومی",
     "browse_to_top": "رفتن به بالای صفحه",
     "categories": "دسته ها",
-    "products": "کالاها"
+    "products": "کالاها",
+    "verification_Code": "کد فعالسازی",
+    "captcha_Image": "تصویر کپچا",
+    "overview _comments _product": "نطرات کاربران درباره ی کالا",
+    "comment_1": "نظر 1:",
+    "comment_2": "نظر 2:",
+    "comment_3": "نظر 3:",
+    "comment_4": "نظر 4:"
   }
 }
