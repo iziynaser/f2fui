@@ -1,8 +1,12 @@
 {
   "translation": {
     "list_of_search_result": "نتایج جستجو",
+    "type": "نوع",
+    "yes": "بله",
+    "no": "خیر",
     "preview": "پیش نمایش",
     "find": "جستجو",
+    "article": "مقاله",
     "save": "ذخیره",
     "title": "عنوان",
     "users": "کاربران",
@@ -561,6 +565,16 @@
     "article_save": "ذخیره",
     "change_status_to": "تغیر وضعیت به",
     "change_state_to": "تغیر وضعیت به",
-    "product_id": "کد کالا"
+    "product_id": "کد کالا",
+    "roles": "نقش ها",
+    "sales": "فروش",
+    "views": "بازدید",
+    "comments": "نظرات",
+    "available_on_warehouse": "موجودی انبار",
+    "number_comments_product": "تعداد نظرات ثبت شده برای این کالا",
+    "contact": "تماس",
+    "benefits": "مزایا",
+    "disadvatages": "معایب",
+    "this_post_is_useful": "این پست برای شما مفید است؟"
   }
 }

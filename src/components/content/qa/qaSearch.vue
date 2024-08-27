@@ -20,7 +20,7 @@
         </b-row>
         <b-row class="my-1">
             <b-col>
-                status
+                {{ $t('status') }}
                 <!-- status : not replyed , replyed -->
             </b-col>
             <b-col>
@@ -29,7 +29,7 @@
         </b-row>
         <b-row class="my-1">
             <b-col>
-                type
+                {{ $t('type') }}
             </b-col>
             <b-col>
                 <b-form-select v-model="form.typetitle" :options="form.type" />

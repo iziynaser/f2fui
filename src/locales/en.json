@@ -1,8 +1,12 @@
 {
   "translation": {
     "list_of_search_result": "list of search result",
+    "type": "type",
+    "yes": "yes",
+    "no": "no",
     "preview": "preview",
     "find": "find",
+    "article": "article",
     "save": "save",
     "title": "title",
     "users": "users",
@@ -439,6 +443,16 @@
     "article_save": "save",
     "change_status_to": "change status to",
     "change_state_to": "change state to",
-    "product_id": "product id"
+    "product_id": "product id",
+    "roles": "roles",
+    "sales": "sales",
+    "views": "views",
+    "comments": "comments",
+    "available_on_warehouse": "available on warehouse",
+    "number_comments_product": "the number of comments about this product",
+    "contact": "contact",
+    "benefits": "benefits",
+    "disadvatages": "disadvatages",
+    "this_post_is_useful": "does this post useful?"
   }
 }

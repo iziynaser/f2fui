@@ -45,9 +45,9 @@
 
           <userMenu />
 
-          <customMenus />
+          <!-- <customMenus /> -->
 
-          <cmsMenu />
+          <!-- <cmsMenu /> -->
 
           <catalogMenu />
 
@@ -88,9 +88,9 @@ import langMenu from './menus/langMenu'
 import contentMenu from './menus/contentMenu'
 import accountingMenu from './menus/accountingMenu'
 import reportMenu from './menus/reportMenu'
-import customMenus from './menus/customMenus'
+//import customMenus from './menus/customMenus'
 import userMenu from './menus/userMenu'
-import cmsMenu from './menus/cmsMenu'
+//import cmsMenu from './menus/cmsMenu'
 
 import { baseUrl } from '../api/util'
 // import Logo from '../front/Logo.vue'
@@ -107,9 +107,9 @@ export default {
     contentMenu,
     accountingMenu,
     reportMenu,
-    customMenus,
+    //customMenus,
     userMenu,
-    cmsMenu,
+    //cmsMenu,
     // Logo
   },
   methods: {
