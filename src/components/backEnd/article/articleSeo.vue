@@ -2,8 +2,8 @@
     <div>
         <b-container fluid>
             <b-row class="my-1">
-                <label for="title">title</label>
-                <b-col sm="6"><b-input id="title"/></b-col>
+                <label for="title">{{ this.$t('title') }}</label>
+                <b-col sm="6"><b-input id="title" /></b-col>
             </b-row>
             <b-row>
                 <label for="description">description</label>
@@ -19,20 +19,18 @@
 
 <script>
 export default {
-    name:'articleSeo',
-    props:{
-          } ,
-    data(){
-      return {
-        
-      }
-    } ,
-    methods:{
+    name: 'articleSeo',
+    props: {
+    },
+    data() {
+        return {
 
-    }      
+        }
+    },
+    methods: {
+
+    }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -55,10 +55,10 @@
         <b-row class="my-1">
             <b-col>{{ $t('qa_c_status') }}</b-col>
             <b-col>
-                <b-button>approved</b-button>
-                <b-button>published</b-button>
-                <b-button>deactive</b-button>
-                <b-button>active</b-button>
+                <b-button>{{ this.$t('qa_c_approved') }}</b-button>
+                <b-button>{{ this.$t('content_s_published') }}</b-button>
+                <b-button>{{ this.$t('qa_c_deactive') }}</b-button>
+                <b-button>{{ this.$t('qa_c_active') }}</b-button>
                 <b-button>declined</b-button>
             </b-col>
         </b-row>

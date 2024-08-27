@@ -10,7 +10,7 @@
         </b-row>
         <b-row class="my-1">
             <b-col>
-                status
+                {{ this.$t('status') }}
             </b-col>
             <b-col>
                 <b-form-select v-model="form.status" :options="status"></b-form-select>

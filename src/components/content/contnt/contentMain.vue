@@ -28,10 +28,10 @@
 
                 <b-tab :title="this.$t('CONTENT_MAIN_seo')">
                 </b-tab>
-                <b-tab title="users">
+                <b-tab :title="this.$t('users')">
                     <contentUsers />
                 </b-tab>
-                <b-tab title="status">
+                <b-tab :title="this.$t('status')">
                     <contentStatus />
                 </b-tab>
 

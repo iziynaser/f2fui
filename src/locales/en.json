@@ -1,6 +1,9 @@
 {
   "translation": {
     "list_of_search_result": "list of search result",
+    "title": "title",
+    "users": "users",
+    "status": "status",
     "submit": "submit",
     "fromDate": "from date:",
     "toDate": "to date:",
@@ -422,6 +425,8 @@
     "hr_re_person_id": "person id:",
     "hr_re_resume_date": "resume date",
     "hr_re_resume_text": "resume text",
-    "hr_re_submit": "submit"
+    "hr_re_submit": "submit",
+    "qa_c_approved": "approved",
+    "qa_c_deactive": "deactive"
   }
 }
