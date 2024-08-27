@@ -453,6 +453,10 @@
     "contact": "contact",
     "benefits": "benefits",
     "disadvatages": "disadvatages",
-    "this_post_is_useful": "does this post useful?"
+    "this_post_is_useful": "does this post useful?",
+    "answer_public_questions": "answer to public questions",
+    "browse_to_top": "browse to top",
+    "categories": "categories",
+    "products": "products"
   }
 }

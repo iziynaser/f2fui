@@ -575,6 +575,10 @@
     "contact": "تماس",
     "benefits": "مزایا",
     "disadvatages": "معایب",
-    "this_post_is_useful": "این پست برای شما مفید است؟"
+    "this_post_is_useful": "این پست برای شما مفید است؟",
+    "answer_public_questions": "پاسخ به سوالات عمومی",
+    "browse_to_top": "رفتن به بالای صفحه",
+    "categories": "دسته ها",
+    "products": "کالاها"
   }
 }
