@@ -1,61 +1,61 @@
 <template>
-<div>
-      <!-- <Logo/> -->
-    
-  <!-- main menu -->
-  <b-navbar toggleable="sm" type="dark" variant="dark" >
+  <div>
+    <!-- <Logo/> -->
 
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <!-- main menu -->
+    <b-navbar toggleable="sm" type="dark" variant="dark">
 
-    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-      <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto">
-        
-        <categoriesMenu/>
+      <b-collapse id="nav-collapse" is-nav>
 
-        <orderMenu/>
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
 
-        <portalMenu/>
+          <categoriesMenu />
 
-        <humanResMenu/>
+          <orderMenu />
 
-        <accountingMenu/>
+          <portalMenu />
 
-        <!-- <b-nav-item-dropdown :text="$t('PARTY_SITE')" right>
+          <humanResMenu />
+
+          <accountingMenu />
+
+          <!-- <b-nav-item-dropdown :text="$t('PARTY_SITE')" right>
           <b-dropdown-item href="#" >
               <router-link to="/humanres">WebSite</router-link>
           </b-dropdown-item>
         </b-nav-item-dropdown> -->
 
-        <!-- <b-nav-item-dropdown :text="$t('POS_SITE')" right>
+          <!-- <b-nav-item-dropdown :text="$t('POS_SITE')" right>
           <b-dropdown-item href="#" >
               <router-link to="/humanres">WebSite</router-link>
           </b-dropdown-item>
         </b-nav-item-dropdown> -->
 
-<!-- 
-        <b-nav-item-dropdown text="CONTENT" right>
-          <b-dropdown-item href="#" >
+
+          <!-- <b-nav-item-dropdown text="CONTENT" right>
+            <b-dropdown-item href="#">
               <router-link to="/contentC">Content</router-link>
-          </b-dropdown-item>
-        </b-nav-item-dropdown> -->
+            </b-dropdown-item>
+          </b-nav-item-dropdown> -->
 
-        <reportMenu/>
+          <reportMenu />
 
-        <userMenu/>
+          <userMenu />
 
-        <customMenus/>
+          <customMenus />
 
-        <cmsMenu/>
+          <cmsMenu />
 
-        <catalogMenu/>
+          <catalogMenu />
 
-        <contentMenu/>
-        
-        <langMenu/>
+          <contentMenu />
 
-        <!-- <div class="dropdown">
+          <langMenu />
+
+          <!-- <div class="dropdown">
           <button class="btn btn-outline-info dropdown-toggle" 
                   aria-haspopup="true"
                   aria-expanded="false"
@@ -70,17 +70,17 @@
             <a  class="dropddown-item">c3</a>            
         </div> -->
 
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
-  <div style="margin-top:20px;"></div>
-</div>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+    <div style="margin-top:20px;"></div>
+  </div>
 </template>
 
 <script>
 
 import categoriesMenu from './categories/categoriesMenu'
-import orderMenu from  './menus/orderMenu'
+import orderMenu from './menus/orderMenu'
 import portalMenu from './menus/portalMenu'
 import humanResMenu from './menus/humanResMenu'
 import catalogMenu from './menus/catalogMenu'
@@ -92,12 +92,12 @@ import customMenus from './menus/customMenus'
 import userMenu from './menus/userMenu'
 import cmsMenu from './menus/cmsMenu'
 
-import {baseUrl} from '../api/util'
+import { baseUrl } from '../api/util'
 // import Logo from '../front/Logo.vue'
 
 export default {
-      name:'navBars',
-      components:{
+  name: 'navBars',
+  components: {
     categoriesMenu,
     orderMenu,
     portalMenu,
@@ -111,12 +111,12 @@ export default {
     userMenu,
     cmsMenu,
     // Logo
-},
-      methods:{
-               urlI(u){
-        return baseUrl(u)
-      }
-
-      }
+  },
+  methods: {
+    urlI(u) {
+      return baseUrl(u)
     }
+
+  }
+}
 </script>
