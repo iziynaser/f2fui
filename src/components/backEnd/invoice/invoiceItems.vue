@@ -5,11 +5,11 @@
       <b-form>
 
         <b-row class="my-1">
-          <b-col sm="2">current date</b-col>
+          <b-col sm="2">{{ $t('current_date') }}</b-col>
           <b-col sm="4">
             <b-form-input id="" required="" placeholder="" />
           </b-col>
-          <b-col sm="2">date</b-col>
+          <b-col sm="2">{{ $t('date') }}</b-col>
           <b-col sm="4">
             <b-form-input id="" required="" placeholder="" />
           </b-col>
@@ -21,29 +21,29 @@
           <b-col sm="4">
             <b-form-input id="" required="" placeholder="" />
           </b-col>
-          <b-col sm="2">description</b-col>
+          <b-col sm="2">{{ $t('description') }}</b-col>
           <b-col sm="4">
             <b-form-input id="" required="" placeholder="" />
           </b-col>
         </b-row>
 
         <b-row class="my-1">
-          <b-col sm="2">creator</b-col>
+          <b-col sm="2">{{ $t('creator') }}</b-col>
           <b-col sm="4">
             <b-form-input id="" required="" placeholder="" />
           </b-col>
-          <b-col sm="2">from person</b-col>
+          <b-col sm="2">{{ $t('fromPerson') }}</b-col>
           <b-col sm="4">
             <b-form-input id="" required="" placeholder="" />
           </b-col>
         </b-row>
 
         <b-row class="my-1">
-          <b-col sm="2">to person</b-col>
+          <b-col sm="2">{{ $t('toPerson') }}</b-col>
           <b-col sm="4">
             <b-form-input id="" required="" placeholder="" />
           </b-col>
-          <b-col sm="2">invoice type</b-col>
+          <b-col sm="2">{{ $t('invoiceType') }}</b-col>
           <b-col sm="4">
             <b-form-input id="" required="" placeholder="" />
           </b-col>

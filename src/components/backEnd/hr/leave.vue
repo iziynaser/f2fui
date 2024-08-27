@@ -12,7 +12,7 @@
             <b-form @submit="onSubmit" @reset="onReset" v-if="visible">
 
                 <b-row class="my-1">
-                    <b-col sm="3">person id</b-col>
+                    <b-col sm="3">{{ $t('personId') }}</b-col>
                     <b-col sm="9">
                         <b-form-select v-model="form.title" :options="form.titleoptions" />
                     </b-col>

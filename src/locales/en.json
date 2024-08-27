@@ -464,6 +464,14 @@
     "comment_1": "comment 1:",
     "comment_2": "comment 2:",
     "comment_3": "comment 3:",
-    "comment_4": "comment 4:"
+    "comment_4": "comment 4:",
+    "current_date": "current date",
+    "fromPerson": "from person",
+    "toPerson": "to person",
+    "description": "description",
+    "creator": "creator",
+    "invoiceType": "invoice type",
+    "date": "date",
+    "personId": "person id"
   }
 }
