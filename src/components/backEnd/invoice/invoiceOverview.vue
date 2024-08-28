@@ -13,10 +13,10 @@
       <b-button variant="link">save as template </b-button>
     </div>
 
-    <b-card title="header"></b-card>
-    <b-card title="status"></b-card>
-    <b-card title="items"></b-card>
-    <b-card title="transaction"></b-card>
+    <b-card :title="this.$t('header')"></b-card>
+    <b-card :title="this.$t('status')"></b-card>
+    <b-card :title="this.$t('items')"></b-card>
+    <b-card :title="this.$t('transaction')"></b-card>
 
   </div>
 </template>

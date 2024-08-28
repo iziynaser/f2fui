@@ -480,6 +480,9 @@
     "equals": "Equals",
     "begins_with": "Begins with",
     "is_empty": "is empty",
-    "not_equal": " not equal"
+    "not_equal": " not equal",
+    "header": "header",
+    "items": "items",
+    "transaction": "transaction"
   }
 }
