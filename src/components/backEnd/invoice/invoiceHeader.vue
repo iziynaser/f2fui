@@ -75,7 +75,7 @@
         <b-row>
           <b-col class="col-2">{{ $t('INVOICE_HEADER_toPerson') }}</b-col>
           <b-col class="col-4">
-            <personModal id="modalToPerson" title="lookup to person" @bClicked="showLkToPerson" />
+            <personModal id="modalToPerson" :title="this.$t('list_of_persons')" @bClicked="showLkToPerson" />
             <tPerson @click="showModalForm" id="modalToPerson" :lkdata="lookupToPerson" modalFormName="personModal"
               :key="rerenderToComponent" />
           </b-col>

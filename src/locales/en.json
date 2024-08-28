@@ -472,6 +472,14 @@
     "creator": "creator",
     "invoiceType": "invoice type",
     "date": "date",
-    "personId": "person id"
+    "personId": "person id",
+    "list_of_persons": "list of persons",
+    "invoiceId": "invoice id",
+    "selected": "selected",
+    "contains": "contains",
+    "equals": "Equals",
+    "begins_with": "Begins with",
+    "is_empty": "is empty",
+    "not_equal": " not equal"
   }
 }

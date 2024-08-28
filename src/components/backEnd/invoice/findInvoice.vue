@@ -8,37 +8,21 @@
                         <b-collapse id="searchCollapse" visible @hide="hideCollapse" @show="showCollapse">
 
                               <b-container>
-                                    <label for="">invoice id</label>
-                                    <select class="m-2" id="">
-                                          <option selected>selected...</option>
-                                          <option value="1">contains</option>
-                                          <option value="2">Equals </option>
-                                          <option value="3">Begins with</option>
-                                          <option value="4">is empty</option>
-                                          <option value="5">not equal</option>
-                                    </select>
-
+                                    <label for="">{{ this.$t('invoiceId') }}</label>
+                                    <f2fSearchOptions />
                                     <input type="text" id="invoiceId" name="invoiceId" />
 
-                                    <input type="checkbox" name="ignoreCase" id="ignoreCase" />
-                                    <label for="ignoreCase">ignoreCase</label>
+                                    <!-- <input type="checkbox" name="ignoreCase" id="ignoreCase" />
+                                    <label for="ignoreCase">ignoreCase</label> -->
                               </b-container>
 
                               <b-container>
-                                    <label for="">description</label>
-                                    <select class="m-2" id="">
-                                          <option selected>selected...</option>
-                                          <option value="1">contains</option>
-                                          <option value="2">Equals </option>
-                                          <option value="3">Begins with</option>
-                                          <option value="4">is empty</option>
-                                          <option value="5">not equal</option>
-                                    </select>
-
+                                    <label for="">{{ this.$t('description') }}</label>
+                                    <f2fSearchOptions />
                                     <input type="text" name="description" id="description" />
 
-                                    <input type="checkbox" name="ignoreCase" id="ignoreCase" />
-                                    <label for="ignoreCase">ignoreCase</label>
+                                    <!-- <input type="checkbox" name="ignoreCase" id="ignoreCase" />
+                                    <label for="ignoreCase">ignoreCase</label> -->
                               </b-container>
 
                               <f2fInvoiceType id="invoiceType" :labell="this.$t('INVOICE_TYPE_COMMON_select')"
@@ -80,6 +64,7 @@
 
 import axios from 'axios'
 import f2fTable from '../../base/f2fTable'
+import f2fSearchOptions from '../../base/f2fSearchOptions'
 
 export default {
       name: 'findInvoice',
@@ -129,7 +114,8 @@ export default {
 
       },
       components: {
-            f2fTable
+            f2fTable,
+            f2fSearchOptions
       },
       methods: {
             hideCollapse() {

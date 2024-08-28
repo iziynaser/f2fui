@@ -594,6 +594,14 @@
     "creator": "ایجاد کننده",
     "invoiceType": "نوع فاکتور",
     "date": "تاریخ",
-    "personId": "کد شخص"
+    "personId": "کد شخص",
+    "list_of_persons": " شرکت/ لیست اشخاص",
+    "invoiceId": "کد فاکتور",
+    "selected": "انتخاب شده",
+    "contains": "شامل",
+    "equals": "مساوی است با",
+    "begins_with": "شروع می شود با",
+    "is_empty": " است خالی",
+    "not_equal": "مساوی نیست با"
   }
 }

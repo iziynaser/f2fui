@@ -11,7 +11,7 @@
         <b-row>
             <b-button>{{ this.$t('find') }}</b-button>
         </b-row>
-        <f2fTable :searchResult="items" :searchFields="fields" caption="list of persons" @rowSelected="rowSelected" />
+        <f2fTable :searchResult="items" :searchFields="fields" :caption="list_of_persons" @rowSelected="rowSelected" />
     </b-container>
 </template>
 
