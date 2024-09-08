@@ -7,46 +7,47 @@
                         </b-button>
                         <b-collapse id="searchCollapse" visible @hide="hideCollapse" @show="showCollapse">
 
-                              <b-container>
-                                    <label for="">{{ this.$t('invoiceId') }}</label>
-                                    <f2fSearchOptions />
-                                    <input type="text" id="invoiceId" name="invoiceId" />
+                              <b-row class="my-1">
+                                    <b-col sm="12">
+                                          <f2fSearchOptions :optionText="this.$t('invoiceId')" />
+                                    </b-col>
+                              </b-row>
 
-                                    <!-- <input type="checkbox" name="ignoreCase" id="ignoreCase" />
-                                    <label for="ignoreCase">ignoreCase</label> -->
-                              </b-container>
-
-                              <b-container>
-                                    <label for="">{{ this.$t('description') }}</label>
-                                    <f2fSearchOptions />
-                                    <input type="text" name="description" id="description" />
-
-                                    <!-- <input type="checkbox" name="ignoreCase" id="ignoreCase" />
-                                    <label for="ignoreCase">ignoreCase</label> -->
-                              </b-container>
-
-                              <f2fInvoiceType id="invoiceType" :labell="this.$t('INVOICE_TYPE_COMMON_select')"
-                                    fetchUrl="/InvoiceType/list"
-                                    :selectOptionLabel="this.$t('INVOICE_TYPE_COMMON_selectOptionLabel')" />
-
-                              <b-form-group label="status ">
-                                    <b-form-checkbox-group id="checkbox-group-0" v-model="selectedInvoiceActionTypes"
-                                          name="falvor-1">
-                                          <b-form-checkbox v-for="actionType in invoiceActionTypes" :key="actionType.id"
-                                                :value="actionType.name">
-                                                {{ actionType.name }}
-                                          </b-form-checkbox>
-                                    </b-form-checkbox-group>
-                              </b-form-group>
-
-                              <b-form-group>
-                                    <label for="fromDate">{{ this.$t('fromDate') }}</label>
-                                    <pdate id="fromDate"></pdate>
-
-                                    <label for="toDate">{{ this.$t('toDate') }}</label>
-                                    <pdate id="toDate"></pdate>
-                              </b-form-group>
-
+                              <b-row class="my-1">
+                                    <b-col sm="12">
+                                          <f2fSearchOptions :optionText="this.$t('description')" />
+                                    </b-col>
+                              </b-row>
+                              <b-row class="my-1">
+                                    <!-- <b-col sm="3"></b-col> -->
+                                    <b-col>
+                                          <f2fInvoiceType id="invoiceType" :labell="this.$t('INVOICE_TYPE_COMMON_select')"
+                                                fetchUrl="/InvoiceType/list"
+                                                :selectOptionLabel="this.$t('INVOICE_TYPE_COMMON_selectOptionLabel')" />
+                                    </b-col>
+                              </b-row>
+                              <b-row class="my-1">
+                                    <b-col sm="3"></b-col>
+                                    <b-col sm="9"><b-form-checkbox-group id="checkbox-group-0"
+                                                v-model="selectedInvoiceActionTypes" name="falvor-1">
+                                                <b-form-checkbox v-for=" actionType  in  invoiceActionTypes "
+                                                      :key="actionType.id" :value="actionType.name">
+                                                      {{ actionType.name }}
+                                                </b-form-checkbox>
+                                          </b-form-checkbox-group></b-col>
+                              </b-row>
+                              <b-row class="my-1">
+                                    <b-col sm="3"><label for="fromDate">{{ this.$t('fromDate') }}</label></b-col>
+                                    <b-col sm="3">
+                                          <pdate id="fromDate"></pdate>
+                                    </b-col>
+                              </b-row>
+                              <b-row class="my-1">
+                                    <b-col sm="3"> <label for="toDate">{{ this.$t('toDate') }}</label></b-col>
+                                    <b-col sm="3">
+                                          <pdate id="toDate"></pdate>
+                                    </b-col>
+                              </b-row>
                               <b-button pill variant="success" v-on:click="findAvailableInvoice">find</b-button>
 
                         </b-collapse>
