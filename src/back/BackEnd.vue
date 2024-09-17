@@ -1,34 +1,58 @@
 <template>
     <div>
-        <NavBars/>
-        <b-card
-            title="Card Title"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 20rem;"
-            class="mb-2"
-        >
-            <b-card-text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-           </b-card-text>
-           <!-- <b-button href="#" variant="primary">Go somewhere</b-button> -->
-        </b-card>
+        <NavBars />
+        <b-card-group deck>
+            <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+                <b-row no-gutters>
+                    <b-col md="6">
+                        <!-- <b-card-img src="http://localhost:8080/images/logo/logo.png" alt="" class="rounded-0"></b-card-img> -->
+                    </b-col>
+                    <b-col md="6">
+                        <b-list-group flush>
+                            <b-list-group-item>
+                                <b-card-body title="new features">
+                                    <b-card-text>
+                                        gfhfghdfgh
+                                        fgjhghjfghj
+                                        fghfghfgfgh
+                                    </b-card-text>
+                                </b-card-body>
+                            </b-list-group-item>
+                            <b-list-group-item>
+                                <b-card-body title="bug fixes">
+                                    <b-card-text>
+                                        gfhfghdfgh
+                                        fgjhghjfghj
+                                        fghfghfgfgh
+                                    </b-card-text>
+                                </b-card-body>
+                            </b-list-group-item>
+                        </b-list-group>
+
+                    </b-col>
+                </b-row>
+            </b-card>
+
+            <b-card title="f2f version" img-src="http://localhost:8080/images/logo/logo.png" img-alt="image" img-top
+                tag="article" style="max-width:20 rem;" class="mb-2">
+                <b-card-text>
+                    1.0
+                </b-card-text>
+            </b-card>
+        </b-card-group>
+
 
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
 import NavBars from '../components/navBars.vue';
 
-    export default {
+export default {
     name: "BackEnd",
     components: { NavBars }
 }
-  </script>
+</script>
   
-  <style>
-  
-  </style>
+<style></style>
   

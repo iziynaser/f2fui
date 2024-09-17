@@ -1,65 +1,73 @@
 <template>
   <div>
-    <b-row>
-      <b-col></b-col>
-      <b-col></b-col>
-      <b-col></b-col>
-      <b-col>
-        <router-link to="/publicQa">{{ $t('answer_public_questions') }}</router-link>
-      </b-col>
-    </b-row>
-    <hr />
-    <div>{{ $t('browse_to_top') }}</div>
-    <hr />
-    <div>
+    <div v-if="$route.path.includes('/')">
+      {{ $route.path }}
+      {{ $route.path.includes('back') }}
+    </div>
+    <div v-else>
       <b-row>
         <b-col>
-          <b-list-group horizontal="md" flush>
-            <b-list-group-item>{{ $t('C_FOOTER_REGISTER_ORDER') }}</b-list-group-item>
-            <b-list-group-item>{{ $t('C_FOOTER_PROCESS_ORDER') }}</b-list-group-item>
-            <b-list-group-item>{{ $t('C_FOOTER_PAYMENT_METHODS') }}</b-list-group-item>
-          </b-list-group>
+          <!-- {{ $route.path }} -->
         </b-col>
-        <b-col>
-          <b-list-group horizontal="md" flush>
-            <li>{{ $t('C_FOOTER_REPORT_A_BUG') }}</li>
-            <li>{{ $t('C_FOOTER_PRIVACY') }}</li>
-            <li>{{ $t('C_FOOTER_RETURN_PRODUCT') }}</li>
-          </b-list-group>
-        </b-col>
+        <b-col>route.path </b-col>
         <b-col></b-col>
         <b-col>
-          <b-row></b-row>
-          <b-row>
-            <b-col>
-              <b-row>
-                inform from pormotions
-                <b-input type="text" />
-              </b-row>
-            </b-col>
-          </b-row>
+          <router-link to="/publicQa">{{ $t('answer_public_questions') }}</router-link>
         </b-col>
       </b-row>
-    </div>
-    <hr />
-    <div>
-      <b-row>
-        <b-col>
-          <span>{{ $t('C_FOOTER_FOLLOW_US') }}</span>
-          <b-link :href="form.instagramUrl">
-            <b-img :src="urlI('/images/footer/instagram.png')" class="p-2 w-20 img-rounded" />
-          </b-link>
-          <b-link :href="form.twitterUrl">
-            <b-img :src="urlI('/images/footer/twitter.png')" class="p-2 w-20 img-rounded" />
-          </b-link>
-          <b-link :href="form.aparatUrl">
-            <b-img :src="urlI('/images/footer/aparat.png')" class="p-2 w-20 img-rounded" />
-          </b-link>
-          <b-link :href="form.linkedInUrl">
-            <b-img :src="urlI('/images/footer/linkedin.png')" class="p-2 w-20 img-rounded" />
-          </b-link>
-        </b-col>
-      </b-row>
+      <hr />
+      <div>{{ $t('browse_to_top') }}</div>
+      <hr />
+      <div>
+        <b-row>
+          <b-col>
+            <b-list-group horizontal="md" flush>
+              <b-list-group-item>{{ $t('C_FOOTER_REGISTER_ORDER') }}</b-list-group-item>
+              <b-list-group-item>{{ $t('C_FOOTER_PROCESS_ORDER') }}</b-list-group-item>
+              <b-list-group-item>{{ $t('C_FOOTER_PAYMENT_METHODS') }}</b-list-group-item>
+            </b-list-group>
+          </b-col>
+          <b-col>
+            <b-list-group horizontal="md" flush>
+              <li>{{ $t('C_FOOTER_REPORT_A_BUG') }}</li>
+              <li>{{ $t('C_FOOTER_PRIVACY') }}</li>
+              <li>{{ $t('C_FOOTER_RETURN_PRODUCT') }}</li>
+            </b-list-group>
+          </b-col>
+          <b-col></b-col>
+          <b-col>
+            <b-row></b-row>
+            <b-row>
+              <b-col>
+                <b-row>
+                  inform from pormotions
+                  <b-input type="text" />
+                </b-row>
+              </b-col>
+            </b-row>
+          </b-col>
+        </b-row>
+      </div>
+      <hr />
+      <div>
+        <b-row>
+          <b-col>
+            <span>{{ $t('C_FOOTER_FOLLOW_US') }}</span>
+            <b-link :href="form.instagramUrl">
+              <b-img :src="urlI('/images/footer/instagram.png')" class="p-2 w-20 img-rounded" />
+            </b-link>
+            <b-link :href="form.twitterUrl">
+              <b-img :src="urlI('/images/footer/twitter.png')" class="p-2 w-20 img-rounded" />
+            </b-link>
+            <b-link :href="form.aparatUrl">
+              <b-img :src="urlI('/images/footer/aparat.png')" class="p-2 w-20 img-rounded" />
+            </b-link>
+            <b-link :href="form.linkedInUrl">
+              <b-img :src="urlI('/images/footer/linkedin.png')" class="p-2 w-20 img-rounded" />
+            </b-link>
+          </b-col>
+        </b-row>
+      </div>
     </div>
   </div>
 </template>
