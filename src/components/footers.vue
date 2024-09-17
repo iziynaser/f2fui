@@ -1,15 +1,14 @@
 <template>
   <div>
-    <div v-if="$route.path.includes('/')">
-      {{ $route.path }}
-      {{ $route.path.includes('back') }}
+    <div v-if="$route.fullPath.length > 1">
+      <!--
+      empty footer
+     -->
     </div>
     <div v-else>
       <b-row>
-        <b-col>
-          <!-- {{ $route.path }} -->
-        </b-col>
-        <b-col>route.path </b-col>
+        <b-col></b-col>
+        <b-col></b-col>
         <b-col></b-col>
         <b-col>
           <router-link to="/publicQa">{{ $t('answer_public_questions') }}</router-link>
