@@ -1,15 +1,34 @@
 {
   "name": "f2fui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
+  "description": "A Single web Application for f2f beack end app written with Vue.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "keywords": [
+    "f2f ui",
+    "ecommerce",
+    "single web page application",
+    "persian application",
+    "vuejs",
+    "vue.js"
+  ],
+  "author": "Naser iziy",
   "dependencies": {
     "@panter/vue-i18next": "^0.15.2",
+    "add": "^2.0.6",
     "axios": "^0.19.2",
     "bootstrap": "^4.6.2",
     "bootstrap-vue": "^2.23.1",
@@ -30,7 +49,9 @@
     "vue-datepicker-persian": "^2.4.3",
     "vue-form-generator": "^2.3.4",
     "vue-i18next": "^0.9.3",
+    "vue-jalali-moment": "^1.0.0",
     "vue-multiselect": "^2.1.6",
+    "vue-persian-calendar": "^0.4.0",
     "vue-persian-datetime-picker": "^2.1.4",
     "vue-popperjs": "^2.3.0",
     "vue-router": "^3.1.5",
@@ -47,6 +68,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.3",
+    "sass-loader": "^16.0.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.1",
     "vue-devtools": "^5.1.3"
