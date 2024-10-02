@@ -42,6 +42,15 @@ import { f2fChangeLocale } from './f2fUtils';
 //import PersianCalendar from 'vue-persian-calendar';
 //Vue.use(PersianCalendar)
 
+// Import utilities functions
+import './utils'
+
+import moment from 'vue-jalali-moment'
+Vue.use(moment)
+
+import PersianCalendar from 'vue-persian-calendar';
+Vue.use(PersianCalendar)
+
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)

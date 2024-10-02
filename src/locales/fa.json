@@ -605,6 +605,12 @@
     "not_equal": "مساوی نیست با",
     "header": "سربرگ",
     "items": "اقلام",
-    "transaction": "تراکنش"
+    "transaction": "تراکنش",
+    "calendar": "تقویم",
+    "phone": "دفترچه تلفن",
+    "notes": "یادداشت ها",
+    "links": "لینک ها",
+    "charts": "چارت سازمانی",
+    "softwares": "نرم افزارها"
   }
 }

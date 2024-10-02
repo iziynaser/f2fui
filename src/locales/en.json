@@ -483,6 +483,12 @@
     "not_equal": " not equal",
     "header": "header",
     "items": "items",
-    "transaction": "transaction"
+    "transaction": "transaction",
+    "calendar": "calendar",
+    "phone": "phone",
+    "notes": "notes",
+    "links": "links",
+    "charts": "charts",
+    "softwares": "softwares"
   }
 }
