@@ -26,6 +26,32 @@
     "vue.js"
   ],
   "author": "Naser iziy",
+  "contributors": [
+    {
+      "name": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "url": ""
+    },
+    {
+      "name": "",
+      "url": ""
+    }
+  ],
   "dependencies": {
     "@full-event-calendar/core": "^0.0.3",
     "@full-event-calendar/daily-grid": "^0.0.3",

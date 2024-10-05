@@ -1,47 +1,34 @@
 <template>
-    <div>
-        <div>
+<div >
+          <div>
             <NavBars />
         </div>
         <div>
             clock , date , toast , ...
         </div>
-        <div>
-            <b-card no-body>
-                <b-tabs pills card>
-                    <b-tab title="appInfo">
-                        <appInfo />
-                    </b-tab>
-                    <b-tab :title="this.$t('INVOICE_MTAB_findInvoice')">
-                        <div>
-                            <b-card no-body>
-                                <b-tabs pills card vertical>
-                                    <b-tab :title="this.$t('calendar')">
-                                        <calendar />
-                                    </b-tab>
-                                    <b-tab :title="this.$t('phone')">
-                                        <phone />
-                                    </b-tab>
-                                    <b-tab :title="this.$t('notes')">
-                                        <notes />
-                                    </b-tab>
-                                    <b-tab :title="this.$t('links')">
-                                        <links />
-                                    </b-tab>
-                                    <b-tab :title="this.$t('charts')">
-                                        <charts />
-                                    </b-tab>
-                                    <b-tab :title="this.$t('softwares')">
-                                        <softwares />
-                                    </b-tab>
-                                </b-tabs>
-                            </b-card>
-                        </div>
-                    </b-tab>
-                </b-tabs>
-            </b-card>
-        </div>
-    </div>
+  <button @click="createTab">click to create tab</button>
+
+   <b-card no-body>
+    <b-tabs small pills card>
+      <b-tab title="help desc">
+      <b-card no-body>
+    <b-tabs  pills small card vertical ref="tabs" v-model="tabIndex">
+      <b-tab v-for="t in tabs" :key="t.id">
+        <template #title>
+            <b-icon icon="x" size="sm" @click="closeTab(t.id)"></b-icon>
+            {{t.name}}
+        </template>
+        <p>
+          <component :is="t.contnt"></component>
+        </p>
+      </b-tab>
+    </b-tabs>
+  </b-card>
+      </b-tab>
+    </b-tabs>
+   </b-card>     
+</div>
+
 </template>
   
 <script>
@@ -55,16 +42,70 @@ import phone from '../components/portal/phone.vue';
 import softwares from '../components/portal/softwares.vue';
 
 export default {
-    name: "BackEnd",
-    components: {
-        NavBars,
-        appInfo,
-        charts,
-        links,
-        calendar,
-        notes,
-        phone,
-        softwares
+  name: "BackEnd",
+  components: {
+    NavBars,
+  },
+    data() {
+      return {
+          appTabs:[],
+          tabs: [
+            {
+              name: "appInfo" ,
+                id: 0 ,
+                    contnt: appInfo
+            },
+            {
+              name: "charts" ,
+                   id: 1,
+                   contnt: charts
+            },
+                        {
+              name: "links" ,
+                   id: 2,
+                   contnt: links
+            },
+                        {
+              name: "calendar" ,
+                   id: 3,
+                   contnt: calendar
+            },
+                        {
+              name: "notes" ,
+                   id: 4,
+                   contnt: notes
+            },
+                        {
+              name: "phone" ,
+                   id: 5,
+                   contnt: phone
+            },
+                        {
+              name: "softwares" ,
+                   id: 6,
+                   contnt: softwares
+            },
+          ],
+        }
+    },
+  methods: {
+    createTab() {
+      let newTab = {
+        id: 0 ,
+        name: "t",
+        contnt : "cccc"
+      }
+      this.tabs.push(newTab);
+        console.log('createTab')
+      },
+        closeTab(x) {
+        for (let i = 0; i < this.tabs.length; i++) {
+          console.log(this.tabs[i]);
+          if (this.tabs[i].id === x) {
+            this.tabs.splice(i, 1)
+          }
+        }
+      }
     }
 }
 </script>

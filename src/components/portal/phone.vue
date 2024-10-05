@@ -12,8 +12,8 @@
                     <b-row class="my-1">
 
                         <b-col sm="9">
-                            <label for="sfield">enter the name , family , group , role , ... </label>
-                            <b-form-input id="sfield" v-model="sfield" size="sm" type="text"></b-form-input>
+                            <!-- <label for="sfield">enter the name , family , group , role , ... </label>
+                            <b-form-input id="sfield" v-model="sfield" size="sm" type="text"></b-form-input> -->
                         </b-col>
                         <b-col sm="3"><b-button>search</b-button></b-col>
                     </b-row>
