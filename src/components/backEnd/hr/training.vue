@@ -7,7 +7,7 @@
 
 <script>
 
-import pdate from '../../../components/pdate'
+//import pdate from '../../../components/pdate'
 
 export default {
     name:'training',
@@ -22,16 +22,16 @@ export default {
       }
     } ,
     methods:{
-        validateForm:function(event){
+        // validateForm:function(event){
 
-        },
-        onSubmit:function(event) {            
-        },
-        onReset:function(event){
-        }
+        // },
+        // onSubmit:function(event) {            
+        // },
+        // onReset:function(event){
+        // }
     },
     components:{
-        pdate
+        //pdate
     }
 }
 </script>

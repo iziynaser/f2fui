@@ -18,7 +18,7 @@
 
           <portalMenu />
 
-          <humanResMenu />
+          <humanResMenu @createAppTab="createAppTab"/>
 
           <accountingMenu />
 
@@ -113,6 +113,10 @@ export default {
     // Logo
   },
   methods: {
+    createAppTab(atab) {
+      console.log('navbars:'+atab);
+      this.$emit('createAppTab', atab);
+    },
     urlI(u) {
       return baseUrl(u)
     }

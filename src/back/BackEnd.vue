@@ -1,7 +1,7 @@
 <template>
 <div >
           <div>
-            <NavBars />
+            <NavBars @createAppTab="createAppTab"/>
         </div>
         <div>
             clock , date , toast , ...
@@ -9,21 +9,39 @@
   <button @click="createTab">click to create tab</button>
 
    <b-card no-body>
-    <b-tabs small pills card>
+    <b-tabs small pills card ref="appTabs">
       <b-tab title="help desc">
-      <b-card no-body>
-    <b-tabs  pills small card vertical ref="tabs" v-model="tabIndex">
-      <b-tab v-for="t in tabs" :key="t.id">
+          <b-card no-body>
+              <b-tabs  pills small card vertical ref="tabs" v-model="tabIndex">
+                  <b-tab v-for="t in tabs" :key="t.id">
+                      <template #title>
+                          <b-icon icon="x" size="sm" @click="closeTab(t.id)"></b-icon>
+                          {{t.name}}
+                      </template>
+                      <p>
+                          <component :is="t.contnt"></component>
+                      </p>
+                  </b-tab>
+              </b-tabs>
+          </b-card>
+      </b-tab>
+
+            <b-tab >
         <template #title>
-            <b-icon icon="x" size="sm" @click="closeTab(t.id)"></b-icon>
-            {{t.name}}
+          sdfsdfsdfdsfsf
         </template>
         <p>
-          <component :is="t.contnt"></component>
+          sdfsdfsdfsdf
         </p>
       </b-tab>
-    </b-tabs>
-  </b-card>
+
+      <b-tab v-for="a in appTabs" ref="appTabs" :key="a.id" v-model="appTabIndex">
+        <template #title>
+          {{ a.name }}
+        </template>
+        <p>
+          <component :is="a.content"></component>
+        </p>
       </b-tab>
     </b-tabs>
    </b-card>     
@@ -48,6 +66,7 @@ export default {
   },
     data() {
       return {
+        appTabIndex: 0 ,
           appTabs:[],
           tabs: [
             {
@@ -97,7 +116,11 @@ export default {
       }
       this.tabs.push(newTab);
         console.log('createTab')
-      },
+    },
+    createAppTab(at) { 
+       //console.log('backEnd:'+at)
+      this.appTabs.push(at);
+    },
         closeTab(x) {
         for (let i = 0; i < this.tabs.length; i++) {
           console.log(this.tabs[i]);
