@@ -9,7 +9,7 @@
   <button @click="createTab">click to create tab</button>
 
    <b-card no-body>
-    <b-tabs small pills card ref="appTabs">
+    <b-tabs small pills card ref="appTabs" v-model="appTabIndex">
       <b-tab title="help desc">
           <b-card no-body>
               <b-tabs  pills small card vertical ref="tabs" v-model="tabIndex">
@@ -35,7 +35,7 @@
         </p>
       </b-tab>
 
-      <b-tab v-for="a in appTabs" ref="appTabs" :key="a.id" v-model="appTabIndex">
+      <b-tab v-for="a in appTabs" ref="appTabs" :key="a.id" >
         <template #title>
           {{ a.name }}
         </template>
@@ -66,6 +66,8 @@ export default {
   },
     data() {
       return {
+        isBusy: false,
+        tabIndex: 0 ,
         appTabIndex: 0 ,
           appTabs:[],
           tabs: [
@@ -118,8 +120,25 @@ export default {
         console.log('createTab')
     },
     createAppTab(at) { 
-       //console.log('backEnd:'+at)
-      this.appTabs.push(at);
+      console.log('backEnd:'+at)
+      let index = 0;
+      let isfound = false;
+      let j = 0;
+      for (j = 0; j < this.appTabs.length; j++) {
+        if (this.appTabs[j].id === at.id) {
+          isfound = true;
+          index = j;
+          console.log('found :'+index);
+          break;
+        }
+      }
+        if (isfound == false) {
+          this.appTabs.push(at);
+        }
+      //console.log('found2 index = '+index);      
+      //this.$refs.appTabs[j].activate();
+      //this.appTabs[j].activate();
+     //this.appTabs[j].active = true;
     },
         closeTab(x) {
         for (let i = 0; i < this.tabs.length; i++) {
