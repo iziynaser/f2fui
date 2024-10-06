@@ -20,9 +20,23 @@
 
           <humanResMenu @createAppTab="createAppTab"/>
 
-          <accountingMenu />
+          <accountingMenu @createAppTab="createAppTab"/>
 
-          <!-- <b-nav-item-dropdown :text="$t('PARTY_SITE')" right>
+          <reportMenu />
+
+          <userMenu />
+
+          <!-- <customMenus /> -->
+
+          <!-- <cmsMenu /> -->
+
+          <catalogMenu  @createAppTab="createAppTab"/>
+
+          <contentMenu  @createAppTab="createAppTab"/>
+
+          <langMenu />
+
+                    <!-- <b-nav-item-dropdown :text="$t('PARTY_SITE')" right>
           <b-dropdown-item href="#" >
               <router-link to="/humanres">WebSite</router-link>
           </b-dropdown-item>
@@ -33,27 +47,11 @@
               <router-link to="/humanres">WebSite</router-link>
           </b-dropdown-item>
         </b-nav-item-dropdown> -->
-
-
-          <!-- <b-nav-item-dropdown text="CONTENT" right>
+                    <!-- <b-nav-item-dropdown text="CONTENT" right>
             <b-dropdown-item href="#">
               <router-link to="/contentC">Content</router-link>
             </b-dropdown-item>
           </b-nav-item-dropdown> -->
-
-          <reportMenu />
-
-          <userMenu />
-
-          <!-- <customMenus /> -->
-
-          <!-- <cmsMenu /> -->
-
-          <catalogMenu />
-
-          <contentMenu />
-
-          <langMenu />
 
           <!-- <div class="dropdown">
           <button class="btn btn-outline-info dropdown-toggle" 
@@ -114,7 +112,7 @@ export default {
   },
   methods: {
     createAppTab(atab) {
-      console.log('navbars:'+atab);
+      //console.log('navbars:'+atab);
       this.$emit('createAppTab', atab);
     },
     urlI(u) {

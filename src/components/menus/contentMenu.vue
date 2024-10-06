@@ -3,35 +3,35 @@
         <b-nav-item-dropdown :text="$t('CONTENT_SITE')" right>
 
             <b-dropdown-item href="#">
-                <router-link to="/createContent">{{ $t('CONTENT_webSite') }}</router-link>
+                  <b-button size="sm" variant="link" @click="createContentTabs(0,$t('CONTENT_webSite'))">{{ $t('CONTENT_webSite') }}</b-button>
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
-                <router-link to="/surveyMain">{{ $t('CONTENT_survey') }}</router-link>
+                <b-button size="sm" variant="link" @click="createContentTabs(1,$t('CONTENT_survey'))">{{ $t('CONTENT_survey') }}</b-button>
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
-                <router-link to="/forumMain">{{ $t('CONTENT_forum') }}</router-link>
+                <b-button size="sm" variant="link" @click="createContentTabs(2,$t('CONTENT_forum'))">{{ $t('CONTENT_forum') }}</b-button>
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
-                <router-link to="/qaMain">{{ $t('C_WEB_QA') }}</router-link>
+                <b-button size="sm" variant="link" @click="createContentTabs(3,$t('C_WEB_QA'))">{{ $t('C_WEB_QA') }}</b-button>
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
-                <router-link to="/blogMain">{{ $t('CONTENT_blog') }}</router-link>
+                <b-button size="sm" variant="link" @click="createContentTabs(4,$t('CONTENT_blog'))">{{ $t('CONTENT_blog') }}</b-button>
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
-                <router-link to="/contentMain">{{ $t('CONTENT_content') }}</router-link>
+                <b-button size="sm" variant="link" @click="createContentTabs(5,$t('CONTENT_content'))">{{ $t('CONTENT_content') }}</b-button>
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
-                <router-link to="/articleMain">{{ $t('article') }}</router-link>
+                <b-button size="sm" variant="link" @click="createContentTabs(6,$t('article'))">{{ $t('article') }}</b-button>
             </b-dropdown-item>
 
             <b-dropdown-item href="#">
-                <router-link to="/humanres">{{ $t('CONTENT_contentSetup') }} </router-link>
+                <b-button size="sm" variant="link" @click="createContentTabs(7,$t('CONTENT_contentSetup'))">{{ $t('CONTENT_contentSetup') }}</b-button>
             </b-dropdown-item>
 
             <!-- <b-nav-item-dropdown text="CONTENT" right> -->
@@ -49,18 +49,44 @@
 </template>
 
 <script>
+import createContent from '../content/createContent.vue'
+import surveyMain from '../content/survey/surveyMain'
+import forumMain from '../content/forum/forumMain'
+import qaMain from '../content/qa/qaMain'
+import blogMain from '../content/blog/blogMain'
+import contentMain from '../content/contnt/contentMain'
+import articleMain from '../backEnd/article/articleMain'
+import humanres from '../backEnd/hr/humanres'
 export default {
     name: 'contentMenu',
     props: {
     },
-    data() {
-        return {
-
-        }
-    },
-    methods: {
-
+  data() {
+    return {
+      cp: [
+            createContent,
+            surveyMain,
+            forumMain,
+            qaMain,
+            blogMain,
+            contentMain,
+            articleMain,
+            humanres
+      ]
     }
+  },
+  methods: {
+    createContentTabs(idParam, nameParam) {
+      let atab = {
+        id: idParam ,
+        name: nameParam,
+        content : this.cp[idParam]
+      }
+      atab.id = (atab.id + 30);
+      //console.log(atab);
+      this.$emit('createAppTab',atab);
+    }
+  }
 }
 </script>
 

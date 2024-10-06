@@ -3,21 +3,24 @@
                   <b-nav-item-dropdown :text="$t('CATALOG_SITE')" right>
 
           <b-dropdown-item href="#" >
-              <router-link to="/cProductBase">{{$t('CATALOG_SETTING')}}</router-link>
+                <b-button  size="sm" variant="link" @click="createCatalogTabs(0,$t('CATALOG_SETTING'))">{{$t('CATALOG_SETTING')}}</b-button>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/createCategories">{{$t('CATALOG_categories')}}</router-link>
+              <b-button  size="sm" variant="link" @click="createCatalogTabs(1,$t('CATALOG_categories'))">{{$t('CATALOG_categories')}}</b-button>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/findProduct">{{$t('CATALOG_products')}}</router-link>
+              <b-button  size="sm" variant="link" @click="createCatalogTabs(2,$t('CATALOG_products'))">{{$t('CATALOG_products')}}</b-button>
           </b-dropdown-item>
 
           <b-dropdown-item href="#" >
-              <router-link to="/createBrands">{{$t('CATALOG_brands')}}</router-link>
+              <b-button  size="sm" variant="link" @click="createCatalogTabs(3,$t('CATALOG_brands'))">{{$t('CATALOG_brands')}}</b-button>
           </b-dropdown-item>
 
+          <b-dropdown-item href="#" >
+              <b-button  size="sm" variant="link" @click="createCatalogTabs(4,$t('CATALOG_TITLE'))">{{$t('CATALOG_TITLE')}}</b-button>
+          </b-dropdown-item>
 
           <!-- <b-dropdown-item href="#" >
               <router-link to="/humanres">{{$t('CATALOG_features')}}</router-link>
@@ -43,9 +46,7 @@
               <router-link to="/humanres">{{$t('CATALOG_imageManagement')}}</router-link>
           </b-dropdown-item> -->
 
-          <b-dropdown-item href="#" >
-              <router-link to="/createCatalog">{{$t('CATALOG_TITLE')}}</router-link>
-          </b-dropdown-item>
+
 
         </b-nav-item-dropdown>
 
@@ -53,18 +54,39 @@
 </template>
 
 <script>
+import cProductBase from '../backEnd/product/cproduct/cProductBase'
+import createCategories from '../backEnd/product/categories/createCategories'
+import findProduct from '../backEnd/product/findProduct'
+import createBrands from '../backEnd/product/brand/createBrands'
+import createCatalog from '../backEnd/product/catalog/createCatalog'
+
 export default {
     name:'catalogMenu',
     props:{
           } ,
-    data(){
-      return {
-        
+    data() {
+        return {
+      cp: [
+                cProductBase,
+                createCategories,
+                findProduct,
+                createBrands,
+                createCatalog
+           ]
+        }
+    },
+  methods: {
+    createCatalogTabs(idParam, nameParam) {
+      let atab = {
+        id: idParam ,
+        name: nameParam,
+        content : this.cp[idParam]
       }
-    } ,
-    methods:{
-
-    }      
+      atab.id = (atab.id + 40);
+      //console.log('catalog :'+atab);
+      this.$emit('createAppTab',atab);
+    }
+  },    
 }
 </script>
 
