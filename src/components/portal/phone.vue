@@ -36,6 +36,7 @@ export default {
     },
     data() {
         return {
+                    isBusy: false,
             iconName: 'caret-down',
             searchResult: [],
             searchFields: [
