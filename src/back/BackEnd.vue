@@ -26,14 +26,14 @@
           </b-card>
       </b-tab>
 
-            <b-tab >
+            <!-- <b-tab >
         <template #title>
           sdfsdfsdfdsfsf
         </template>
         <p>
           sdfsdfsdfsdf
         </p>
-      </b-tab>
+      </b-tab> -->
 
       <b-tab v-for="a in appTabs" ref="appTabs" :key="a.id" >
         <template #title>
@@ -51,7 +51,7 @@
   
 <script>
 import NavBars from '../components/navBars.vue';
-import appInfo from './appInfo.vue';
+
 import charts from '../components/portal/charts.vue';
 import links from '../components/portal/links.vue';
 import calendar from '../components/portal/calendar.vue';
@@ -71,11 +71,12 @@ export default {
         appTabIndex: 0 ,
           appTabs:[],
           tabs: [
-            {
-              name: "appInfo" ,
-                id: 0 ,
-                    contnt: appInfo
-            },
+            // {
+            //   name: "appInfo" ,
+            //   id: 0 ,
+            //   contnt: appInfo
+            // }
+            // ,
             {
               name: "charts" ,
                    id: 1,

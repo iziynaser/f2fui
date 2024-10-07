@@ -12,9 +12,9 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
 
-          <categoriesMenu />
+          <categoriesMenu @createAppTab="createAppTab"/>
 
-          <orderMenu />
+          <orderMenu @createAppTab="createAppTab"/>
 
           <portalMenu />
 
@@ -22,19 +22,22 @@
 
           <accountingMenu @createAppTab="createAppTab"/>
 
-          <reportMenu />
+          <reportMenu @createAppTab="createAppTab"/>
 
-          <userMenu />
-
-          <!-- <customMenus /> -->
-
-          <!-- <cmsMenu /> -->
+          <userMenu @createAppTab="createAppTab"/>
 
           <catalogMenu  @createAppTab="createAppTab"/>
 
           <contentMenu  @createAppTab="createAppTab"/>
 
           <langMenu />
+
+          <b-dropdown-item href="#">
+              <b-button fill rounded size="sm" variant="link" @click="createAppInfoTab(1001,$t('appInfo'))">{{ $t('appInfo') }}</b-button>
+          </b-dropdown-item>
+                    <!-- <customMenus /> -->
+
+          <!-- <cmsMenu /> -->
 
                     <!-- <b-nav-item-dropdown :text="$t('PARTY_SITE')" right>
           <b-dropdown-item href="#" >
@@ -89,13 +92,21 @@ import reportMenu from './menus/reportMenu'
 //import customMenus from './menus/customMenus'
 import userMenu from './menus/userMenu'
 //import cmsMenu from './menus/cmsMenu'
-
+import appInfo from '../back/appInfo.vue';
 import { baseUrl } from '../api/util'
 // import Logo from '../front/Logo.vue'
 
 export default {
   name: 'navBars',
+      data() {
+        return {
+      cp: [
+          appInfo
+           ]
+        }
+    },
   components: {
+    //appInfo,
     categoriesMenu,
     orderMenu,
     portalMenu,
@@ -111,6 +122,16 @@ export default {
     // Logo
   },
   methods: {
+        createAppInfoTab(idParam, nameParam) {
+          let atab = {
+            id: idParam ,
+            name: nameParam,
+            content : this.cp[0]
+          }
+          atab.id = (atab.id + 1001);
+          //console.log(atab);
+          this.$emit('createAppTab',atab);
+    },
     createAppTab(atab) {
       //console.log('navbars:'+atab);
       this.$emit('createAppTab', atab);
