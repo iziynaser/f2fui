@@ -19,7 +19,7 @@
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">year experience</b-col>
+                    <b-col sm="3">{{ this.$t('year_experience') }}</b-col>
                     <b-col sm="9">
                         <b-form-input id="name" v-model="form.name" required placeholder="enter your name" />
                     </b-col>
@@ -33,7 +33,7 @@
                 </b-row>
 
                 <b-row>
-                    <b-col sm="3">skill level</b-col>
+                    <b-col sm="3">{{ this.$t('skill_level') }}</b-col>
                     <b-col sm="9">
                         <b-form-input id="address" v-model="form.address" required placeholder="enter your adress" />
                     </b-col>
@@ -41,8 +41,8 @@
 
                 <b-row>
                     <b-col sm="9">
-                        <b-button type="submit" variant="primary">submit</b-button>
-                        <b-button type="reset" variant="danger">reset</b-button>
+                        <b-button type="submit" variant="primary">{{ this.$t('submit') }}</b-button>
+                        <b-button type="reset" variant="danger">{{ this.$t('reset') }}</b-button>
                     </b-col>
                 </b-row>
             </b-form>

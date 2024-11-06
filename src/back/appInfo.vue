@@ -8,15 +8,14 @@
                     </b-col>
                     <b-col md="6">
                         <b-list-group flush>
-                            <b-list-group-item>
-                                <b-card-body title="new features">
-                                    <b-card-text>
-                                        gfhfghdfgh
-                                        fgjhghjfghj
-                                        fghfghfgfgh
-                                    </b-card-text>
-                                </b-card-body>
-                            </b-list-group-item>
+                            <b-card-body :title="this.$t('new_features')">
+                            </b-card-body>
+                            <b-list-group-item>content</b-list-group-item>
+                            <b-list-group-item>hr</b-list-group-item>
+                            <b-list-group-item>accounting</b-list-group-item>
+                            <b-list-group-item>site</b-list-group-item>
+                        </b-list-group>
+                        <b-list-group flush>
                             <b-list-group-item>
                                 <b-card-body title="bug fixes">
                                     <b-card-text>
@@ -27,7 +26,6 @@
                                 </b-card-body>
                             </b-list-group-item>
                         </b-list-group>
-
                     </b-col>
                 </b-row>
             </b-card>

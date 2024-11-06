@@ -611,6 +611,14 @@
     "notes": "یادداشت ها",
     "links": "لینک ها",
     "charts": "چارت سازمانی",
-    "softwares": "نرم افزارها"
+    "softwares": "نرم افزارها" ,
+    "appInfo" : "برنامه کاربردی" ,
+    "new_features" : "ویژگیهای جدید" ,
+    "year_experience" : "مدت تجربه" ,
+    "skill_level" : "سطح مهارت" ,
+    "reset" : "انصراف" ,
+    "appover_person" : "شخص تایید کننده" ,
+    "leave_status": "وضعیت ترک کار",
+    "help_desc":"میز کار"
   }
 }

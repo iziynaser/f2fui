@@ -91,11 +91,11 @@ export default {
       let atab = {
         id: idParam ,
         name: nameParam,
-        content : this.cp[idParam]
+        contnt : this.cp[idParam]
       }
       atab.id = (atab.id + 40);
       //console.log('catalog :'+atab);
-      this.$emit('createAppTab',atab);
+      this.$emit('createHelpDeskTab',atab);
     }
   },
 }

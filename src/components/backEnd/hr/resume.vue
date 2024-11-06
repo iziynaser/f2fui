@@ -46,8 +46,9 @@
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col sm="11"><b-button type="submit" variant="primary">{{ this.$t('hr_re_submit')
-                    }}</b-button></b-col>
+                    <b-col sm="11"><b-button type="submit" variant="primary">
+                        {{ this.$t('hr_re_submit')}}
+                    </b-button></b-col>
                 </b-row>
             </b-form>
 

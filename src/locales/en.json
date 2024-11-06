@@ -489,6 +489,14 @@
     "notes": "notes",
     "links": "links",
     "charts": "charts",
-    "softwares": "softwares"
+    "softwares": "softwares" ,
+    "appInfo" : "application Info" ,
+    "new_features" : "new features" ,
+    "year_experience" : "year experience" ,
+    "skill_level" : "skill level" ,
+    "reset" : "reset" ,
+    "appover_person" : "appover_person" ,
+    "leave_status": "leave status" ,
+    "help_desc":"help desc"
   }
 }

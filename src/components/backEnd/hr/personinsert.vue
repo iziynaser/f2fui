@@ -55,8 +55,8 @@
                     </b-col>
                 </b-row>
 
-                <b-button type="submit" variant="primary">submit</b-button>
-                <b-button type="reset" variant="danger">reset</b-button>
+                <b-button type="submit" variant="primary">{{ this.$t('submit') }}</b-button>
+                <b-button type="reset" variant="danger">{{ this.$t('reset') }}</b-button>
             </b-form>
 
         </b-container>

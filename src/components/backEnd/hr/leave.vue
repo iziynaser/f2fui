@@ -39,14 +39,14 @@
                 </b-row>
 
                 <b-row>
-                    <b-col sm="3">appover person</b-col>
+                    <b-col sm="3">{{ this.$t('appover_person') }}</b-col>
                     <b-col sm="9">
                         <b-form-input id="address" v-model="form.address" required placeholder="enter your adress" />
                     </b-col>
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">leave status</b-col>
+                    <b-col sm="3">{{ this.$t('leave_status') }}</b-col>
                     <b-col sm="9">
                         <b-form-select v-model="form.title" :options="form.titleoptions" />
                     </b-col>
@@ -54,7 +54,7 @@
 
                 <b-row>
                     <b-col sm="9">
-                        <b-button type="submit" variant="primary">submit</b-button>
+                        <b-button type="submit" variant="primary">{{ this.$t('submit') }}</b-button>
                     </b-col>
                 </b-row>
             </b-form>

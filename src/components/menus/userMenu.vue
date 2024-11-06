@@ -33,7 +33,7 @@ export default {
       let atab = {
         id: idParam ,
         name: nameParam,
-        content : this.cp[idParam]
+        contnt : this.cp[idParam]
       }
       atab.id = (atab.id + 20);
       //console.log(atab);

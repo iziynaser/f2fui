@@ -5,7 +5,7 @@
                 <br/>
                 password:<input type="text" v-model="newUser.email" placeholder="enter your email"/>
                 <br/>
-                <input type="submit" value="submit"/>
+                <input type="submit" :value="submit"/>
             </form>
     </div>
 </template>

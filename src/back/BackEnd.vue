@@ -1,48 +1,40 @@
 <template>
 <div >
           <div>
-            <NavBars @createAppTab="createAppTab"/>
+            <NavBars @createAppTab="createAppTab" @createHelpDeskTab="createHelpDeskTab"/>
         </div>
         <div>
             clock , date , toast , ...
         </div>
-  <button @click="createTab">click to create tab</button>
 
    <b-card no-body>
     <b-tabs small pills card ref="appTabs" v-model="appTabIndex">
-      <b-tab title="help desc">
+      <b-tab :title="$t('help_desc')">
           <b-card no-body>
-              <b-tabs  pills small card vertical ref="tabs" v-model="tabIndex">
-                  <b-tab v-for="t in tabs" :key="t.id">
+              <b-tabs  pills small card vertical ref="appTabs" v-model="tabIndex">
+
+                        <b-tab v-for="a in helpDeskTabs" ref="helpDeskTabs" :key="a.id" >
+        <template #title>
+          <b-icon icon="x" size="sm" @click="closeTab(a.id)"></b-icon>
+            {{getTranslationFromBundle(a.name)}}
+        </template>
+        <p>
+          <component :is="a.contnt"></component>
+        </p>
+      </b-tab>
+
+              </b-tabs>
+          </b-card>
+      </b-tab>
+                  <b-tab v-for="t in appTabs" :key="t.id">
                       <template #title>
                           <b-icon icon="x" size="sm" @click="closeTab(t.id)"></b-icon>
-                          {{t.name}}
+                          {{ t.name }}
                       </template>
                       <p>
                           <component :is="t.contnt"></component>
                       </p>
                   </b-tab>
-              </b-tabs>
-          </b-card>
-      </b-tab>
-
-            <!-- <b-tab >
-        <template #title>
-          sdfsdfsdfdsfsf
-        </template>
-        <p>
-          sdfsdfsdfsdf
-        </p>
-      </b-tab> -->
-
-      <b-tab v-for="a in appTabs" ref="appTabs" :key="a.id" >
-        <template #title>
-          {{ a.name }}
-        </template>
-        <p>
-          <component :is="a.content"></component>
-        </p>
-      </b-tab>
     </b-tabs>
    </b-card>     
 </div>
@@ -67,16 +59,10 @@ export default {
     data() {
       return {
         isBusy: false,
-        tabIndex: 0 ,
+        helpDeskTabIndex: 0 ,
         appTabIndex: 0 ,
           appTabs:[],
-          tabs: [
-            // {
-            //   name: "appInfo" ,
-            //   id: 0 ,
-            //   contnt: appInfo
-            // }
-            // ,
+          helpDeskTabs: [
             {
               name: "charts" ,
                    id: 1,
@@ -111,17 +97,17 @@ export default {
         }
     },
   methods: {
-    createTab() {
-      let newTab = {
-        id: 0 ,
-        name: "t",
-        contnt : "cccc"
-      }
-      this.tabs.push(newTab);
-        console.log('createTab')
-    },
+    // createTab() {
+    //   let newTab = {
+    //     id: 0 ,
+    //     name: "t",
+    //     contnt : "cccc"
+    //   }
+    //   this.helpDeskTabs.push(newTab);
+    //     console.log('createTab')
+    // },
     createAppTab(at) { 
-      console.log('backEnd:'+at)
+      //console.log('backEnd:'+at)
       let index = 0;
       let isfound = false;
       let j = 0;
@@ -136,19 +122,44 @@ export default {
         if (isfound == false) {
           this.appTabs.push(at);
         }
-      //console.log('found2 index = '+index);      
-      //this.$refs.appTabs[j].activate();
-      //this.appTabs[j].activate();
-     //this.appTabs[j].active = true;
     },
-        closeTab(x) {
-        for (let i = 0; i < this.tabs.length; i++) {
-          console.log(this.tabs[i]);
-          if (this.tabs[i].id === x) {
-            this.tabs.splice(i, 1)
-          }
+    createHelpDeskTab(at) { 
+      //console.log('backEnd:'+at)
+      let index = 0;
+      let isfound = false;
+      let j = 0;
+      for (j = 0; j < this.helpDeskTabs.length; j++) {
+        if (this.helpDeskTabs[j].id === at.id) {
+          isfound = true;
+          index = j;
+          console.log('found :'+index);
+          break;
         }
       }
+        if (isfound == false) {
+          this.helpDeskTabs.push(at);
+        }
+    },
+    closeTab(x) {
+      for (let i = 0; i < this.appTabs.length; i++) {
+        if (this.appTabs[i].id == x) {
+            this.appTabs.splice(i, 1)
+          }
+      }
+
+      for (let i = 0; i < this.helpDeskTabs.length; i++) {
+        if (this.helpDeskTabs[i].id === x) {
+            this.helpDeskTabs.splice(i, 1)
+          }
+      }
+        
+    },
+    getTranslationFromBundle(str) {
+      //console.log("a:"+str);
+      let tStr = this.$t(str);
+      //console.log(",b:"+tStr);
+      return tStr;
+     }
     }
 }
 </script>
