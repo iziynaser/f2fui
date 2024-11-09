@@ -4,12 +4,12 @@
         <!-- <span v-if="id">id : {{id}}</span>
         and <span v-if="title">title : {{title}}</span> -->
         
-          <f2fTable  :searchResult="searchResult" :searchFields="searchFields" caption="list of prices related to this product" /> 
+          <f2fTable  :searchResult="searchResult" :searchFields="searchFields" :caption="this.$t('list_of_prices_related_to_this_product')" /> 
 
           <b-container fluid>
                 <b-row  class="my-1">
                     <b-col sm="3">
-                        <label for="priceType">priceType</label> 
+                        <label for="priceType">{{$t('priceType')}}</label> 
                     </b-col>
                     <b-col sm="9">
                         <f2fPriceType             id="priceType"

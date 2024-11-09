@@ -4,7 +4,7 @@
 
       <!-- load list of images -->
       <div>
-        <strong>list of images on server</strong>
+        <strong>{{ $t('list_of_images_on_server')}}</strong>
         <ul>
           <li v-for="item in listOfImages" :key="item">
             <!-- <b-img :src="item" class="img-responsive img-thumnail"> -->
@@ -16,7 +16,7 @@
 
       <!--UPLOAD-->
       <form enctype="multipart/form-data" novalidate v-if="isInitial || isSaving">
-        <strong>Upload images</strong>
+        <strong>{{$t('Upload_images')}}</strong>
 
 
         <div class="dropbox">

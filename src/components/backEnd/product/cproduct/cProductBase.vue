@@ -29,7 +29,7 @@
                             <hr /> -->
                             <b-collapse v-model="c[0]" ref="c1" id="c1">
                                 <div>                                       
-                                        <f2fBaseInfo  label="price types"
+                                        <f2fBaseInfo  :label="this.$t('price_types')"
                                                       url="/ProductPrice/list"
                                                       saveUrl="/ProductPrice/save"
                                                       deleteUrl="/ProductPrice/del"  />
@@ -37,7 +37,7 @@
                             </b-collapse>
                             <b-collapse v-model="c[1]" ref="c2" id="c2">
                                 <div>                                        
-                                        <f2fBaseInfo  label="measure types"
+                                        <f2fBaseInfo  :label="this.$t('measure_types')"
                                                       url="/MeasureType/list" 
                                                       saveUrl="/MeasureType/save"
                                                       deleteUrl="/MeasureType/del"
@@ -46,7 +46,7 @@
                             </b-collapse>
                             <b-collapse v-model="c[2]" ref="c3" id="c3">
                                 <div>                                       
-                                        <f2fBaseInfo  label="product types"
+                                        <f2fBaseInfo  :label="this.$t('product_types')"
                                                       url="/ProductType/list"
                                                       saveUrl="/ProductType/save"
                                                       deleteUrl="/ProductType/del"

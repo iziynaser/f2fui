@@ -619,6 +619,27 @@
     "reset" : "انصراف" ,
     "appover_person" : "شخص تایید کننده" ,
     "leave_status": "وضعیت ترک کار",
-    "help_desc":"میز کار"
+    "help_desc":"میز کار" ,
+    "lookup_content_id" : "انتخاب محتوا" ,
+    "measure_types" : "انواع اندازه گیری" ,
+    "product_types" : "انواع کالا" ,
+    "price_types" : "انواع قیمت" ,
+    "leave_id" : " کد ترک کار" ,
+    "list_of_images_on_server" : "لیست تصاویر روی سرور" ,
+    "Upload_images" : "بارگذاری تصاویر" ,
+    "create_a_new_keyword" : "ایجاد کلمه کلیدی جدید" ,
+    "feature_Name" : "نام ویژگی" ,
+    "Value" : "مقدار ویژگی" ,
+    "comment" : "شرح" ,
+    "product_categroy_type" : "انتخاب دسته بندی کالا",
+    "list_of_prices_related_to_this_product" : "لیست قیمت های مرتبط با این کالا",
+    "priceType" : "نوع قیمت",
+    "product_related_key" : "کلید های مرتبط با کالا",
+    "save_product" : "ذخیره کالا",
+    "save_new_keyword" : "ذخیره کلمه کلیدی" ,
+    "lookup_from_person" : "انتخاب شخص حقیقی/حقوقی" ,
+    "firstName" : "نام" ,
+    "lastName" : "نام خانوادگی" ,
+    "personCode" : "کد شخص"
   }
 }

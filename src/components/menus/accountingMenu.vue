@@ -3,7 +3,7 @@
         <b-nav-item-dropdown :text="$t('ACCOUNTING_SITE')" right>
 
             <b-dropdown-item href="#">
-                  <b-button  size="sm" variant="link" @click="createAcTabs(0,$t('ACCOUNTING_invoices'))">{{ $t('ACCOUNTING_invoices') }}</b-button>
+                  <b-button  size="sm" variant="link" @click="createAcTabs(6,$t('ACCOUNTING_invoices'))">{{ $t('ACCOUNTING_invoices') }}</b-button>
             </b-dropdown-item>
 
             <b-dropdown-item>
@@ -38,6 +38,15 @@
                   <b-button  size="sm" variant="link" @click="createAcTabs(8,$t('ACCOUNTING_budget'))">{{ $t('ACCOUNTING_budget') }}</b-button>
             </b-dropdown-item>
 
+            <!-- <b-dropdown-item href="#">
+                  <b-button  size="sm" variant="link" @click="createAcTabs(6,$t('invoices'))">{{ $t('invoices') }}</b-button>
+            </b-dropdown-item> -->
+
+            
+            <!-- <b-dropdown-item href="#">
+                  <b-button  size="sm" variant="link" @click="createAcTabs(7,$t('find_invoice'))">{{ $t('find_invoice') }}</b-button>
+            </b-dropdown-item> -->
+
         </b-nav-item-dropdown>
 
     </div>
@@ -50,7 +59,8 @@ import aggreement from '../backEnd/acc/aggreement.vue'
 import billingAccount from '../backEnd/acc/billingAccount.vue'
 import createPayment from '../backEnd/payment/createPayment.vue'
 import FinAccountMain from '../backEnd/acc/fin/FinAccountMain'
-
+import invoice from '../backEnd/invoice/invoice'
+import findInvoice from '../backEnd/invoice/findInvoice.vue'
 export default {
     name: 'accountingMenu',
     props: {
@@ -63,7 +73,9 @@ export default {
                 aggreement,
                 billingAccount ,
                 createPayment,
-                FinAccountMain
+                FinAccountMain,
+                invoice,
+                findInvoice
            ]
         }
     },

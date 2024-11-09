@@ -89,7 +89,7 @@
 
                         <b-row class="my-1">
                             <b-col>
-                                <b-button size="small" variant="primary" v-on:click="saveProduct">save product</b-button>
+                                <b-button size="small" variant="primary" v-on:click="saveProduct">{{$t('save_product')}}</b-button>
                             </b-col>
                         </b-row>
 

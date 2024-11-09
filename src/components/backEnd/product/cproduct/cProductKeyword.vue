@@ -3,10 +3,10 @@
                          <!-- <span v-if="id">id : {{id}}</span>
                  and <span v-if="title">title : {{title}}</span> -->
         <div>
-            create a new keyword
+            {{ $t('create_a_new_keyword')}}
         </div>
 
-        <f2fTable :searchResult="searchResult" :searchFields="searchFields" caption="product related key" />
+        <f2fTable :searchResult="searchResult" :searchFields="searchFields" :caption="this.$t('product_related_key')" />
 
 <b-container fluid>
     <b-row class="my-1">
@@ -25,7 +25,7 @@
         
         <div>
             <b-button size="small" variant="primary" v-on:click="loadKeyowrds">{{$t('C_PRODUCT_KEY_DEL_ALL')}}</b-button>
-            <b-button size="small" variant="primary" v-on:click="saveKeyword">save new keyword</b-button>
+            <b-button size="small" variant="primary" v-on:click="saveKeyword">{{ $t('save_new_keyword') }}</b-button>
         </div>
 
     </div>

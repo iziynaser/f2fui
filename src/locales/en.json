@@ -497,6 +497,27 @@
     "reset" : "reset" ,
     "appover_person" : "appover_person" ,
     "leave_status": "leave status" ,
-    "help_desc":"help desc"
+    "help_desc":"help desc" ,
+    "lookup_content_id" : "lookup content id" ,
+    "measure_types" : "measure types" ,
+    "product_types" : "product types" ,
+    "price_types" : "price types" ,
+     "leave_id" : "leave id" ,
+     "list_of_images_on_server" : "list of images on server" ,
+     "Upload_images" : "Upload images" ,
+     "create_a_new_keyword" : "create a new keyword" ,
+     "feature_Name" : "feature Name" ,
+     "Value" : "Value" ,
+     "comment" : "comment" ,
+     "product_categroy_type" : "product categroy type",
+     "list_of_prices_related_to_this_product" : "list of prices related to this product",
+     "priceType" : "priceType" ,
+     "product_related_key" : "product related key",
+     "save_product" : "save product",
+     "save_new_keyword" : "save new keyword",
+     "lookup_from_person" : "lookup from person" ,
+     "firstName" : "firstName" ,
+     "lastName" : "lastName" ,
+     "personCode" : "personCode"
   }
 }

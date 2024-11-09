@@ -3,7 +3,7 @@
         <b-container fluid>
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label for="contentId">lookup content id</label> 
+                    <label for="contentId">{{$t('lookup_content_id')}}</label> 
                 </b-col>
                 <b-col sm="9">
                     <b-form-input id="contentId"  size="sm" type="text"></b-form-input> 
@@ -11,7 +11,7 @@
             </b-row>
             <b-row  class="my-1">
                 <b-col sm="3">
-                    <label>product categroy type</label> 
+                    <label>{{$t('product_categroy_type')}}</label> 
                 </b-col>
                 <b-col sm="9">
                     <b-form-input  size="sm" type="text"></b-form-input> 

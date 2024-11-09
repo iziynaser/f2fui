@@ -4,7 +4,23 @@
             <NavBars @createAppTab="createAppTab" @createHelpDeskTab="createHelpDeskTab"/>
         </div>
         <div>
-            clock , date , toast , ...
+          <b-card class="mb-2"  img-right img-src="http://localhost:8080/images/logo/face.png">
+            <b-card-text> 
+              <div>
+                <b-container fluid>
+                  <b-row  class="my-1">
+                    <b-col sm="3">
+                        <label>clock</label> 
+                    </b-col>
+                    <b-col sm="6">
+                       <toast :show="toast.show" :text="toast.text" @hide-toast="hideToast"></toast>
+                    </b-col>
+                  </b-row> 
+                  </b-container>
+              </div>
+            </b-card-text>  
+           
+          </b-card>           
         </div>
 
    <b-card no-body>
@@ -50,11 +66,13 @@ import calendar from '../components/portal/calendar.vue';
 import notes from '../components/portal/notes.vue';
 import phone from '../components/portal/phone.vue';
 import softwares from '../components/portal/softwares.vue';
+import toast from '../components/Toast'
 
 export default {
   name: "BackEnd",
   components: {
     NavBars,
+    toast,
   },
     data() {
       return {
@@ -95,8 +113,17 @@ export default {
             },
           ],
         }
-    },
+  },
+      computed:{
+        toast(){
+          return this.$store.getters.toast;
+        }
+  },
   methods: {
+          hideToast(){
+        this.$store.commit("hideToast");
+      },
+
     // createTab() {
     //   let newTab = {
     //     id: 0 ,

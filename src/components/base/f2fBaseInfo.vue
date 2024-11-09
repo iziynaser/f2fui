@@ -8,10 +8,10 @@
         <b-container fluid>
             <b-row  class="my-1">
                 <b-col sm="5">
-                    <span class="border-bottom border-dark">feature Name</span> 
+                    <span class="border-bottom border-dark">{{$t('feature_Name')}}</span> 
                 </b-col>
                 <b-col sm="5">
-                    <span class="border-bottom  border-dark">Value</span> 
+                    <span class="border-bottom  border-dark">{{$t('Value')}}</span> 
                 </b-col>
                 <b-col sm="2">
                     <span class="border-bottom  border-dark">Value</span>

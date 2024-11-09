@@ -60,7 +60,7 @@
                 </b-col>
             </b-row>
             <b-row class="my-1">
-                <b-col>comment</b-col>
+                <b-col>{{$t('comment')}}</b-col>
                 <b-col>
                     <b-input v-model="form.description" type="text" />
                 </b-col>

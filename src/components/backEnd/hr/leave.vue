@@ -19,7 +19,7 @@
                 </b-row>
 
                 <b-row class="my-1">
-                    <b-col sm="3">leave id</b-col>
+                    <b-col sm="3">{{ $t('leave_id') }}</b-col>
                     <b-col sm="9">
                         <b-form-select v-model="form.title" :options="form.titleoptions" />
                     </b-col>
