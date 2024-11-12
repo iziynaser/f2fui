@@ -18,10 +18,10 @@ export default {
         isBusy:false,
         errors:{},        
         fields:[
-            {key:"id",label:'title'},
-            {key:"username",label:'user name'},
-            {key:"action",label:'action'},
-            {key:"detailr",label:'show details'}
+            {key:"id",label:this.$t('title')},
+            {key:"username",label:this.$t('user_name')},
+            {key:"action",label: this.$t('action')},
+            {key:"detailr",label: this.$t('show_details')}
         ],            
       } 
     },

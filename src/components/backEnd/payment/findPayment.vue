@@ -68,10 +68,10 @@ export default {
         errors:{},
         searchResult:[],    
         searchFields:[
-              {key:'id',label:'شناسه'},
-              {key:'name',label:'نام'},
-              {key:'title',label:'عنوان'},
-              {key:'comment',label:'شرح'},
+              {key:'id',label: this.$t('id')},
+              {key:'name',label: this.$t('name')},
+              {key:'title',label: this.$t('title')},
+              {key:'comment',label: this.$t('description')},
         ],            
       }
     } ,

@@ -37,12 +37,12 @@ export default {
         isBusy:false,
         searchResult:[],    
         searchFields:[
-              {key:'index',label:'ردیف'},
-              {key:'ip',label:'آدرس آی پی'},
-              {key:'device',label:'دستگاه'},
-              {key:'username',label:'نام کاربری'},
-              {key:'clientId',label:'کلاینت'},
-              {key:'dateCreated',label:'تاریخ'}
+              {key:'index',label: this.$t('index')},
+              {key:'ip',label: this.$t('ip')},
+              {key:'device',label: this.$t()},
+              {key:'username',label: this.$t('username')},
+              {key:'clientId',label: this.$t('clientId')},
+              {key:'dateCreated',label: this.$t('dateCreated')}
         ],          
       }
     } ,

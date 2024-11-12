@@ -60,11 +60,11 @@ export default {
         return {
             items: [],
             fields: [
-                { key: 'id', label: 'شناسه' },
-                { key: 'name', label: 'nam' },
-                { key: 'fromDate', label: 'از تاریخ' },
-                { key: 'toDate', label: 'تا تاریخ' },
-                { key: 'description', label: 'description' }
+                { key: 'id', label: this.$t('id') },
+                { key: 'name', label: this.$t('name') },
+                { key: 'fromDate', label: this.$t('fromDate') },
+                { key: 'toDate', label: this.$t('toDate') },
+                { key: 'description', label: this.$t('description') }
             ],
         }
     },

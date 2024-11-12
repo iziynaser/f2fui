@@ -57,10 +57,10 @@ export default {
             footerTextVariant: 'dark',
             errors: {},
             fields: [
-                { key: "id", label: 'id' },
-                { key: "firstName", label: 'firstName' },
-                { key: "lastName", label: 'lastName' },
-                { key: "personCode", label: 'personCode' }
+                { key: "id", label: this.$t('id') },
+                { key: "firstName", label: this.$t('firstName') },
+                { key: "lastName", label: this.$t('lastName') },
+                { key: "personCode", label: this.$t('personCode') }
             ],
         }
     },

@@ -52,10 +52,10 @@ export default {
           },
           searchResult:[],    
           searchFields:[
-              {key:'id',label:'شناسه'},
-              {key:'keyName',label:'نام کلید'},
-              {key:'keyWeight',label:'وزن کلمه'},
-              {key:'keyStatus',label:'وضغیت'},
+              {key:'id',label:this.$t('id')},
+              {key:'keyName',label:this.$t('keyName')},
+              {key:'keyWeight',label:this.$t('keyWeight')},
+              {key:'keyStatus',label:this.$t('keyStatus')},
           ],
       }
     } ,

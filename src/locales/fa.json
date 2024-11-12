@@ -640,6 +640,32 @@
     "lookup_from_person" : "انتخاب شخص حقیقی/حقوقی" ,
     "firstName" : "نام" ,
     "lastName" : "نام خانوادگی" ,
-    "personCode" : "کد شخص"
+    "personCode" : "کد شخص" ,
+    "id" : "ردیف" ,
+    "group" : "گروه" ,
+    "role" : "نقش" ,
+    "company" : "شرکت" ,
+    "semat" : "سمت" ,
+    "name" : "نام" ,
+    "edit_product" : "ویرایش کالا" ,
+    "product_code" : "کد کالا" ,
+    "product_name" : "نام کالا" ,
+    "categoryId" : "کد دسته" ,
+    "categoryName" : "نام دسته" ,
+    "keyName" : "نام کلید" ,
+    "keyWeight" : "وزن کلید" ,
+    "keyStatus" : "وضعیت کلید" ,
+    "price" : "قیمت" ,
+    "pricing" : "قیمت گذاری" ,
+    "currency" : "ارز" ,
+    "user_name" : "نام کاربری" ,
+     "action" : "اکشن" ,
+     "show_details" : "نمایش جزییات" ,
+      "index" : "ایندکس" ,
+     "ip" : "آدرس ای پی" ,
+     "device" : "دستگاه" ,
+     "clientId" : "کلاینت" ,
+     "dateCreated" : "تاریخ"
+
   }
 }

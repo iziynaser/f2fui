@@ -32,7 +32,7 @@ export default {
             isBusy: false,
             errors: {},
             fields: [
-                { key: "id", label: 'id' },
+                { key: "id", label: this.$t('id') },
                 { key: "firstName", label: this.$t('firstName') },
                 { key: "lastName", label: this.$t('lastName') },
                 { key: "personCode", label: this.$t('personCode') }

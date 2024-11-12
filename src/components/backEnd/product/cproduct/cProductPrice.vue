@@ -72,12 +72,12 @@ export default {
       return {
         searchResult:[],
           searchFields:[
-              {key:'id',label:'شناسه'},
-              {key:'fromDate',label:'از تاریخ'},
-              {key:'toDate',label:'تا تاریخ'},
-              {key:'price',label:'قیمت'},
-              {key:'tax',label:'قیمت گذاری'},
-              {key:'currency',label:'ارز'},
+              {key:'id',label: this.$t('id')},
+              {key:'fromDate',label: this.$t('fromDate')},
+              {key:'toDate',label: this.$t('toDate')},
+              {key:'price',label:this.$t('price')},
+              {key:'tax',label:this.$t('pricing')},
+              {key:'currency',label: this.$t('currency')},
           ] ,
           form:{
               priceType:0 ,
