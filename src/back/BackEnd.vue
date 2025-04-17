@@ -67,6 +67,7 @@ import notes from '../components/portal/notes.vue';
 import phone from '../components/portal/phone.vue';
 import softwares from '../components/portal/softwares.vue';
 import toast from '../components/Toast'
+import fAsset from '../components/portal/fAsset.vue'
 
 export default {
   name: "BackEnd",
@@ -111,6 +112,11 @@ export default {
                    id: 6,
                    contnt: softwares
             },
+                        {
+              name: "assets" ,
+                   id: 7,
+                   contnt: fAsset
+            }
           ],
         }
   },

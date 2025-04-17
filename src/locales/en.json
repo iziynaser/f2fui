@@ -543,6 +543,7 @@
      "ip" : "ip" ,
      "device" : "device" ,
      "clientId" : "clientId" ,
-     "dateCreated" : "dateCreated"
+     "dateCreated" : "dateCreated",
+     "otherSellers" : "other sellers"
   }
 }

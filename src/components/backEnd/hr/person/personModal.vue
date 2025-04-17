@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal :ref="id" :id="id" v-model="show" :title="title" :header-bg-variant="headerBgVariant"
+        <b-modal :ref="id" :id="id" v-model="show" :header-bg-variant="headerBgVariant"
             :header-text-variant="headerTextVariant" :body-bg-variant="bodyBgVariant" :body-text-variant="bodyTextVariant"
             :footer-bg-variant="footerBgVariant" :footer-text-variant="footerTextVariant">
             <b-container fluid>
@@ -8,11 +8,13 @@
                     <employee :id="id" @items="lkdata" @bClicked="setIndexes" />
                 </b-row>
             </b-container>
-
+            <template #modal-title>
+                {{ title }}
+            </template>
             <template #modal-footer>
                 <div class="w-100">
                     <b-button variant="primary" size="sm" class="float-right" @click="closeModalForm">
-                        Close
+                        {{$t('close')}}
                     </b-button>
                 </div>
             </template>

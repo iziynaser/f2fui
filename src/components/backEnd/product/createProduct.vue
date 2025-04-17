@@ -45,7 +45,9 @@
                 <b-tab :title="this.$t('CPRODUCT_CREATE_content')">
                     <!-- <cProductPics/>                -->
                 </b-tab>
-
+                <b-tab :title="otherSellers">
+                    other sellers
+                </b-tab>
             </b-tabs>
         </b-card>
     </div>

@@ -665,7 +665,7 @@
      "ip" : "آدرس ای پی" ,
      "device" : "دستگاه" ,
      "clientId" : "کلاینت" ,
-     "dateCreated" : "تاریخ"
-
+     "dateCreated" : "تاریخ",
+     "otherSellers" : "سایر فروشندگان"
   }
 }

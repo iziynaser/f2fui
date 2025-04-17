@@ -13,8 +13,12 @@
           <b-col sm="4">
             <b-row class="my-1">
               <b-col>
-                <b-button type="button" class="btn bg-light btn-outline-dark">
-                  <!-- <router-link to="/signUp" >{{$t('signUp')}}</router-link> -->
+                <b-button type="button" variant="danger" size="sm" class="btn bg-light btn-outline-dark">
+                  <router-link to="back/BackEnd">back End</router-link>
+                </b-button>
+              </b-col>
+              <b-col>
+                <b-button type="button" size="sm" class="btn bg-light btn-outline-dark">
                   <router-link to="/signUp">e/sign in</router-link>
                 </b-button>
               </b-col>
